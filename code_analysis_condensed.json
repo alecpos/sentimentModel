@@ -1,0 +1,655 @@
+{
+  "summary": {
+    "total_files": 87,
+    "total_tokens": 180884,
+    "file_type_distribution": {
+      ".json": 24,
+      ".txt": 1,
+      ".csv": 1,
+      ".py": 61
+    },
+    "directory_structure": {
+      "__files__": [
+        "test_results_ad_predictor_20250224_175251.json",
+        "test_results_ad_predictor_20250224_174138.json",
+        "test_results_ad_predictor_20250224_174641.json",
+        "test_results_ad_predictor_20250224_173605.json",
+        "test_results_ad_predictor_20250224_174601.json",
+        "requirements.txt",
+        "code_analysis_condensed.json",
+        "test_results_ad_predictor_20250224_174515.json",
+        "test_results_ad_predictor_20250224_173854.json",
+        "test_results_ad_predictor_20250224_174125.json",
+        "codebase_digest.json",
+        "test_results_ad_predictor_20250224_175450.json",
+        "within_ml_implementation.csv",
+        "test_results_ad_predictor_20250224_175202.json",
+        "test_results_ad_predictor_20250224_175652.json",
+        "code_analysis.json",
+        "test_results_ad_predictor_20250224_174331.json",
+        "test_results_ad_predictor_20250224_174218.json",
+        "test_results_ad_predictor_20250224_174023.json",
+        "test_results_ad_predictor_20250224_175106.json",
+        "jiraCreate.py",
+        "test_results_ad_predictor_20250224_175547.json",
+        "test_results_ad_predictor_20250224_174100.json",
+        "test_results_ad_predictor_20250224_174907.json",
+        "test_results_ad_predictor_20250224_173739.json",
+        "test_results_ad_predictor_20250224_173200.json",
+        "test_results_ad_predictor_20250224_174212.json"
+      ],
+      "app": {
+        "__files__": [
+          "config.py",
+          "__init__.py"
+        ]
+      },
+      "tests": {
+        "__files__": [
+          "conftest.py",
+          "test_fairness.py",
+          "test_data_pipeline_service.py",
+          "test_data_lake.py",
+          "__init__.py",
+          "test_feedback_handler.py",
+          "test_search_service.py",
+          "test_adversarial.py",
+          "test_data_models.py",
+          "test_anomaly_detector.py",
+          "test_validation_feedback.py",
+          "test_lineage_service.py",
+          "test_enhanced_ad_predictor.py",
+          "test_security_search.py",
+          "integration_test.py",
+          "error_test.py",
+          "test_ad_predictor.py",
+          "test_data_catalog.py"
+        ],
+        ".benchmarks": {
+          "__files__": []
+        }
+      },
+      ".benchmarks": {
+        "__files__": []
+      },
+      "scripts": {
+        "__files__": [
+          "digest.py"
+        ],
+        ".benchmarks": {
+          "__files__": []
+        }
+      }
+    },
+    "generation_timestamp": "2025-02-24T18:19:35.293299",
+    "processing_duration_seconds": 3.68,
+    "complexity_hotspots": [
+      {
+        "path": "app/models/ml/prediction/ad_score_predictor.py",
+        "score": 151
+      },
+      {
+        "path": "scripts/digest.py",
+        "score": 74
+      },
+      {
+        "path": "app/models/ml/prediction/account_health_predictor.py",
+        "score": 55
+      },
+      {
+        "path": "app/core/feedback/feedback_handler.py",
+        "score": 28
+      },
+      {
+        "path": "app/models/domain/data_catalog_model.py",
+        "score": 28
+      }
+    ],
+    "central_modules": [
+      {
+        "path": "app/models/ml/prediction/ad_score_predictor.py",
+        "dependents": 145
+      },
+      {
+        "path": "app/models/ml/prediction/account_health_predictor.py",
+        "dependents": 128
+      },
+      {
+        "path": "app/models/ml/prediction/anomaly_detector.py",
+        "dependents": 123
+      },
+      {
+        "path": "app/models/ad_account_health_model.py",
+        "dependents": 118
+      },
+      {
+        "path": "app/models/ad_score_model.py",
+        "dependents": 118
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "test_results_ad_predictor_20250224_175251.json",
+      "token_count": 500,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174138.json",
+      "token_count": 576,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174641.json",
+      "token_count": 600,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173605.json",
+      "token_count": 46,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174601.json",
+      "token_count": 600,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "requirements.txt",
+      "token_count": 248,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "code_analysis_condensed.json",
+      "token_count": 333,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174515.json",
+      "token_count": 408,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173854.json",
+      "token_count": 88,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174125.json",
+      "token_count": 576,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "codebase_digest.json",
+      "token_count": 70635,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175450.json",
+      "token_count": 560,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "within_ml_implementation.csv",
+      "token_count": 5003,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175202.json",
+      "token_count": 720,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175652.json",
+      "token_count": 895,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "code_analysis.json",
+      "token_count": 525,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174331.json",
+      "token_count": 600,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174218.json",
+      "token_count": 600,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174023.json",
+      "token_count": 284,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175106.json",
+      "token_count": 720,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "jiraCreate.py",
+      "token_count": 4678,
+      "complexity": 3,
+      "dependency_count": 2
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175547.json",
+      "token_count": 895,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174100.json",
+      "token_count": 441,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174907.json",
+      "token_count": 712,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173739.json",
+      "token_count": 46,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173200.json",
+      "token_count": 340,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174212.json",
+      "token_count": 600,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/config.py",
+      "token_count": 120,
+      "complexity": 0,
+      "dependency_count": 2
+    },
+    {
+      "path": "app/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/core/database.py",
+      "token_count": 321,
+      "complexity": 1,
+      "dependency_count": 6
+    },
+    {
+      "path": "app/core/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/core/config/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/core/feedback/feedback_handler.py",
+      "token_count": 2154,
+      "complexity": 28,
+      "dependency_count": 103
+    },
+    {
+      "path": "app/core/search/search_service.py",
+      "token_count": 1833,
+      "complexity": 22,
+      "dependency_count": 93
+    },
+    {
+      "path": "app/core/ml/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/core/db/mixins.py",
+      "token_count": 495,
+      "complexity": 4,
+      "dependency_count": 55
+    },
+    {
+      "path": "app/core/db/models.py",
+      "token_count": 120,
+      "complexity": 0,
+      "dependency_count": 52
+    },
+    {
+      "path": "app/core/db/__init__.py",
+      "token_count": 127,
+      "complexity": 0,
+      "dependency_count": 5
+    },
+    {
+      "path": "app/core/db/composite.py",
+      "token_count": 83,
+      "complexity": 0,
+      "dependency_count": 4
+    },
+    {
+      "path": "app/core/db/base.py",
+      "token_count": 208,
+      "complexity": 1,
+      "dependency_count": 6
+    },
+    {
+      "path": "app/core/events/lineage_service.py",
+      "token_count": 108,
+      "complexity": 0,
+      "dependency_count": 29
+    },
+    {
+      "path": "app/core/preprocessor/ad_data_preprocessor.py",
+      "token_count": 2273,
+      "complexity": 18,
+      "dependency_count": 80
+    },
+    {
+      "path": "app/core/validation/data_quality_validator.py",
+      "token_count": 1454,
+      "complexity": 19,
+      "dependency_count": 92
+    },
+    {
+      "path": "app/core/data_lake/security_manager.py",
+      "token_count": 4281,
+      "complexity": 8,
+      "dependency_count": 30
+    },
+    {
+      "path": "app/core/data_lake/data_pipeline_service.py",
+      "token_count": 1189,
+      "complexity": 10,
+      "dependency_count": 27
+    },
+    {
+      "path": "app/utils/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/models/__init__.py",
+      "token_count": 308,
+      "complexity": 0,
+      "dependency_count": 4
+    },
+    {
+      "path": "app/models/ad_account_health_model.py",
+      "token_count": 394,
+      "complexity": 0,
+      "dependency_count": 118
+    },
+    {
+      "path": "app/models/ad_score_model.py",
+      "token_count": 425,
+      "complexity": 0,
+      "dependency_count": 118
+    },
+    {
+      "path": "app/models/ml/__init__.py",
+      "token_count": 632,
+      "complexity": 0,
+      "dependency_count": 4
+    },
+    {
+      "path": "app/models/ml/prediction/account_health_predictor.py",
+      "token_count": 6736,
+      "complexity": 55,
+      "dependency_count": 128
+    },
+    {
+      "path": "app/models/ml/prediction/anomaly_detector.py",
+      "token_count": 2806,
+      "complexity": 15,
+      "dependency_count": 123
+    },
+    {
+      "path": "app/models/ml/prediction/__init__.py",
+      "token_count": 118,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/models/ml/prediction/ad_score_predictor.py",
+      "token_count": 16756,
+      "complexity": 151,
+      "dependency_count": 145
+    },
+    {
+      "path": "app/models/domain/__init__.py",
+      "token_count": 75,
+      "complexity": 0,
+      "dependency_count": 3
+    },
+    {
+      "path": "app/models/domain/data_catalog_model.py",
+      "token_count": 2053,
+      "complexity": 28,
+      "dependency_count": 65
+    },
+    {
+      "path": "app/models/domain/data_lake_model.py",
+      "token_count": 709,
+      "complexity": 8,
+      "dependency_count": 95
+    },
+    {
+      "path": "app/schemas/ad_score_schema.py",
+      "token_count": 1157,
+      "complexity": 0,
+      "dependency_count": 87
+    },
+    {
+      "path": "app/schemas/__init__.py",
+      "token_count": 382,
+      "complexity": 0,
+      "dependency_count": 83
+    },
+    {
+      "path": "app/schemas/ad_account_health_schema.py",
+      "token_count": 1011,
+      "complexity": 0,
+      "dependency_count": 87
+    },
+    {
+      "path": "app/api/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/api/v1/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/api/v1/endpoints/data_catalog.py",
+      "token_count": 304,
+      "complexity": 2,
+      "dependency_count": 51
+    },
+    {
+      "path": "app/api/v1/routes/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/services/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/services/ml/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "app/services/domain/data_lake_service.py",
+      "token_count": 108,
+      "complexity": 0,
+      "dependency_count": 18
+    },
+    {
+      "path": "app/services/domain/data_catalog_service.py",
+      "token_count": 142,
+      "complexity": 0,
+      "dependency_count": 30
+    },
+    {
+      "path": "tests/conftest.py",
+      "token_count": 1743,
+      "complexity": 0,
+      "dependency_count": 67
+    },
+    {
+      "path": "tests/test_fairness.py",
+      "token_count": 2638,
+      "complexity": 24,
+      "dependency_count": 36
+    },
+    {
+      "path": "tests/test_data_pipeline_service.py",
+      "token_count": 576,
+      "complexity": 0,
+      "dependency_count": 34
+    },
+    {
+      "path": "tests/test_data_lake.py",
+      "token_count": 2782,
+      "complexity": 4,
+      "dependency_count": 114
+    },
+    {
+      "path": "tests/__init__.py",
+      "token_count": 0,
+      "complexity": 0,
+      "dependency_count": 0
+    },
+    {
+      "path": "tests/test_feedback_handler.py",
+      "token_count": 1598,
+      "complexity": 1,
+      "dependency_count": 76
+    },
+    {
+      "path": "tests/test_search_service.py",
+      "token_count": 2395,
+      "complexity": 2,
+      "dependency_count": 71
+    },
+    {
+      "path": "tests/test_adversarial.py",
+      "token_count": 1999,
+      "complexity": 7,
+      "dependency_count": 35
+    },
+    {
+      "path": "tests/test_data_models.py",
+      "token_count": 2245,
+      "complexity": 2,
+      "dependency_count": 71
+    },
+    {
+      "path": "tests/test_anomaly_detector.py",
+      "token_count": 2550,
+      "complexity": 3,
+      "dependency_count": 106
+    },
+    {
+      "path": "tests/test_validation_feedback.py",
+      "token_count": 520,
+      "complexity": 0,
+      "dependency_count": 57
+    },
+    {
+      "path": "tests/test_lineage_service.py",
+      "token_count": 976,
+      "complexity": 0,
+      "dependency_count": 55
+    },
+    {
+      "path": "tests/test_enhanced_ad_predictor.py",
+      "token_count": 4088,
+      "complexity": 23,
+      "dependency_count": 62
+    },
+    {
+      "path": "tests/test_security_search.py",
+      "token_count": 940,
+      "complexity": 0,
+      "dependency_count": 45
+    },
+    {
+      "path": "tests/integration_test.py",
+      "token_count": 665,
+      "complexity": 0,
+      "dependency_count": 30
+    },
+    {
+      "path": "tests/error_test.py",
+      "token_count": 103,
+      "complexity": 0,
+      "dependency_count": 16
+    },
+    {
+      "path": "tests/test_ad_predictor.py",
+      "token_count": 5571,
+      "complexity": 25,
+      "dependency_count": 52
+    },
+    {
+      "path": "tests/test_data_catalog.py",
+      "token_count": 1521,
+      "complexity": 2,
+      "dependency_count": 66
+    },
+    {
+      "path": "scripts/digest.py",
+      "token_count": 6863,
+      "complexity": 74,
+      "dependency_count": 94
+    }
+  ]
+}
