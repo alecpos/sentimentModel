@@ -1,0 +1,4442 @@
+{
+  "summary": {
+    "total_files": 124,
+    "total_lines": 25159,
+    "total_tokens": 216118,
+    "python_files": 61,
+    "total_functions": 100,
+    "total_classes": 76,
+    "complexity_hotspots": [
+      {
+        "path": "scripts/digest.py",
+        "complexity": 201,
+        "avg_function_length": 43.484848484848484,
+        "functions": 0,
+        "classes": 4
+      },
+      {
+        "path": "app/models/ml/prediction/ad_score_predictor.py",
+        "complexity": 163,
+        "avg_function_length": 23.84285714285714,
+        "functions": 0,
+        "classes": 16
+      },
+      {
+        "path": "app/models/ml/prediction/account_health_predictor.py",
+        "complexity": 68,
+        "avg_function_length": 22.09090909090909,
+        "functions": 2,
+        "classes": 2
+      },
+      {
+        "path": "app/core/feedback/feedback_handler.py",
+        "complexity": 34,
+        "avg_function_length": 19.666666666666668,
+        "functions": 0,
+        "classes": 1
+      },
+      {
+        "path": "tests/test_enhanced_ad_predictor.py",
+        "complexity": 33,
+        "avg_function_length": 71.85714285714286,
+        "functions": 7,
+        "classes": 0
+      }
+    ],
+    "timestamp": "2025-02-25T13:59:27.304859",
+    "type_safety": {
+      "field_count": 252,
+      "type_hints_count": 320,
+      "type_inconsistencies_count": 0,
+      "high_severity_issues": 0
+    }
+  },
+  "files": [
+    {
+      "path": "scripts/digest.py",
+      "size": 55156,
+      "lines": 1147,
+      "tokens": 9464,
+      "classes": [
+        {
+          "name": "CodebaseDigest",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 52,
+              "args": 6,
+              "arg_types": {
+                "input_directory_path": "str",
+                "output_file_path": "str",
+                "enable_type_analysis": "bool",
+                "suggest_fixes": "bool"
+              }
+            },
+            {
+              "name": "process_codebase",
+              "line": 89,
+              "args": 1
+            },
+            {
+              "name": "_extract_class_definitions",
+              "line": 148,
+              "args": 2,
+              "arg_types": {
+                "file_path": "str"
+              }
+            },
+            {
+              "name": "_should_ignore_path",
+              "line": 168,
+              "args": 2,
+              "return_type": "bool",
+              "arg_types": {
+                "path": "str"
+              }
+            },
+            {
+              "name": "_process_file",
+              "line": 190,
+              "args": 3,
+              "arg_types": {
+                "full_path": "str",
+                "rel_path": "str"
+              }
+            },
+            {
+              "name": "_get_python_metrics",
+              "line": 238,
+              "args": 3,
+              "arg_types": {
+                "content": "str",
+                "file_path": "str"
+              }
+            },
+            {
+              "name": "_get_complexity_metrics",
+              "line": 401,
+              "args": 2,
+              "arg_types": {
+                "content": "str"
+              }
+            },
+            {
+              "name": "_calculate_avg_function_length",
+              "line": 436,
+              "args": 2,
+              "return_type": "float",
+              "arg_types": {
+                "tree": "ast.AST"
+              }
+            },
+            {
+              "name": "_extract_field_usages",
+              "line": 455,
+              "args": 3,
+              "arg_types": {
+                "content": "str",
+                "file_path": "str"
+              }
+            },
+            {
+              "name": "_extract_type_hints",
+              "line": 656,
+              "args": 3,
+              "arg_types": {
+                "content": "str",
+                "file_path": "str"
+              }
+            },
+            {
+              "name": "_analyze_type_consistency",
+              "line": 796,
+              "args": 1
+            },
+            {
+              "name": "_generate_fix_suggestions",
+              "line": 851,
+              "args": 1
+            },
+            {
+              "name": "_identify_hotspots",
+              "line": 919,
+              "args": 1
+            },
+            {
+              "name": "_generate_output",
+              "line": 940,
+              "args": 1
+            },
+            {
+              "name": "generate_typing_report",
+              "line": 1020,
+              "args": 2,
+              "arg_types": {
+                "output_path": "str"
+              }
+            }
+          ],
+          "line": 30
+        },
+        {
+          "name": "NodeVisitor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 266,
+              "args": 1
+            },
+            {
+              "name": "visit_ClassDef",
+              "line": 272,
+              "args": 2,
+              "arg_types": {
+                "node": "ast.ClassDef"
+              }
+            },
+            {
+              "name": "visit_FunctionDef",
+              "line": 336,
+              "args": 2,
+              "arg_types": {
+                "node": "ast.FunctionDef"
+              }
+            },
+            {
+              "name": "_get_attribute_full_name",
+              "line": 377,
+              "args": 2
+            }
+          ],
+          "line": 258,
+          "bases": [
+            "ast.NodeVisitor"
+          ]
+        },
+        {
+          "name": "FieldVisitor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 471,
+              "args": 3
+            },
+            {
+              "name": "visit_ClassDef",
+              "line": 483,
+              "args": 2
+            },
+            {
+              "name": "visit_FunctionDef",
+              "line": 494,
+              "args": 2
+            },
+            {
+              "name": "visit_Attribute",
+              "line": 505,
+              "args": 2
+            },
+            {
+              "name": "_get_parent_context",
+              "line": 526,
+              "args": 2
+            },
+            {
+              "name": "_get_value_type",
+              "line": 554,
+              "args": 2
+            },
+            {
+              "name": "_find_parent_node",
+              "line": 608,
+              "args": 3
+            },
+            {
+              "name": "_contains_node",
+              "line": 630,
+              "args": 4
+            }
+          ],
+          "line": 468,
+          "bases": [
+            "ast.NodeVisitor"
+          ]
+        },
+        {
+          "name": "TypeHintVisitor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 674,
+              "args": 3
+            },
+            {
+              "name": "visit_ClassDef",
+              "line": 686,
+              "args": 2
+            },
+            {
+              "name": "visit_FunctionDef",
+              "line": 697,
+              "args": 2
+            },
+            {
+              "name": "visit_AnnAssign",
+              "line": 731,
+              "args": 2
+            },
+            {
+              "name": "_get_annotation_name",
+              "line": 753,
+              "args": 2
+            },
+            {
+              "name": "_get_attribute_path",
+              "line": 775,
+              "args": 2
+            }
+          ],
+          "line": 671,
+          "bases": [
+            "ast.NodeVisitor"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 10,
+      "class_count": 4,
+      "function_count": 0,
+      "complexity_score": 201,
+      "avg_function_length": 43.484848484848484
+    },
+    {
+      "path": "app/models/ml/prediction/ad_score_predictor.py",
+      "size": 79731,
+      "lines": 1907,
+      "tokens": 16756,
+      "classes": [
+        {
+          "name": "CrossModalAttention",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 43,
+              "args": 4
+            },
+            {
+              "name": "forward",
+              "line": 60,
+              "args": 3
+            }
+          ],
+          "line": 41,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "MultiModalFeatureExtractor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 101,
+              "args": 4
+            },
+            {
+              "name": "_get_cultural_embedding",
+              "line": 169,
+              "args": 2
+            },
+            {
+              "name": "_get_cultural_region_index",
+              "line": 218,
+              "args": 5
+            },
+            {
+              "name": "transform",
+              "line": 258,
+              "args": 2
+            },
+            {
+              "name": "get_feature_dim",
+              "line": 337,
+              "args": 1,
+              "return_type": "int"
+            },
+            {
+              "name": "to",
+              "line": 341,
+              "args": 2,
+              "arg_types": {
+                "device": "torch.device"
+              }
+            },
+            {
+              "name": "fit",
+              "line": 347,
+              "args": 2
+            }
+          ],
+          "line": 98
+        },
+        {
+          "name": "CosineAnnealingNoise",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 380,
+              "args": 5
+            },
+            {
+              "name": "get_amplitude",
+              "line": 387,
+              "args": 2
+            }
+          ],
+          "line": 378
+        },
+        {
+          "name": "QuantumNoiseLayer",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 398,
+              "args": 3
+            },
+            {
+              "name": "forward",
+              "line": 415,
+              "args": 2
+            },
+            {
+              "name": "_update_hessian_estimate",
+              "line": 447,
+              "args": 2
+            },
+            {
+              "name": "_compute_influence_entropy",
+              "line": 455,
+              "args": 1
+            }
+          ],
+          "line": 396,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "TestResultsExporter",
+          "methods": [
+            {
+              "name": "record_test_result",
+              "line": 476,
+              "args": 5,
+              "arg_types": {
+                "test_name": "str",
+                "passed": "bool"
+              }
+            },
+            {
+              "name": "record_enhancement_status",
+              "line": 502,
+              "args": 3,
+              "arg_types": {
+                "enhancement_name": "str",
+                "enabled": "bool"
+              }
+            },
+            {
+              "name": "export_json",
+              "line": 508,
+              "args": 2
+            },
+            {
+              "name": "export_pdf",
+              "line": 520,
+              "args": 2
+            }
+          ],
+          "line": 460
+        },
+        {
+          "name": "SplineCalibrator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 628,
+              "args": 2,
+              "arg_types": {
+                "num_bins": "int"
+              }
+            },
+            {
+              "name": "forward",
+              "line": 636,
+              "args": 2,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            },
+            {
+              "name": "fit",
+              "line": 677,
+              "args": 5,
+              "arg_types": {
+                "x": "torch.Tensor",
+                "y": "torch.Tensor",
+                "epochs": "int",
+                "lr": "float"
+              }
+            },
+            {
+              "name": "_compute_monotonicity_loss",
+              "line": 762,
+              "args": 1
+            },
+            {
+              "name": "_compute_smoothness_loss",
+              "line": 770,
+              "args": 1
+            }
+          ],
+          "line": 626,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "DynamicLinear",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 780,
+              "args": 2
+            },
+            {
+              "name": "_initialize_parameters",
+              "line": 791,
+              "args": 2,
+              "arg_types": {
+                "in_features": "int"
+              }
+            },
+            {
+              "name": "forward",
+              "line": 816,
+              "args": 2,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            },
+            {
+              "name": "parameters",
+              "line": 841,
+              "args": 1
+            },
+            {
+              "name": "extra_repr",
+              "line": 847,
+              "args": 1,
+              "return_type": "str"
+            }
+          ],
+          "line": 778,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "AdaptiveDropout",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 852,
+              "args": 4,
+              "arg_types": {
+                "p": "float",
+                "momentum": "float",
+                "window_size": "int"
+              }
+            },
+            {
+              "name": "forward",
+              "line": 862,
+              "args": 2,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            }
+          ],
+          "line": 850,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "HierarchicalCalibrator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 894,
+              "args": 2,
+              "arg_types": {
+                "num_spline_points": "int"
+              }
+            },
+            {
+              "name": "_init_parameters",
+              "line": 902,
+              "args": 1
+            },
+            {
+              "name": "forward",
+              "line": 907,
+              "args": 2,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            },
+            {
+              "name": "_compute_monotonicity_loss",
+              "line": 954,
+              "args": 1
+            },
+            {
+              "name": "_compute_smoothness_loss",
+              "line": 962,
+              "args": 1
+            },
+            {
+              "name": "calibrate",
+              "line": 970,
+              "args": 3,
+              "arg_types": {
+                "uncalibrated_preds": "torch.Tensor",
+                "targets": "torch.Tensor"
+              }
+            },
+            {
+              "name": "check_monotonicity",
+              "line": 1077,
+              "args": 2,
+              "return_type": "bool",
+              "arg_types": {
+                "num_points": "int"
+              }
+            }
+          ],
+          "line": 893,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "AdPredictorNN",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1089,
+              "args": 4
+            },
+            {
+              "name": "forward",
+              "line": 1122,
+              "args": 2
+            }
+          ],
+          "line": 1088,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "PerformanceMonitor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1142,
+              "args": 1
+            },
+            {
+              "name": "reset_metrics",
+              "line": 1157,
+              "args": 1
+            },
+            {
+              "name": "track",
+              "line": 1169,
+              "args": 5
+            },
+            {
+              "name": "get_summary",
+              "line": 1222,
+              "args": 1
+            },
+            {
+              "name": "track_intersectional_bias",
+              "line": 1251,
+              "args": 4
+            }
+          ],
+          "line": 1140
+        },
+        {
+          "name": "CalibratedEnsemble",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1335,
+              "args": 4
+            },
+            {
+              "name": "forward",
+              "line": 1343,
+              "args": 2,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            },
+            {
+              "name": "fit",
+              "line": 1377,
+              "args": 4
+            },
+            {
+              "name": "predict",
+              "line": 1418,
+              "args": 3
+            }
+          ],
+          "line": 1332,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "DPCohortManager",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1432,
+              "args": 2
+            },
+            {
+              "name": "get_epsilon",
+              "line": 1440,
+              "args": 2
+            },
+            {
+              "name": "step_epoch",
+              "line": 1448,
+              "args": 1
+            }
+          ],
+          "line": 1430
+        },
+        {
+          "name": "DPTrainingValidator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1455,
+              "args": 5
+            },
+            {
+              "name": "_calculate_noise_multiplier",
+              "line": 1467,
+              "args": 2
+            },
+            {
+              "name": "validate_batch",
+              "line": 1483,
+              "args": 4
+            },
+            {
+              "name": "_update_privacy_budget",
+              "line": 1513,
+              "args": 2
+            },
+            {
+              "name": "step_epoch",
+              "line": 1528,
+              "args": 1
+            }
+          ],
+          "line": 1452
+        },
+        {
+          "name": "GeospatialCalibrator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1535,
+              "args": 4
+            },
+            {
+              "name": "_create_spatial_regions",
+              "line": 1545,
+              "args": 2
+            },
+            {
+              "name": "_get_region_weights",
+              "line": 1595,
+              "args": 3
+            },
+            {
+              "name": "fit",
+              "line": 1620,
+              "args": 4
+            },
+            {
+              "name": "forward",
+              "line": 1664,
+              "args": 3,
+              "return_type": "torch.Tensor",
+              "arg_types": {
+                "x": "torch.Tensor"
+              }
+            }
+          ],
+          "line": 1532,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "AdScorePredictor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 1693,
+              "args": 2
+            },
+            {
+              "name": "_build_feature_pipeline",
+              "line": 1708,
+              "args": 2
+            },
+            {
+              "name": "_train_tree_model",
+              "line": 1753,
+              "args": 3
+            },
+            {
+              "name": "_train_torch_model",
+              "line": 1776,
+              "args": 3
+            },
+            {
+              "name": "_build_dynamic_nn",
+              "line": 1821,
+              "args": 1
+            },
+            {
+              "name": "fit",
+              "line": 1827,
+              "args": 3
+            },
+            {
+              "name": "_torch_predict_proba",
+              "line": 1856,
+              "args": 2
+            },
+            {
+              "name": "predict",
+              "line": 1877,
+              "args": 2
+            }
+          ],
+          "line": 1692
+        }
+      ],
+      "functions": [],
+      "imports": 39,
+      "class_count": 16,
+      "function_count": 0,
+      "complexity_score": 163,
+      "avg_function_length": 23.84285714285714
+    },
+    {
+      "path": "app/models/ml/prediction/account_health_predictor.py",
+      "size": 33256,
+      "lines": 834,
+      "tokens": 6736,
+      "classes": [
+        {
+          "name": "EnhancedHealthEnsemble",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 56,
+              "args": 3
+            },
+            {
+              "name": "fit",
+              "line": 70,
+              "args": 3
+            },
+            {
+              "name": "predict",
+              "line": 85,
+              "args": 2
+            },
+            {
+              "name": "_optimize_weights",
+              "line": 90,
+              "args": 3
+            }
+          ],
+          "line": 53,
+          "bases": [
+            "RegressorMixin",
+            "BaseEstimator"
+          ]
+        },
+        {
+          "name": "AdvancedHealthPredictor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 159,
+              "args": 3
+            },
+            {
+              "name": "_get_feature_columns",
+              "line": 182,
+              "args": 1
+            },
+            {
+              "name": "_build_enhanced_pipeline",
+              "line": 190,
+              "args": 1
+            },
+            {
+              "name": "_build_preprocessor",
+              "line": 201,
+              "args": 1
+            },
+            {
+              "name": "_preprocess_training_data",
+              "line": 221,
+              "args": 3
+            },
+            {
+              "name": "_add_derived_features",
+              "line": 264,
+              "args": 2
+            },
+            {
+              "name": "train",
+              "line": 293,
+              "args": 4
+            },
+            {
+              "name": "_objective",
+              "line": 377,
+              "args": 4
+            },
+            {
+              "name": "predict_health_score",
+              "line": 412,
+              "args": 2
+            },
+            {
+              "name": "_extract_enhanced_features",
+              "line": 476,
+              "args": 3
+            },
+            {
+              "name": "_generate_shap_explanations",
+              "line": 501,
+              "args": 2
+            },
+            {
+              "name": "_calculate_confidence",
+              "line": 511,
+              "args": 2
+            },
+            {
+              "name": "_identify_risk_factors",
+              "line": 522,
+              "args": 2
+            },
+            {
+              "name": "_process_historical_data",
+              "line": 563,
+              "args": 2
+            },
+            {
+              "name": "_calculate_trend",
+              "line": 574,
+              "args": 3
+            },
+            {
+              "name": "_calculate_velocity",
+              "line": 583,
+              "args": 2
+            },
+            {
+              "name": "_rule_based_prediction",
+              "line": 589,
+              "args": 3
+            },
+            {
+              "name": "save_model",
+              "line": 622,
+              "args": 2
+            },
+            {
+              "name": "load_model",
+              "line": 646,
+              "args": 2
+            },
+            {
+              "name": "_load_config",
+              "line": 660,
+              "args": 2
+            },
+            {
+              "name": "_update_model_params",
+              "line": 695,
+              "args": 2
+            },
+            {
+              "name": "_calculate_privacy_budget",
+              "line": 718,
+              "args": 1
+            },
+            {
+              "name": "_evaluate_model",
+              "line": 726,
+              "args": 3
+            },
+            {
+              "name": "_create_model",
+              "line": 745,
+              "args": 2
+            },
+            {
+              "name": "_calculate_shap_values",
+              "line": 763,
+              "args": 2,
+              "return_type": "np.ndarray",
+              "arg_types": {
+                "features_df": "pd.DataFrame"
+              }
+            },
+            {
+              "name": "_generate_optimization_suggestions",
+              "line": 801,
+              "args": 2
+            }
+          ],
+          "line": 129
+        }
+      ],
+      "functions": [
+        {
+          "name": "early_stopping_callback_factory",
+          "line": 30,
+          "args": 2,
+          "decorators": [],
+          "arg_types": {
+            "patience": "int",
+            "min_delta": "float"
+          }
+        },
+        {
+          "name": "callback",
+          "line": 39,
+          "args": 2,
+          "decorators": []
+        }
+      ],
+      "imports": 20,
+      "class_count": 2,
+      "function_count": 2,
+      "complexity_score": 68,
+      "avg_function_length": 22.09090909090909
+    },
+    {
+      "path": "app/core/feedback/feedback_handler.py",
+      "size": 11208,
+      "lines": 268,
+      "tokens": 2154,
+      "classes": [
+        {
+          "name": "FeedbackProcessor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 10,
+              "args": 2,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "add_feedback",
+              "line": 13,
+              "args": 4,
+              "arg_types": {
+                "catalog_id": "str",
+                "user_id": "str",
+                "comment": "str"
+              }
+            },
+            {
+              "name": "_determine_automated_actions",
+              "line": 39,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel",
+                "comment": "str"
+              }
+            },
+            {
+              "name": "_execute_automated_action",
+              "line": 94,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_handle_refresh_action",
+              "line": 130,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_handle_documentation_action",
+              "line": 135,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_handle_quality_check_action",
+              "line": 147,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_handle_schema_review_action",
+              "line": 152,
+              "args": 3,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "resolve_feedback",
+              "line": 163,
+              "args": 4,
+              "arg_types": {
+                "catalog_id": "str",
+                "feedback_id": "str",
+                "resolution": "str"
+              }
+            },
+            {
+              "name": "get_feedback_stats",
+              "line": 186,
+              "args": 2,
+              "arg_types": {
+                "catalog_id": "str"
+              }
+            },
+            {
+              "name": "get_pending_feedback",
+              "line": 211,
+              "args": 2,
+              "arg_types": {
+                "catalog_id": "str"
+              }
+            },
+            {
+              "name": "analyze_feedback_trends",
+              "line": 231,
+              "args": 1
+            }
+          ],
+          "line": 9
+        }
+      ],
+      "functions": [],
+      "imports": 6,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 34,
+      "avg_function_length": 19.666666666666668
+    },
+    {
+      "path": "tests/test_enhanced_ad_predictor.py",
+      "size": 19570,
+      "lines": 537,
+      "tokens": 4088,
+      "classes": [],
+      "functions": [
+        {
+          "name": "test_quantum_noise_resilience",
+          "line": 18,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_differential_privacy",
+          "line": 133,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_multimodal_feature_extraction",
+          "line": 189,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_end_to_end_enhanced_pipeline",
+          "line": 248,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_intersectional_bias_tracking",
+          "line": 336,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_cultural_context_adaptation",
+          "line": 416,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_session_timer",
+          "line": 518,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 8,
+      "class_count": 0,
+      "function_count": 7,
+      "complexity_score": 33,
+      "avg_function_length": 71.85714285714286
+    },
+    {
+      "path": "app/models/domain/data_catalog_model.py",
+      "size": 10128,
+      "lines": 251,
+      "tokens": 2053,
+      "classes": [
+        {
+          "name": "DataCatalogModel",
+          "methods": [
+            {
+              "name": "track_usage",
+              "line": 60,
+              "args": 3,
+              "arg_types": {
+                "user_id": "str",
+                "query_type": "str"
+              }
+            },
+            {
+              "name": "__init__",
+              "line": 87,
+              "args": 1
+            },
+            {
+              "name": "_validate_level_context_init",
+              "line": 121,
+              "args": 1
+            },
+            {
+              "name": "validate_level_context",
+              "line": 133,
+              "args": 3
+            },
+            {
+              "name": "add_feedback",
+              "line": 143,
+              "args": 3,
+              "arg_types": {
+                "user_id": "str",
+                "comment": "str"
+              }
+            },
+            {
+              "name": "resolve_feedback",
+              "line": 163,
+              "args": 3,
+              "arg_types": {
+                "feedback_id": "str",
+                "resolution_comment": "str"
+              }
+            },
+            {
+              "name": "_increment_version",
+              "line": 186,
+              "args": 1
+            },
+            {
+              "name": "validate_lineage",
+              "line": 192,
+              "args": 3
+            },
+            {
+              "name": "add_downstream_dependency",
+              "line": 225,
+              "args": 4,
+              "arg_types": {
+                "downstream_id": "str",
+                "downstream_name": "str",
+                "dependency_type": "str"
+              }
+            }
+          ],
+          "line": 18,
+          "bases": [
+            "BaseModel"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 6,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 32,
+      "avg_function_length": 18.88888888888889
+    },
+    {
+      "path": "app/core/search/search_service.py",
+      "size": 9515,
+      "lines": 236,
+      "tokens": 1833,
+      "classes": [
+        {
+          "name": "DataCatalogSearch",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 8,
+              "args": 3
+            },
+            {
+              "name": "_ensure_index",
+              "line": 15,
+              "args": 1
+            },
+            {
+              "name": "index_entry",
+              "line": 42,
+              "args": 2,
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "bulk_index",
+              "line": 57,
+              "args": 2
+            },
+            {
+              "name": "search",
+              "line": 79,
+              "args": 4,
+              "arg_types": {
+                "query": "str",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "search_by_level",
+              "line": 116,
+              "args": 4,
+              "arg_types": {
+                "level": "str",
+                "query": "str",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "get_recent_updates",
+              "line": 148,
+              "args": 3,
+              "arg_types": {
+                "days": "int",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "search_with_facets",
+              "line": 175,
+              "args": 5,
+              "arg_types": {
+                "query": "str",
+                "user_id": "str"
+              }
+            }
+          ],
+          "line": 7
+        }
+      ],
+      "functions": [],
+      "imports": 5,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 31,
+      "avg_function_length": 26.75
+    },
+    {
+      "path": "tests/test_ad_predictor.py",
+      "size": 23337,
+      "lines": 643,
+      "tokens": 5571,
+      "classes": [
+        {
+          "name": "MockTree",
+          "methods": [
+            {
+              "name": "predict",
+              "line": 208,
+              "args": 2
+            }
+          ],
+          "line": 207
+        },
+        {
+          "name": "MockTree",
+          "methods": [
+            {
+              "name": "predict",
+              "line": 268,
+              "args": 2
+            }
+          ],
+          "line": 267
+        }
+      ],
+      "functions": [
+        {
+          "name": "get_ad_score_predictor",
+          "line": 18,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "sample_ad_data",
+          "line": 23,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_ad_predictor_train",
+          "line": 40,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_ad_prediction",
+          "line": 51,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_ad_predictor_calibration",
+          "line": 64,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_edge_case_handling",
+          "line": 84,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_temporal_consistency",
+          "line": 98,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_shape_compatibility",
+          "line": 119,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "synthetic_data_generator",
+          "line": 136,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "_generate",
+          "line": 138,
+          "args": 3,
+          "decorators": []
+        },
+        {
+          "name": "test_dynamic_linear_layer",
+          "line": 172,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_adaptive_dropout",
+          "line": 188,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_calibrated_ensemble",
+          "line": 204,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_predictor_nn_architecture",
+          "line": 222,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_gradient_flow",
+          "line": 232,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_model_calibration",
+          "line": 265,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_model_reproducibility",
+          "line": 294,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_dimensional_adaptation",
+          "line": 340,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_gradient_stability",
+          "line": 355,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "wrapper",
+          "line": 367,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_calibration_quality",
+          "line": 394,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_hierarchical_calibrator",
+          "line": 468,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_performance_monitoring",
+          "line": 490,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_model_scaling",
+          "line": 520,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "test_end_to_end_training",
+          "line": 540,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_geospatial_calibration",
+          "line": 571,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "get_region_bias",
+          "line": 584,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "test_region_calibration",
+          "line": 610,
+          "args": 2,
+          "decorators": []
+        }
+      ],
+      "imports": 15,
+      "class_count": 2,
+      "function_count": 28,
+      "complexity_score": 30,
+      "avg_function_length": 20.933333333333334
+    },
+    {
+      "path": "app/core/validation/data_quality_validator.py",
+      "size": 7016,
+      "lines": 180,
+      "tokens": 1454,
+      "classes": [
+        {
+          "name": "DataQualityValidator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 8,
+              "args": 2,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "validate_schema",
+              "line": 11,
+              "args": 2,
+              "arg_types": {
+                "catalog_id": "str"
+              }
+            },
+            {
+              "name": "validate_quality",
+              "line": 33,
+              "args": 2,
+              "arg_types": {
+                "catalog_id": "str"
+              }
+            },
+            {
+              "name": "_calculate_completeness",
+              "line": 73,
+              "args": 2,
+              "return_type": "float",
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_calculate_accuracy",
+              "line": 86,
+              "args": 2,
+              "return_type": "float",
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_calculate_timeliness",
+              "line": 104,
+              "args": 2,
+              "return_type": "float",
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_check_consistency",
+              "line": 117,
+              "args": 2,
+              "return_type": "float",
+              "arg_types": {
+                "entry": "DataCatalogModel"
+              }
+            },
+            {
+              "name": "_calculate_quality_trend",
+              "line": 138,
+              "args": 2,
+              "return_type": "str"
+            },
+            {
+              "name": "_calculate_overall_score",
+              "line": 153,
+              "args": 2,
+              "return_type": "float"
+            },
+            {
+              "name": "_validate_schema_structure",
+              "line": 170,
+              "args": 2,
+              "return_type": "bool"
+            }
+          ],
+          "line": 7
+        }
+      ],
+      "functions": [],
+      "imports": 5,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 25,
+      "avg_function_length": 15.4
+    },
+    {
+      "path": "tests/test_fairness.py",
+      "size": 13737,
+      "lines": 350,
+      "tokens": 2638,
+      "classes": [],
+      "functions": [
+        {
+          "name": "create_synthetic_demographic_data",
+          "line": 8,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "calculate_demographic_parity",
+          "line": 48,
+          "args": 3,
+          "decorators": []
+        },
+        {
+          "name": "calculate_equal_opportunity",
+          "line": 62,
+          "args": 4,
+          "decorators": []
+        },
+        {
+          "name": "test_demographic_parity",
+          "line": 77,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_equal_opportunity",
+          "line": 129,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_intersectional_fairness",
+          "line": 181,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_counterfactual_fairness",
+          "line": 267,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 5,
+      "class_count": 0,
+      "function_count": 7,
+      "complexity_score": 25,
+      "avg_function_length": 47.142857142857146
+    },
+    {
+      "path": "app/core/preprocessor/ad_data_preprocessor.py",
+      "size": 10906,
+      "lines": 306,
+      "tokens": 2273,
+      "classes": [
+        {
+          "name": "TextPreprocessor",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 19,
+              "args": 2,
+              "arg_types": {
+                "nlp_model": "str"
+              }
+            },
+            {
+              "name": "_tokenize",
+              "line": 23,
+              "args": 2,
+              "arg_types": {
+                "text": "str"
+              }
+            },
+            {
+              "name": "_analyze_sentiment",
+              "line": 28,
+              "args": 2,
+              "arg_types": {
+                "text": "str"
+              }
+            },
+            {
+              "name": "fit",
+              "line": 32,
+              "args": 3
+            },
+            {
+              "name": "transform",
+              "line": 35,
+              "args": 2,
+              "return_type": "pd.DataFrame",
+              "arg_types": {
+                "X": "pd.Series"
+              }
+            },
+            {
+              "name": "_process_text",
+              "line": 41,
+              "args": 2,
+              "arg_types": {
+                "text": "str"
+              }
+            }
+          ],
+          "line": 17,
+          "bases": [
+            "BaseEstimator",
+            "TransformerMixin"
+          ]
+        },
+        {
+          "name": "OutlierHandler",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 67,
+              "args": 2,
+              "arg_types": {
+                "factor": "float"
+              }
+            },
+            {
+              "name": "fit",
+              "line": 71,
+              "args": 3
+            },
+            {
+              "name": "transform",
+              "line": 95,
+              "args": 2,
+              "return_type": "np.ndarray"
+            }
+          ],
+          "line": 65,
+          "bases": [
+            "BaseEstimator",
+            "TransformerMixin"
+          ]
+        },
+        {
+          "name": "DataValidator",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 117,
+              "args": 2
+            },
+            {
+              "name": "fit",
+              "line": 121,
+              "args": 3
+            },
+            {
+              "name": "transform",
+              "line": 124,
+              "args": 2,
+              "return_type": "np.ndarray"
+            },
+            {
+              "name": "_validate_data",
+              "line": 147,
+              "args": 2,
+              "arg_types": {
+                "X": "pd.DataFrame"
+              }
+            }
+          ],
+          "line": 115,
+          "bases": [
+            "BaseEstimator",
+            "TransformerMixin"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "build_preprocessing_pipeline",
+          "line": 175,
+          "args": 4,
+          "decorators": [],
+          "return_type": "Pipeline"
+        }
+      ],
+      "imports": 12,
+      "class_count": 3,
+      "function_count": 1,
+      "complexity_score": 24,
+      "avg_function_length": 16.357142857142858
+    },
+    {
+      "path": "app/models/ml/prediction/anomaly_detector.py",
+      "size": 13571,
+      "lines": 361,
+      "tokens": 2806,
+      "classes": [
+        {
+          "name": "AutoEncoder",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 24,
+              "args": 4
+            },
+            {
+              "name": "forward",
+              "line": 55,
+              "args": 2
+            }
+          ],
+          "line": 22,
+          "bases": [
+            "nn.Module"
+          ]
+        },
+        {
+          "name": "EnhancedAnomalyDetector",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 64,
+              "args": 2
+            },
+            {
+              "name": "train",
+              "line": 94,
+              "args": 2
+            },
+            {
+              "name": "detect",
+              "line": 121,
+              "args": 3
+            },
+            {
+              "name": "_preprocess_data",
+              "line": 147,
+              "args": 2,
+              "return_type": "np.ndarray"
+            },
+            {
+              "name": "_train_autoencoder",
+              "line": 168,
+              "args": 2,
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_calculate_threshold",
+              "line": 214,
+              "args": 2,
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_calculate_dynamic_thresholds",
+              "line": 225,
+              "args": 2,
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_ensemble_predict",
+              "line": 234,
+              "args": 2,
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_generate_explanations",
+              "line": 249,
+              "args": 2,
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_default_config",
+              "line": 258,
+              "args": 1
+            },
+            {
+              "name": "_calculate_nn_anomaly_scores",
+              "line": 284,
+              "args": 2,
+              "return_type": "np.ndarray",
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_fallback_detection",
+              "line": 293,
+              "args": 3,
+              "arg_types": {
+                "error": "Exception"
+              }
+            },
+            {
+              "name": "_predict_proba",
+              "line": 303,
+              "args": 2,
+              "return_type": "np.ndarray",
+              "arg_types": {
+                "X": "np.ndarray"
+              }
+            },
+            {
+              "name": "_build_temporary_autoencoder",
+              "line": 307,
+              "args": 2,
+              "return_type": "nn.Module"
+            },
+            {
+              "name": "_validate_autoencoder",
+              "line": 344,
+              "args": 4,
+              "return_type": "float",
+              "arg_types": {
+                "model": "nn.Module",
+                "X": "np.ndarray",
+                "val_size": "float"
+              }
+            }
+          ],
+          "line": 60
+        }
+      ],
+      "functions": [],
+      "imports": 17,
+      "class_count": 2,
+      "function_count": 0,
+      "complexity_score": 17,
+      "avg_function_length": 17.705882352941178
+    },
+    {
+      "path": "app/core/data_lake/data_pipeline_service.py",
+      "size": 5480,
+      "lines": 129,
+      "tokens": 1189,
+      "classes": [
+        {
+          "name": "DataPipelineService",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 19,
+              "args": 3,
+              "arg_types": {
+                "security_manager": "SecurityManager",
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "ingest_data",
+              "line": 27,
+              "args": 4,
+              "arg_types": {
+                "catalog_id": "str",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "process_data",
+              "line": 53,
+              "args": 3,
+              "arg_types": {
+                "catalog_id": "str",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "curate_data",
+              "line": 82,
+              "args": 3,
+              "arg_types": {
+                "catalog_id": "str",
+                "user_id": "str"
+              }
+            },
+            {
+              "name": "_transform_data",
+              "line": 109,
+              "args": 2
+            },
+            {
+              "name": "_finalize_data",
+              "line": 122,
+              "args": 2
+            }
+          ],
+          "line": 13
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 13,
+      "avg_function_length": 16.5
+    },
+    {
+      "path": "app/models/domain/data_lake_model.py",
+      "size": 3284,
+      "lines": 89,
+      "tokens": 709,
+      "classes": [
+        {
+          "name": "DataLakeModel",
+          "methods": [
+            {
+              "name": "validate_name",
+              "line": 44,
+              "args": 3
+            },
+            {
+              "name": "validate_meta_info",
+              "line": 51,
+              "args": 3
+            },
+            {
+              "name": "validate_data",
+              "line": 77,
+              "args": 3
+            }
+          ],
+          "line": 17,
+          "bases": [
+            "Base"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 6,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 13,
+      "avg_function_length": 13.0
+    },
+    {
+      "path": "app/core/data_lake/security_manager.py",
+      "size": 21494,
+      "lines": 572,
+      "tokens": 4281,
+      "classes": [
+        {
+          "name": "PolicyEngine",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 42,
+              "args": 3
+            },
+            {
+              "name": "evaluate",
+              "line": 83,
+              "args": 4,
+              "return_type": "bool",
+              "arg_types": {
+                "user_id": "str",
+                "resource": "str",
+                "action": "str"
+              }
+            }
+          ],
+          "line": 10
+        },
+        {
+          "name": "EncryptionService",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 174,
+              "args": 2,
+              "arg_types": {
+                "secret_key": "bytes"
+              }
+            },
+            {
+              "name": "encrypt",
+              "line": 191,
+              "args": 2,
+              "return_type": "bytes",
+              "arg_types": {
+                "data": "bytes"
+              }
+            },
+            {
+              "name": "decrypt",
+              "line": 220,
+              "args": 2,
+              "return_type": "bytes",
+              "arg_types": {
+                "data": "bytes"
+              }
+            }
+          ],
+          "line": 142
+        },
+        {
+          "name": "AuditLogger",
+          "methods": [
+            {
+              "name": "record_access_attempt",
+              "line": 286,
+              "args": 5,
+              "arg_types": {
+                "user_id": "str",
+                "resource": "str",
+                "action": "str",
+                "allowed": "bool"
+              }
+            },
+            {
+              "name": "log_event",
+              "line": 314,
+              "args": 3,
+              "arg_types": {
+                "user_id": "str",
+                "event_description": "str"
+              }
+            }
+          ],
+          "line": 253
+        },
+        {
+          "name": "PIIProcessor",
+          "methods": [
+            {
+              "name": "redact_pii",
+              "line": 347,
+              "args": 1,
+              "return_type": "bytes"
+            }
+          ],
+          "line": 343
+        },
+        {
+          "name": "SecurityManager",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 429,
+              "args": 4,
+              "arg_types": {
+                "policy_engine": "PolicyEngine",
+                "encryption_service": "EncryptionService",
+                "audit_logger": "AuditLogger"
+              }
+            },
+            {
+              "name": "check_access",
+              "line": 456,
+              "args": 4,
+              "return_type": "bool",
+              "arg_types": {
+                "user_id": "str",
+                "resource": "str",
+                "action": "str"
+              }
+            },
+            {
+              "name": "encrypt_data",
+              "line": 485,
+              "args": 2,
+              "return_type": "bytes",
+              "arg_types": {
+                "data": "bytes"
+              }
+            },
+            {
+              "name": "decrypt_data",
+              "line": 518,
+              "args": 2,
+              "return_type": "bytes",
+              "arg_types": {
+                "data": "bytes"
+              }
+            },
+            {
+              "name": "log_general_event",
+              "line": 550,
+              "args": 3,
+              "arg_types": {
+                "user_id": "str",
+                "description": "str"
+              }
+            }
+          ],
+          "line": 383
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 5,
+      "function_count": 0,
+      "complexity_score": 8,
+      "avg_function_length": 28.692307692307693
+    },
+    {
+      "path": "tests/test_data_lake.py",
+      "size": 13735,
+      "lines": 378,
+      "tokens": 2782,
+      "classes": [
+        {
+          "name": "TestDataLakeModel",
+          "methods": [
+            {
+              "name": "test_basic_creation",
+              "line": 48,
+              "args": 3
+            },
+            {
+              "name": "test_uuid_uniqueness",
+              "line": 60,
+              "args": 3
+            },
+            {
+              "name": "test_id_constraint",
+              "line": 73,
+              "args": 3
+            },
+            {
+              "name": "test_data_size_constraints",
+              "line": 92,
+              "args": 3
+            },
+            {
+              "name": "test_multi_level_data_input",
+              "line": 113,
+              "args": 2
+            },
+            {
+              "name": "test_rbac_enforcement",
+              "line": 158,
+              "args": 1
+            },
+            {
+              "name": "test_catalog_lake_integration",
+              "line": 178,
+              "args": 3
+            },
+            {
+              "name": "test_data_catalog_lineage",
+              "line": 206,
+              "args": 2
+            },
+            {
+              "name": "test_raw_layer_immutability",
+              "line": 260,
+              "args": 3
+            },
+            {
+              "name": "test_processed_layer_transformations",
+              "line": 273,
+              "args": 1
+            },
+            {
+              "name": "test_curated_layer_aggregation",
+              "line": 281,
+              "args": 2
+            },
+            {
+              "name": "test_data_encryption",
+              "line": 297,
+              "args": 1
+            },
+            {
+              "name": "test_audit_logging",
+              "line": 309,
+              "args": 2
+            },
+            {
+              "name": "test_metadata_validation",
+              "line": 317,
+              "args": 2
+            },
+            {
+              "name": "test_metadata_flexibility",
+              "line": 345,
+              "args": 2
+            },
+            {
+              "name": "test_name_constraints",
+              "line": 369,
+              "args": 2
+            }
+          ],
+          "line": 47
+        }
+      ],
+      "functions": [
+        {
+          "name": "database_setup",
+          "line": 14,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "db_session",
+          "line": 21,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "valid_sample_data",
+          "line": 35,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 10,
+      "class_count": 1,
+      "function_count": 3,
+      "complexity_score": 7,
+      "avg_function_length": 17.105263157894736
+    },
+    {
+      "path": "tests/test_adversarial.py",
+      "size": 8687,
+      "lines": 264,
+      "tokens": 1999,
+      "classes": [
+        {
+          "name": "PGDAttack",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 10,
+              "args": 5
+            },
+            {
+              "name": "generate",
+              "line": 16,
+              "args": 3
+            }
+          ],
+          "line": 8
+        },
+        {
+          "name": "FGSMAttack",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 34,
+              "args": 3
+            },
+            {
+              "name": "generate",
+              "line": 38,
+              "args": 3
+            }
+          ],
+          "line": 32
+        }
+      ],
+      "functions": [
+        {
+          "name": "test_pgd_robustness",
+          "line": 51,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_fgsm_robustness",
+          "line": 122,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_gradient_masking",
+          "line": 193,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 5,
+      "class_count": 2,
+      "function_count": 3,
+      "complexity_score": 7,
+      "avg_function_length": 34.285714285714285
+    },
+    {
+      "path": "app/core/db/mixins.py",
+      "size": 2288,
+      "lines": 71,
+      "tokens": 495,
+      "classes": [
+        {
+          "name": "TimestampMixin",
+          "methods": [],
+          "line": 7
+        },
+        {
+          "name": "UUIDMixin",
+          "methods": [],
+          "line": 12
+        },
+        {
+          "name": "SoftDeleteMixin",
+          "methods": [
+            {
+              "name": "soft_delete",
+              "line": 20,
+              "args": 1
+            },
+            {
+              "name": "is_deleted",
+              "line": 24,
+              "args": 1
+            }
+          ],
+          "line": 16
+        },
+        {
+          "name": "AuditMixin",
+          "methods": [
+            {
+              "name": "set_created_by",
+              "line": 32,
+              "args": 2
+            },
+            {
+              "name": "set_updated_by",
+              "line": 37,
+              "args": 2
+            }
+          ],
+          "line": 27
+        },
+        {
+          "name": "VersioningMixin",
+          "methods": [
+            {
+              "name": "save_version",
+              "line": 48,
+              "args": 4,
+              "arg_types": {
+                "change_type": "str",
+                "description": "str",
+                "user_id": "str"
+              }
+            }
+          ],
+          "line": 43
+        }
+      ],
+      "functions": [],
+      "imports": 3,
+      "class_count": 5,
+      "function_count": 0,
+      "complexity_score": 4,
+      "avg_function_length": 5.8
+    },
+    {
+      "path": "tests/test_anomaly_detector.py",
+      "size": 13129,
+      "lines": 343,
+      "tokens": 2550,
+      "classes": [
+        {
+          "name": "TestAnomalyDetector",
+          "methods": [
+            {
+              "name": "test_initialization",
+              "line": 111,
+              "args": 1
+            },
+            {
+              "name": "test_training_process",
+              "line": 128,
+              "args": 2
+            },
+            {
+              "name": "test_detection_normal_case",
+              "line": 154,
+              "args": 3
+            },
+            {
+              "name": "test_detection_anomalous_case",
+              "line": 181,
+              "args": 3
+            },
+            {
+              "name": "test_missing_features",
+              "line": 208,
+              "args": 3
+            },
+            {
+              "name": "test_model_reproducibility",
+              "line": 232,
+              "args": 2
+            },
+            {
+              "name": "test_confidence_scoring",
+              "line": 259,
+              "args": 3
+            },
+            {
+              "name": "test_batch_processing",
+              "line": 284,
+              "args": 3
+            },
+            {
+              "name": "test_input_validation",
+              "line": 310,
+              "args": 5,
+              "arg_types": {
+                "field": "str",
+                "invalid_value": "Any"
+              }
+            },
+            {
+              "name": "test_device_handling",
+              "line": 331,
+              "args": 1
+            }
+          ],
+          "line": 103
+        }
+      ],
+      "functions": [
+        {
+          "name": "sample_metrics",
+          "line": 29,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "trained_detector",
+          "line": 84,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 6,
+      "class_count": 1,
+      "function_count": 2,
+      "complexity_score": 4,
+      "avg_function_length": 23.333333333333332
+    },
+    {
+      "path": "jiraCreate.py",
+      "size": 28086,
+      "lines": 532,
+      "tokens": 4678,
+      "classes": [],
+      "functions": [
+        {
+          "name": "create_jira_csv",
+          "line": 4,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 2,
+      "class_count": 0,
+      "function_count": 1,
+      "complexity_score": 3,
+      "avg_function_length": 523.0
+    },
+    {
+      "path": "tests/test_search_service.py",
+      "size": 12072,
+      "lines": 346,
+      "tokens": 2395,
+      "classes": [
+        {
+          "name": "TestSearchService",
+          "methods": [
+            {
+              "name": "test_index_creation",
+              "line": 111,
+              "args": 3
+            },
+            {
+              "name": "test_entry_indexing",
+              "line": 121,
+              "args": 4
+            },
+            {
+              "name": "test_basic_search",
+              "line": 147,
+              "args": 3
+            },
+            {
+              "name": "test_filtered_search",
+              "line": 171,
+              "args": 3
+            },
+            {
+              "name": "test_level_specific_search",
+              "line": 194,
+              "args": 3
+            },
+            {
+              "name": "test_recent_updates",
+              "line": 225,
+              "args": 3
+            },
+            {
+              "name": "test_search_result_format",
+              "line": 248,
+              "args": 3
+            },
+            {
+              "name": "test_search_relevance",
+              "line": 278,
+              "args": 3
+            },
+            {
+              "name": "test_search_indexing",
+              "line": 304,
+              "args": 4
+            },
+            {
+              "name": "test_level_filtering",
+              "line": 318,
+              "args": 3
+            }
+          ],
+          "line": 108
+        }
+      ],
+      "functions": [
+        {
+          "name": "mock_es",
+          "line": 10,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "mock_index",
+          "line": 17,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "mock_bulk",
+          "line": 22,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "search_service",
+          "line": 46,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "sample_entries",
+          "line": 51,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 7,
+      "class_count": 1,
+      "function_count": 5,
+      "complexity_score": 3,
+      "avg_function_length": 20.866666666666667
+    },
+    {
+      "path": "app/core/database.py",
+      "size": 1484,
+      "lines": 59,
+      "tokens": 321,
+      "classes": [
+        {
+          "name": "BaseModel",
+          "methods": [
+            {
+              "name": "generate_uuid",
+              "line": 45,
+              "args": 1
+            },
+            {
+              "name": "to_dict",
+              "line": 49,
+              "args": 1
+            }
+          ],
+          "line": 40,
+          "bases": [
+            "Base"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "get_db",
+          "line": 31,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "create_tables",
+          "line": 57,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 4,
+      "class_count": 1,
+      "function_count": 2,
+      "complexity_score": 2,
+      "avg_function_length": 3.75
+    },
+    {
+      "path": "app/api/v1/endpoints/data_catalog.py",
+      "size": 1614,
+      "lines": 44,
+      "tokens": 304,
+      "classes": [
+        {
+          "name": "DataCatalogSearch",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 7,
+              "args": 2,
+              "arg_types": {
+                "es_host": "str"
+              }
+            },
+            {
+              "name": "search",
+              "line": 11,
+              "args": 3,
+              "arg_types": {
+                "query": "str",
+                "max_results": "int"
+              }
+            },
+            {
+              "name": "index_entry",
+              "line": 30,
+              "args": 2
+            }
+          ],
+          "line": 6
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 2,
+      "avg_function_length": 11.0
+    },
+    {
+      "path": "tests/test_data_models.py",
+      "size": 11707,
+      "lines": 317,
+      "tokens": 2245,
+      "classes": [
+        {
+          "name": "TestDataCatalogModel",
+          "methods": [
+            {
+              "name": "test_basic_creation",
+              "line": 49,
+              "args": 3
+            },
+            {
+              "name": "test_multi_level_validation",
+              "line": 59,
+              "args": 2
+            },
+            {
+              "name": "test_schema_documentation",
+              "line": 112,
+              "args": 3
+            },
+            {
+              "name": "test_feedback_cycle",
+              "line": 146,
+              "args": 3
+            },
+            {
+              "name": "test_lineage_tracking",
+              "line": 170,
+              "args": 3
+            },
+            {
+              "name": "test_usage_tracking",
+              "line": 205,
+              "args": 3
+            },
+            {
+              "name": "test_version_management",
+              "line": 228,
+              "args": 3
+            }
+          ],
+          "line": 46
+        },
+        {
+          "name": "TestDataModels",
+          "methods": [
+            {
+              "name": "test_data_catalog_model_creation",
+              "line": 248,
+              "args": 2
+            },
+            {
+              "name": "test_data_lake_model_validation",
+              "line": 284,
+              "args": 2
+            },
+            {
+              "name": "test_level_specific_metadata",
+              "line": 307,
+              "args": 2
+            }
+          ],
+          "line": 245
+        }
+      ],
+      "functions": [
+        {
+          "name": "sample_catalog_entry",
+          "line": 9,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 5,
+      "class_count": 2,
+      "function_count": 1,
+      "complexity_score": 2,
+      "avg_function_length": 25.636363636363637
+    },
+    {
+      "path": "tests/test_data_catalog.py",
+      "size": 7770,
+      "lines": 209,
+      "tokens": 1521,
+      "classes": [
+        {
+          "name": "TestDataCatalog",
+          "methods": [
+            {
+              "name": "test_basic_creation",
+              "line": 10,
+              "args": 3
+            },
+            {
+              "name": "test_multi_level_validation",
+              "line": 20,
+              "args": 2
+            },
+            {
+              "name": "test_search_functionality",
+              "line": 56,
+              "args": 3
+            },
+            {
+              "name": "test_advanced_search",
+              "line": 68,
+              "args": 3
+            },
+            {
+              "name": "test_metadata_documentation",
+              "line": 85,
+              "args": 3
+            },
+            {
+              "name": "test_lineage_tracking",
+              "line": 108,
+              "args": 3
+            },
+            {
+              "name": "test_downstream_dependencies",
+              "line": 131,
+              "args": 3
+            },
+            {
+              "name": "test_feedback_cycle",
+              "line": 164,
+              "args": 4
+            },
+            {
+              "name": "test_feedback_analysis",
+              "line": 186,
+              "args": 4
+            },
+            {
+              "name": "test_validation_errors",
+              "line": 201,
+              "args": 2
+            }
+          ],
+          "line": 6
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 2,
+      "avg_function_length": 17.6
+    },
+    {
+      "path": "app/core/db/models.py",
+      "size": 580,
+      "lines": 22,
+      "tokens": 120,
+      "classes": [
+        {
+          "name": "BaseModel",
+          "methods": [
+            {
+              "name": "__tablename__",
+              "line": 14,
+              "args": 1
+            },
+            {
+              "name": "to_dict",
+              "line": 17,
+              "args": 1
+            }
+          ],
+          "line": 9,
+          "bases": [
+            "Base"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 5,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 1,
+      "avg_function_length": 3.0
+    },
+    {
+      "path": "app/core/db/base.py",
+      "size": 920,
+      "lines": 41,
+      "tokens": 208,
+      "classes": [],
+      "functions": [
+        {
+          "name": "get_db",
+          "line": 31,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "create_tables",
+          "line": 39,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 2,
+      "complexity_score": 1,
+      "avg_function_length": 4.0
+    },
+    {
+      "path": "tests/conftest.py",
+      "size": 8021,
+      "lines": 268,
+      "tokens": 1743,
+      "classes": [
+        {
+          "name": "MockES",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 85,
+              "args": 1
+            },
+            {
+              "name": "index",
+              "line": 88,
+              "args": 4
+            },
+            {
+              "name": "search",
+              "line": 91,
+              "args": 1
+            }
+          ],
+          "line": 84
+        },
+        {
+          "name": "MockProducer",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 101,
+              "args": 2
+            },
+            {
+              "name": "produce",
+              "line": 104,
+              "args": 4
+            }
+          ],
+          "line": 100
+        }
+      ],
+      "functions": [
+        {
+          "name": "test_db_engine",
+          "line": 19,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "db_session",
+          "line": 35,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "mock_security",
+          "line": 48,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "mock_elasticsearch",
+          "line": 80,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "mock_kafka",
+          "line": 98,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "sample_data",
+          "line": 112,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "mock_es",
+          "line": 130,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "mock_index",
+          "line": 138,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "mock_bulk",
+          "line": 143,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "search_service",
+          "line": 175,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "feedback_processor",
+          "line": 180,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "data_validator",
+          "line": 185,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "sample_lake_entry",
+          "line": 190,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "sample_catalog_entry",
+          "line": 205,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "lineage_entries",
+          "line": 236,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 14,
+      "class_count": 2,
+      "function_count": 15,
+      "complexity_score": 1,
+      "avg_function_length": 10.95
+    },
+    {
+      "path": "tests/test_feedback_handler.py",
+      "size": 8016,
+      "lines": 206,
+      "tokens": 1598,
+      "classes": [
+        {
+          "name": "TestFeedbackProcessor",
+          "methods": [
+            {
+              "name": "test_add_feedback",
+              "line": 49,
+              "args": 3
+            },
+            {
+              "name": "test_resolve_feedback",
+              "line": 68,
+              "args": 3
+            },
+            {
+              "name": "test_get_pending_feedback",
+              "line": 98,
+              "args": 3
+            },
+            {
+              "name": "test_feedback_stats",
+              "line": 119,
+              "args": 3
+            },
+            {
+              "name": "test_feedback_trends",
+              "line": 140,
+              "args": 3
+            },
+            {
+              "name": "test_invalid_feedback_handling",
+              "line": 162,
+              "args": 2
+            },
+            {
+              "name": "test_feedback_versioning",
+              "line": 176,
+              "args": 3
+            },
+            {
+              "name": "test_feedback_persistence",
+              "line": 195,
+              "args": 2
+            }
+          ],
+          "line": 46
+        }
+      ],
+      "functions": [
+        {
+          "name": "feedback_processor",
+          "line": 9,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "sample_catalog_entries",
+          "line": 14,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 6,
+      "class_count": 1,
+      "function_count": 2,
+      "complexity_score": 1,
+      "avg_function_length": 17.5
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164548.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170527.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175251.json",
+      "size": 1728,
+      "lines": 68,
+      "tokens": 500
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170053.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165206.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_171906.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174138.json",
+      "size": 1834,
+      "lines": 75,
+      "tokens": 576
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174641.json",
+      "size": 1872,
+      "lines": 76,
+      "tokens": 600
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165905.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170711.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173605.json",
+      "size": 163,
+      "lines": 8,
+      "tokens": 46
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165913.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174601.json",
+      "size": 1872,
+      "lines": 76,
+      "tokens": 600
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_172741.json",
+      "size": 3110,
+      "lines": 116,
+      "tokens": 1001
+    },
+    {
+      "path": "requirements.txt",
+      "size": 512,
+      "lines": 24,
+      "tokens": 248
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170025.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165159.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "code_analysis_condensed.json",
+      "size": 16169,
+      "lines": 655,
+      "tokens": 4692
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164508.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_154055.json",
+      "size": 276,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174515.json",
+      "size": 1382,
+      "lines": 53,
+      "tokens": 408
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173854.json",
+      "size": 262,
+      "lines": 14,
+      "tokens": 88
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164309.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165722.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174125.json",
+      "size": 1833,
+      "lines": 75,
+      "tokens": 576
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164631.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "codebase_digest.json",
+      "size": 309868,
+      "lines": 5543,
+      "tokens": 70635
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170625.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175450.json",
+      "size": 1936,
+      "lines": 68,
+      "tokens": 560
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_172116.json",
+      "size": 3110,
+      "lines": 116,
+      "tokens": 1001
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170351.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175202.json",
+      "size": 2339,
+      "lines": 91,
+      "tokens": 720
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175652.json",
+      "size": 2800,
+      "lines": 106,
+      "tokens": 895
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164043.json",
+      "size": 276,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165740.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "code_analysis.json",
+      "size": 103840,
+      "lines": 4442,
+      "tokens": 25728
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164223.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174331.json",
+      "size": 1875,
+      "lines": 76,
+      "tokens": 600
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165832.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_163949.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165809.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174218.json",
+      "size": 1874,
+      "lines": 76,
+      "tokens": 600
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174023.json",
+      "size": 1074,
+      "lines": 35,
+      "tokens": 284
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_171651.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170646.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_171407.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175106.json",
+      "size": 2334,
+      "lines": 91,
+      "tokens": 720
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_171515.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_165043.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_172109.json",
+      "size": 3110,
+      "lines": 116,
+      "tokens": 1001
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170227.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_175547.json",
+      "size": 2800,
+      "lines": 106,
+      "tokens": 895
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_170211.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174100.json",
+      "size": 1459,
+      "lines": 55,
+      "tokens": 441
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174907.json",
+      "size": 2315,
+      "lines": 90,
+      "tokens": 712
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164140.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_172352.json",
+      "size": 3110,
+      "lines": 116,
+      "tokens": 1001
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164506.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173739.json",
+      "size": 163,
+      "lines": 8,
+      "tokens": 46
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_164414.json",
+      "size": 277,
+      "lines": 15,
+      "tokens": 93
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_173200.json",
+      "size": 1112,
+      "lines": 42,
+      "tokens": 340
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_172153.json",
+      "size": 3117,
+      "lines": 116,
+      "tokens": 1001
+    },
+    {
+      "path": "test_results_ad_predictor_20250224_174212.json",
+      "size": 1875,
+      "lines": 76,
+      "tokens": 600
+    },
+    {
+      "path": "app/config.py",
+      "size": 491,
+      "lines": 19,
+      "tokens": 120,
+      "classes": [
+        {
+          "name": "Settings",
+          "methods": [],
+          "line": 4,
+          "bases": [
+            "BaseSettings"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 2,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/config/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/ml/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/db/__init__.py",
+      "size": 483,
+      "lines": 21,
+      "tokens": 127,
+      "classes": [],
+      "functions": [],
+      "imports": 4,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/db/composite.py",
+      "size": 373,
+      "lines": 12,
+      "tokens": 83,
+      "classes": [
+        {
+          "name": "TimestampedModel",
+          "methods": [],
+          "line": 6,
+          "bases": [
+            "BaseModel",
+            "TimestampMixin"
+          ]
+        },
+        {
+          "name": "FullModel",
+          "methods": [],
+          "line": 10,
+          "bases": [
+            "BaseModel",
+            "UUIDMixin",
+            "TimestampMixin",
+            "AuditMixin"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 2,
+      "class_count": 2,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/core/events/lineage_service.py",
+      "size": 515,
+      "lines": 17,
+      "tokens": 108,
+      "classes": [
+        {
+          "name": "LineageTracker",
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 6,
+              "args": 1
+            },
+            {
+              "name": "emit_lineage_event",
+              "line": 9,
+              "args": 3,
+              "arg_types": {
+                "catalog_id": "str",
+                "operation": "str"
+              }
+            }
+          ],
+          "line": 5
+        }
+      ],
+      "functions": [],
+      "imports": 3,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 4.5
+    },
+    {
+      "path": "app/utils/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/models/__init__.py",
+      "size": 1105,
+      "lines": 48,
+      "tokens": 308,
+      "classes": [],
+      "functions": [],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/models/ad_account_health_model.py",
+      "size": 1933,
+      "lines": 44,
+      "tokens": 394,
+      "classes": [
+        {
+          "name": "AdAccountHealthModel",
+          "methods": [],
+          "line": 12,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "PerformanceMetricModel",
+          "methods": [],
+          "line": 29,
+          "bases": [
+            "BaseModel"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 6,
+      "class_count": 2,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/models/ad_score_model.py",
+      "size": 2070,
+      "lines": 47,
+      "tokens": 425,
+      "classes": [
+        {
+          "name": "AdScoreModel",
+          "methods": [],
+          "line": 12,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "AdScoreAnalysisModel",
+          "methods": [],
+          "line": 34,
+          "bases": [
+            "BaseModel"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 6,
+      "class_count": 2,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/models/ml/__init__.py",
+      "size": 2724,
+      "lines": 100,
+      "tokens": 632,
+      "classes": [],
+      "functions": [
+        {
+          "name": "get_ad_score_predictor",
+          "line": 41,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "get_health_predictor",
+          "line": 55,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "get_anomaly_detector",
+          "line": 69,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 6,
+      "class_count": 0,
+      "function_count": 3,
+      "complexity_score": 0,
+      "avg_function_length": 12.0
+    },
+    {
+      "path": "app/models/ml/prediction/__init__.py",
+      "size": 473,
+      "lines": 23,
+      "tokens": 118,
+      "classes": [],
+      "functions": [],
+      "imports": 1,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/models/domain/__init__.py",
+      "size": 289,
+      "lines": 12,
+      "tokens": 75,
+      "classes": [],
+      "functions": [],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/schemas/ad_score_schema.py",
+      "size": 5246,
+      "lines": 106,
+      "tokens": 1157,
+      "classes": [
+        {
+          "name": "AdScoreRequestSchema",
+          "methods": [],
+          "line": 9,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "AdScoreResponseSchema",
+          "methods": [],
+          "line": 38,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "AdScoreAnalysisRequestSchema",
+          "methods": [],
+          "line": 76,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "AdScoreAnalysisResponseSchema",
+          "methods": [],
+          "line": 93,
+          "bases": [
+            "BaseModel"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 4,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/schemas/__init__.py",
+      "size": 1560,
+      "lines": 63,
+      "tokens": 382,
+      "classes": [],
+      "functions": [],
+      "imports": 6,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/schemas/ad_account_health_schema.py",
+      "size": 4675,
+      "lines": 94,
+      "tokens": 1011,
+      "classes": [
+        {
+          "name": "AdAccountHealthRequestSchema",
+          "methods": [],
+          "line": 9,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "AdAccountHealthResponseSchema",
+          "methods": [],
+          "line": 28,
+          "bases": [
+            "BaseModel"
+          ]
+        },
+        {
+          "name": "PerformanceMetricSchema",
+          "methods": [],
+          "line": 81,
+          "bases": [
+            "BaseModel"
+          ]
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 3,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/api/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/api/v1/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/api/v1/routes/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/services/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/services/ml/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "app/services/domain/data_lake_service.py",
+      "size": 443,
+      "lines": 16,
+      "tokens": 108,
+      "classes": [],
+      "functions": [
+        {
+          "name": "save_to_data_lake",
+          "line": 5,
+          "args": 3,
+          "decorators": [],
+          "arg_types": {
+            "name": "str",
+            "data": "bytes",
+            "metadata": "dict"
+          }
+        }
+      ],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 1,
+      "complexity_score": 0,
+      "avg_function_length": 11.0
+    },
+    {
+      "path": "app/services/domain/data_catalog_service.py",
+      "size": 617,
+      "lines": 18,
+      "tokens": 142,
+      "classes": [],
+      "functions": [
+        {
+          "name": "add_to_data_catalog",
+          "line": 5,
+          "args": 5,
+          "decorators": [],
+          "arg_types": {
+            "name": "str",
+            "description": "str",
+            "data_lake_id": "UUID",
+            "usage_guidelines": "str",
+            "metadata": "dict"
+          }
+        }
+      ],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 1,
+      "complexity_score": 0,
+      "avg_function_length": 13.0
+    },
+    {
+      "path": "tests/test_data_pipeline_service.py",
+      "size": 2689,
+      "lines": 65,
+      "tokens": 576,
+      "classes": [
+        {
+          "name": "TestDataPipelineService",
+          "methods": [
+            {
+              "name": "setup",
+              "line": 9,
+              "args": 3,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "test_ingest_data_flow",
+              "line": 26,
+              "args": 2,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "test_full_pipeline_flow",
+              "line": 35,
+              "args": 2,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            },
+            {
+              "name": "test_process_without_ingest_fails",
+              "line": 56,
+              "args": 1
+            },
+            {
+              "name": "test_curate_without_process_fails",
+              "line": 61,
+              "args": 2,
+              "arg_types": {
+                "db_session": "Session"
+              }
+            }
+          ],
+          "line": 7
+        }
+      ],
+      "functions": [],
+      "imports": 4,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 9.6
+    },
+    {
+      "path": "tests/__init__.py",
+      "size": 0,
+      "lines": 1,
+      "tokens": 0,
+      "classes": [],
+      "functions": [],
+      "imports": 0,
+      "class_count": 0,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 0
+    },
+    {
+      "path": "tests/test_validation_feedback.py",
+      "size": 2326,
+      "lines": 79,
+      "tokens": 520,
+      "classes": [],
+      "functions": [
+        {
+          "name": "test_data_quality_validation",
+          "line": 6,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_feedback_processing",
+          "line": 32,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 4,
+      "class_count": 0,
+      "function_count": 2,
+      "complexity_score": 0,
+      "avg_function_length": 35.5
+    },
+    {
+      "path": "tests/test_lineage_service.py",
+      "size": 4962,
+      "lines": 143,
+      "tokens": 976,
+      "classes": [
+        {
+          "name": "TestLineageTracking",
+          "methods": [
+            {
+              "name": "setup",
+              "line": 9,
+              "args": 2
+            },
+            {
+              "name": "test_lineage_emission",
+              "line": 46,
+              "args": 1
+            },
+            {
+              "name": "test_lineage_validation",
+              "line": 73,
+              "args": 1
+            },
+            {
+              "name": "test_downstream_tracking",
+              "line": 101,
+              "args": 1
+            }
+          ],
+          "line": 5
+        }
+      ],
+      "functions": [],
+      "imports": 3,
+      "class_count": 1,
+      "function_count": 0,
+      "complexity_score": 0,
+      "avg_function_length": 32.0
+    },
+    {
+      "path": "tests/test_security_search.py",
+      "size": 4537,
+      "lines": 120,
+      "tokens": 940,
+      "classes": [],
+      "functions": [
+        {
+          "name": "mock_es",
+          "line": 9,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "mock_security",
+          "line": 31,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_security_manager_access",
+          "line": 37,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_search_service_indexing",
+          "line": 47,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "test_encryption_service",
+          "line": 60,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_audit_logging",
+          "line": 72,
+          "args": 1,
+          "decorators": []
+        },
+        {
+          "name": "test_secure_search",
+          "line": 81,
+          "args": 2,
+          "decorators": []
+        },
+        {
+          "name": "test_secure_search_denied",
+          "line": 105,
+          "args": 2,
+          "decorators": []
+        }
+      ],
+      "imports": 6,
+      "class_count": 0,
+      "function_count": 8,
+      "complexity_score": 0,
+      "avg_function_length": 12.0
+    },
+    {
+      "path": "tests/integration_test.py",
+      "size": 2629,
+      "lines": 73,
+      "tokens": 665,
+      "classes": [],
+      "functions": [
+        {
+          "name": "sample_data",
+          "line": 9,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_full_health_pipeline",
+          "line": 36,
+          "args": 1,
+          "decorators": []
+        }
+      ],
+      "imports": 4,
+      "class_count": 0,
+      "function_count": 2,
+      "complexity_score": 0,
+      "avg_function_length": 31.0
+    },
+    {
+      "path": "tests/error_test.py",
+      "size": 507,
+      "lines": 14,
+      "tokens": 103,
+      "classes": [],
+      "functions": [
+        {
+          "name": "test_invalid_input",
+          "line": 5,
+          "args": 0,
+          "decorators": []
+        },
+        {
+          "name": "test_uninitialized_model",
+          "line": 11,
+          "args": 0,
+          "decorators": []
+        }
+      ],
+      "imports": 3,
+      "class_count": 0,
+      "function_count": 2,
+      "complexity_score": 0,
+      "avg_function_length": 3.5
+    }
+  ],
+  "type_safety": {
+    "field_usage": {},
+    "type_inconsistencies": [],
+    "fix_suggestions": []
+  }
+}
