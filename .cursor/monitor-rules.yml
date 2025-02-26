@@ -1,0 +1,16 @@
+snapshots:
+  retention: 30d
+  compression: zstd
+  location: .cursor/snapshots
+
+protection:
+  patterns:
+    - "# @preserve"
+    - "# @critical"
+    - "@service"
+    
+validation:
+  pre_commit:
+    - type_check
+    - test_coverage
+    - complexity_scan 

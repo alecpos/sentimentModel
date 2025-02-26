@@ -1,0 +1,31 @@
+# ML Code Quality Rules and Validation Standards
+
+groups:
+  - name: ml-quality-rules
+    rules:
+      - alert: ComplexityViolation
+        expr: code_complexity > 50
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Code complexity exceeds threshold"
+          description: "Cognitive complexity is above 50"
+
+      - alert: TestCoverageInsufficient
+        expr: test_coverage < 85
+        for: 30m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Low test coverage"
+          description: "Test coverage is below 85%"
+
+      - alert: FairnessMetricViolation
+        expr: demographic_parity > 0.15 or equal_opportunity_gap > 0.10
+        for: 1h
+        labels:
+          severity: high
+        annotations:
+          summary: "ML Fairness Constraint Violated"
+          description: "Fairness metrics exceed predefined thresholds"

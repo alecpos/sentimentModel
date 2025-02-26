@@ -1,0 +1,85 @@
+{
+  "safeEditing": {
+    "functionProtection": {
+      "excludePatterns": [
+        "**/__init__.py",
+        "**/core/**/*_service.py",
+        "**/models/**/*_model.py"
+      ],
+      "annotationRules": [
+        "# CursorKeep\n",
+        "@preserve\n"
+      ]
+    },
+    "versionControl": {
+      "autoCommitBeforeEdit": true,
+      "maxSnapshots": 10,
+      "compression": "zstd-7"
+    },
+    "validation": {
+      "preEditChecklist": [
+        "type-coverage > 95%",
+        "test-coverage > 90%",
+        "complexity < 50"
+      ],
+      "postEditChecks": [
+        "no-function-deletions",
+        "type-safety-preserved",
+        "tests-passing"
+      ]
+    }
+  },
+  "mlValidation": {
+    "fairnessMetrics": {
+      "demographicParity": 0.15,
+      "equalOpportunity": 0.10
+    },
+    "robustnessChecks": {
+      "adversarialAccuracy": 0.70,
+      "calibrationError": 0.05
+    }
+  },
+  "security": {
+    "licenseChecks": ["Apache-2.0", "MIT"],
+    "vulnerabilityScan": {
+      "enabled": true,
+      "frequency": "hourly"
+    },
+    "dependencyAudit": {
+      "allowedDependencies": [
+        "torch>=2.0.0",
+        "numpy>=1.20.0",
+        "scikit-learn>=1.0.0"
+      ]
+    }
+  },
+  "development": {
+    "autoFormatting": true,
+    "typeCheckingLevel": "strict",
+    "testAutomation": {
+      "generateTests": true,
+      "coverageThreshold": 90
+    }
+  },
+  "editor": {
+    "safeEdits": true,
+    "backupEnabled": true,
+    "snapshotInterval": 300
+  },
+  "ai": {
+    "model": "claude-3.5-sonnet",
+    "contextWindow": 100000,
+    "safetyChecks": true,
+    "templates": {
+      "path": ".cursor/prompt-templates",
+      "defaultTemplate": "safe-edit"
+    }
+  },
+  "protection": {
+    "annotations": [
+      "# CursorKeep",
+      "# @preserve"
+    ],
+    "backupPath": ".cursor/backups"
+  }
+} 

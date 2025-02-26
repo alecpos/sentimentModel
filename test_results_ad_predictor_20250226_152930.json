@@ -1,0 +1,202 @@
+{
+  "tests": {
+    "test_pgd_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_fgsm_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_gradient_masking": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_quantum_noise_resilience": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_differential_privacy": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_multimodal_feature_extraction": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_intersectional_bias_tracking": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_cultural_context_adaptation": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_demographic_parity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_equal_opportunity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_intersectional_fairness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_counterfactual_fairness": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_adaptive_fairness_regularization": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_causal_intervention": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_intersection_aware_calibration": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_temporal_fairness_drift": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_subgroup_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_session": {
+      "passed": true,
+      "execution_time": 6.339822
+    }
+  },
+  "metrics": {
+    "test_pgd_robustness": {
+      "error": "Model not robust against PGD attack: 0.000\nassert False"
+    },
+    "test_fgsm_robustness": {
+      "error": "Model not robust against FGSM attack: 0.655\nassert False"
+    },
+    "test_gradient_masking": {
+      "clean_accuracy": 0.6200000047683716,
+      "pgd_accuracy": 0.0,
+      "random_accuracy": 0.550000011920929,
+      "acc_difference": 0.550000011920929
+    },
+    "test_quantum_noise_resilience": {
+      "error": "'AdPredictorNN' object has no attribute 'quantum_noise'"
+    },
+    "test_differential_privacy": {
+      "privacy_budget_history": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "final_privacy_budget": 0.0018295101634089191
+    },
+    "test_multimodal_feature_extraction": {
+      "feature_dimension": 256,
+      "n_samples": 10,
+      "text_features": 100,
+      "image_features": 512
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "training_losses": [
+        0.6933761835098267,
+        0.627183735370636,
+        0.48946356773376465,
+        0.4312826991081238,
+        0.3537900447845459
+      ],
+      "privacy_budgets": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "accuracies": [
+        0.6399999856948853,
+        0.8799999952316284,
+        0.9800000190734863,
+        1.0,
+        1.0
+      ]
+    },
+    "test_intersectional_bias_tracking": {
+      "error": "'PerformanceMonitor' object has no attribute 'demographic_groups'"
+    },
+    "test_cultural_context_adaptation": {
+      "feature_dimension": 256,
+      "n_samples": 50,
+      "cultural_embedding_dim": 32,
+      "num_cultural_regions": 5,
+      "region_differences": {
+        "NA-SA": 0.019252628270442426,
+        "EU-NA": 0.021466771745060634,
+        "EU-SA": 0.01538525812750186,
+        "AS-NA": 0.019211436142772684,
+        "AS-EU": 0.018247845233009548,
+        "AS-SA": 0.01589875997466005,
+        "AF-NA": 0.01925593066603408,
+        "AF-EU": 0.02352497026030741,
+        "AF-AS": 0.014989291911713973,
+        "AF-SA": 0.020023992273736593
+      }
+    },
+    "test_demographic_parity": {
+      "gender_parity": 0.0013407468795776367,
+      "age_group_parity": 0.0011033415794372559,
+      "ethnicity_parity": 0.002595186233520508,
+      "income_level_parity": 0.002284109592437744,
+      "location_parity": 0.0016135573387145996
+    },
+    "test_equal_opportunity": {
+      "gender_equal_opp": 0.010702833533287048,
+      "age_group_equal_opp": 0.03037130832672119,
+      "ethnicity_equal_opp": 0.03703702986240387,
+      "income_level_equal_opp": 0.04034152626991272,
+      "location_equal_opp": 0.10191826522350311
+    },
+    "test_intersectional_fairness": {
+      "error": "list indices must be integers or slices, not str"
+    },
+    "test_counterfactual_fairness": {
+      "gender_cf_diff": 0.009329710304737091,
+      "age_group_cf_diff": 0.009303474942843119,
+      "ethnicity_cf_diff": 0.00936015684902668,
+      "income_level_cf_diff": 0.009399289866288503,
+      "location_cf_diff": 0.0091655078291893
+    },
+    "test_adaptive_fairness_regularization": {
+      "error": "Boolean value of Tensor with more than one value is ambiguous"
+    },
+    "test_causal_intervention": {
+      "error": "Boolean value of Tensor with more than one value is ambiguous"
+    },
+    "test_intersection_aware_calibration": {
+      "error": "AdPredictorNN.forward() takes from 2 to 3 positional arguments but 4 were given"
+    },
+    "test_temporal_fairness_drift": {
+      "error": "Boolean value of Tensor with more than one value is ambiguous"
+    },
+    "test_subgroup_robustness": {
+      "error": "Boolean value of Tensor with more than one value is ambiguous"
+    }
+  },
+  "enhancements": {
+    "quantum_noise": false,
+    "differential_privacy": true,
+    "multimodal": true
+  },
+  "timestamp": "2025-02-26T15:29:15.628147"
+}

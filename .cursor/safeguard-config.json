@@ -1,0 +1,20 @@
+{
+  "versionControl": {
+    "snapshotInterval": "5m",
+    "backupLocation": ".cursor/snapshots",
+    "diffTool": "semantic",
+    "compressionLevel": "zstd-3"
+  },
+  "protectedPatterns": {
+    "functions": ["^(get|set|init|main|process).*"],
+    "classes": [".*Service$", ".*Repository$"],
+    "files": ["core/*.py", "models/*.py"]
+  },
+  "validationRules": {
+    "preEdit": {
+      "coverage": 90,
+      "complexity": 50,
+      "typeCheck": "strict"
+    }
+  }
+} 

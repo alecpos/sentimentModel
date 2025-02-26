@@ -1,0 +1,216 @@
+{
+  "tests": {
+    "test_pgd_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_fgsm_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_gradient_masking": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_quantum_noise_resilience": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_differential_privacy": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_multimodal_feature_extraction": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_intersectional_bias_tracking": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_cultural_context_adaptation": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_demographic_parity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_equal_opportunity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_intersectional_fairness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_counterfactual_fairness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_adaptive_fairness_regularization": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_causal_intervention": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_intersection_aware_calibration": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_temporal_fairness_drift": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_subgroup_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_session": {
+      "passed": true,
+      "execution_time": 2.041917
+    }
+  },
+  "metrics": {
+    "test_pgd_robustness": {
+      "error": "Model not robust against PGD attack: 0.019\nassert False"
+    },
+    "test_fgsm_robustness": {
+      "error": "Model not robust against FGSM attack: 0.611\nassert False"
+    },
+    "test_gradient_masking": {
+      "clean_accuracy": 0.5400000214576721,
+      "pgd_accuracy": 0.009999999776482582,
+      "random_accuracy": 0.49000000953674316,
+      "acc_difference": 0.4800000097602606
+    },
+    "test_quantum_noise_resilience": {
+      "clean_accuracy": 0.33000001311302185,
+      "noisy_accuracy": 0.33000001311302185,
+      "accuracy_difference": 0.0
+    },
+    "test_differential_privacy": {
+      "privacy_budget_history": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "final_privacy_budget": 0.0018295101634089191
+    },
+    "test_multimodal_feature_extraction": {
+      "feature_dimension": 256,
+      "n_samples": 10,
+      "text_features": 100,
+      "image_features": 512
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "training_losses": [
+        1.433680772781372,
+        1.6731561422348022,
+        1.4759639501571655,
+        1.3907090425491333,
+        2.4552533626556396
+      ],
+      "privacy_budgets": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "accuracies": [
+        0.5600000023841858,
+        0.5199999809265137,
+        0.5,
+        0.4399999976158142,
+        0.4399999976158142
+      ]
+    },
+    "test_intersectional_bias_tracking": {
+      "error": "assert 'gender\u00c3\u2014race' in {'age\u00d7income': {'demographic_parity': [0.017818927764892578], 'equal_opportunity': [0.050884515047073364], 'predictive_equality': [0.011506929993629456], 'sample_sizes': [201]}, 'age\u00d7language': {'demographic_parity': [0.020148396492004395], 'equal_opportunity': [0.0019288212060928345], 'predictive_equality': [0.033843860030174255], 'sample_sizes': [279]}, 'age\u00d7location': {'demographic_parity': [0.0009197890758514404], 'equal_opportunity': [0.0009594559669494629], 'predictive_equality': [0.005364254117012024], 'sample_sizes': [242]}, 'gender\u00d7age': {'demographic_parity': [0.010263264179229736], 'equal_opportunity': [0.022551357746124268], 'predictive_equality': [0.0022933632135391235], 'sample_sizes': [195]}, ...}"
+    },
+    "test_cultural_context_adaptation": {
+      "feature_dimension": 256,
+      "n_samples": 50,
+      "cultural_embedding_dim": 32,
+      "num_cultural_regions": 5,
+      "region_differences": {
+        "NA-SA": 0.019252628270442426,
+        "EU-NA": 0.021466771745060634,
+        "EU-SA": 0.01538525812750186,
+        "AS-NA": 0.019211436142772684,
+        "AS-EU": 0.018247845233009548,
+        "AS-SA": 0.01589875997466005,
+        "AF-NA": 0.01925593066603408,
+        "AF-EU": 0.02352497026030741,
+        "AF-AS": 0.014989291911713973,
+        "AF-SA": 0.020023992273736593
+      }
+    },
+    "test_demographic_parity": {
+      "gender_parity": 0.004399776458740234,
+      "age_group_parity": 0.006431698799133301,
+      "ethnicity_parity": 0.04456320405006409,
+      "income_level_parity": 0.028249472379684448,
+      "location_parity": 0.07199987769126892
+    },
+    "test_equal_opportunity": {
+      "gender_equal_opp": 0.01828688383102417,
+      "age_group_equal_opp": 0.0799030065536499,
+      "ethnicity_equal_opp": 0.0418972373008728,
+      "income_level_equal_opp": 0.09845763444900513,
+      "location_equal_opp": 0.10131251811981201
+    },
+    "test_intersectional_fairness": {
+      "gender\u00d7age_group_parity": 0.051389521919190884,
+      "gender\u00d7ethnicity_parity": 0.045064555713906884,
+      "gender\u00d7income_level_parity": 0.0494317882694304,
+      "gender\u00d7location_parity": 0.04815173614770174,
+      "age_group\u00d7ethnicity_parity": 0.20060597779229283,
+      "age_group\u00d7income_level_parity": 0.15390413021668792,
+      "age_group\u00d7location_parity": 0.18828547792509198,
+      "ethnicity\u00d7income_level_parity": 0.19601988838985562,
+      "ethnicity\u00d7location_parity": 0.18985775858163834,
+      "income_level\u00d7location_parity": 0.16712819109670818,
+      "gender\u00d7age_group\u00d7ethnicity_parity": 0.05809097283054143,
+      "error": "Intersectional fairness violations detected: {'gender\u00d7age_group_parity': 0.051389521919190884, 'gender\u00d7ethnicity_parity': 0.045064555713906884, 'gender\u00d7income_level_parity': 0.0494317882694304, 'gender\u00d7location_parity': 0.04815173614770174, 'age_group\u00d7ethnicity_parity': 0.20060597779229283, 'age_group\u00d7income_level_parity': 0.15390413021668792, 'age_group\u00d7location_parity': 0.18828547792509198, 'ethnicity\u00d7income_level_parity': 0.19601988838985562, 'ethnicity\u00d7location_parity': 0.18985775858163834, 'income_level\u00d7location_parity': 0.16712819109670818, 'gender\u00d7age_group\u00d7ethnicity_parity': 0.05809097283054143}\nassert False"
+    },
+    "test_counterfactual_fairness": {
+      "gender_cf_diff": 0.10443829609173418,
+      "age_group_cf_diff": 0.10543072889417757,
+      "ethnicity_cf_diff": 0.1029673072036951,
+      "income_level_cf_diff": 0.10367555540787908,
+      "location_cf_diff": 0.10519770819912755,
+      "error": "Counterfactual fairness violations detected: {'gender_cf_diff': 0.10443829609173418, 'age_group_cf_diff': 0.10543072889417757, 'ethnicity_cf_diff': 0.1029673072036951, 'income_level_cf_diff': 0.10367555540787908, 'location_cf_diff': 0.10519770819912755}\nassert False"
+    },
+    "test_adaptive_fairness_regularization": {
+      "error": "AdPredictorNN.compute_fairness_loss() takes 3 positional arguments but 4 were given"
+    },
+    "test_causal_intervention": {
+      "error": "AdPredictorNN.compute_fairness_loss() takes 3 positional arguments but 4 were given"
+    },
+    "test_intersection_aware_calibration": {
+      "error": "AdPredictorNN.forward() takes from 2 to 3 positional arguments but 4 were given"
+    },
+    "test_temporal_fairness_drift": {
+      "error": "AdPredictorNN.compute_fairness_loss() takes 3 positional arguments but 4 were given"
+    },
+    "test_subgroup_robustness": {
+      "error": "AdPredictorNN.compute_fairness_loss() takes 3 positional arguments but 4 were given"
+    }
+  },
+  "enhancements": {
+    "quantum_noise": true,
+    "differential_privacy": true,
+    "multimodal": true
+  },
+  "timestamp": "2025-02-26T14:47:50.120648"
+}
