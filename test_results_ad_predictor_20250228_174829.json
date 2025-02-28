@@ -1,0 +1,224 @@
+{
+  "tests": {
+    "test_pgd_robustness": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_fgsm_robustness": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_gradient_masking": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_quantum_noise_resilience": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_differential_privacy": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_multimodal_feature_extraction": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_intersectional_bias_tracking": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_cultural_context_adaptation": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_demographic_parity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_equal_opportunity": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_intersectional_fairness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_counterfactual_fairness": {
+      "passed": true,
+      "execution_time": null
+    },
+    "test_adaptive_fairness_regularization": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_causal_intervention": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_intersection_aware_calibration": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_temporal_fairness_drift": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_subgroup_robustness": {
+      "passed": false,
+      "execution_time": null
+    },
+    "test_session": {
+      "passed": true,
+      "execution_time": 2.502071
+    }
+  },
+  "metrics": {
+    "test_pgd_robustness": {
+      "clean_accuracy": 0.5299999713897705,
+      "adversarial_accuracy": 0.5299999713897705,
+      "robustness_score": 1.0,
+      "l2_perturbation": 0.41807037591934204,
+      "linf_perturbation": 0.158859521150589
+    },
+    "test_fgsm_robustness": {
+      "clean_accuracy": 0.3799999952316284,
+      "adversarial_accuracy": 0.3799999952316284,
+      "robustness_score": 1.0,
+      "l2_perturbation": 0.7876937985420227,
+      "linf_perturbation": 0.15000003576278687
+    },
+    "test_gradient_masking": {
+      "clean_accuracy": 0.6200000047683716,
+      "pgd_accuracy": 0.009999999776482582,
+      "random_accuracy": 0.5899999737739563,
+      "acc_difference": 0.5799999739974737
+    },
+    "test_quantum_noise_resilience": {
+      "clean_accuracy": 0.9739999771118164,
+      "noisy_accuracy": 0.9739999771118164,
+      "accuracy_difference": 0.0
+    },
+    "test_differential_privacy": {
+      "privacy_budget_history": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "final_privacy_budget": 0.0018295101634089191
+    },
+    "test_multimodal_feature_extraction": {
+      "feature_dimension": 256,
+      "n_samples": 10,
+      "text_features": 100,
+      "image_features": 512
+    },
+    "test_end_to_end_enhanced_pipeline": {
+      "training_losses": [
+        0.7307426333427429,
+        0.7255524396896362,
+        0.6418552994728088,
+        0.6258209347724915,
+        0.6269206404685974
+      ],
+      "privacy_budgets": [
+        0.0008181818181818183,
+        0.001157083823759805,
+        0.0014171324789199905,
+        0.0016363636363636365,
+        0.0018295101634089191
+      ],
+      "accuracies": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "test_intersectional_bias_tracking": {
+      "num_pairwise_intersections": 15,
+      "num_three_way_intersections": 1
+    },
+    "test_cultural_context_adaptation": {
+      "feature_dimension": 256,
+      "n_samples": 50,
+      "cultural_embedding_dim": 32,
+      "num_cultural_regions": 5,
+      "region_differences": {
+        "NA-SA": 0.019252628270442426,
+        "EU-NA": 0.021466771745060634,
+        "EU-SA": 0.01538525812750186,
+        "AS-NA": 0.019211436142772684,
+        "AS-EU": 0.018247845233009548,
+        "AS-SA": 0.01589875997466005,
+        "AF-NA": 0.01925593066603408,
+        "AF-EU": 0.02352497026030741,
+        "AF-AS": 0.014989291911713973,
+        "AF-SA": 0.020023992273736593
+      }
+    },
+    "test_demographic_parity": {
+      "gender_parity": 0.0010070204734802246,
+      "age_group_parity": 0.0018616318702697754,
+      "ethnicity_parity": 0.0034240782260894775,
+      "income_level_parity": 0.002360999584197998,
+      "location_parity": 0.002975553274154663
+    },
+    "test_equal_opportunity": {
+      "gender_equal_opp": 0.0383298397064209,
+      "age_group_equal_opp": 0.03618687391281128,
+      "ethnicity_equal_opp": 0.01479196548461914,
+      "income_level_equal_opp": 0.05404573678970337,
+      "location_equal_opp": 0.09059828519821167
+    },
+    "test_intersectional_fairness": {
+      "gender\u00c3\u2014income_level_parity": 0.3208597004413605,
+      "gender\u00c3\u2014location_parity": 0.32090142369270325,
+      "age_group\u00c3\u2014gender_parity": 0.3215291500091553,
+      "age_group\u00c3\u2014ethnicity_parity": 0.28068816661834717,
+      "age_group\u00c3\u2014income_level_parity": 0.29958564043045044,
+      "age_group\u00c3\u2014location_parity": 0.29239171743392944,
+      "ethnicity\u00c3\u2014gender_parity": 0.3175120949745178,
+      "ethnicity\u00c3\u2014income_level_parity": 0.2892845571041107,
+      "ethnicity\u00c3\u2014location_parity": 0.2601194381713867,
+      "income_level\u00c3\u2014location_parity": 0.2996956408023834,
+      "gender\u00c3\u2014age_group\u00c3\u2014ethnicity_parity": 0.32508599758148193,
+      "error": "Intersectional fairness violations detected: {'gender\u00c3\u2014income_level_parity': 0.3208597004413605, 'gender\u00c3\u2014location_parity': 0.32090142369270325, 'age_group\u00c3\u2014gender_parity': 0.3215291500091553, 'age_group\u00c3\u2014ethnicity_parity': 0.28068816661834717, 'age_group\u00c3\u2014income_level_parity': 0.29958564043045044, 'age_group\u00c3\u2014location_parity': 0.29239171743392944, 'ethnicity\u00c3\u2014gender_parity': 0.3175120949745178, 'ethnicity\u00c3\u2014income_level_parity': 0.2892845571041107, 'ethnicity\u00c3\u2014location_parity': 0.2601194381713867, 'income_level\u00c3\u2014location_parity': 0.2996956408023834, 'gender\u00c3\u2014age_group\u00c3\u2014ethnicity_parity': 0.32508599758148193}\nassert False"
+    },
+    "test_counterfactual_fairness": {
+      "gender_cf_diff": 0.004870279222726822,
+      "age_group_cf_diff": 0.005042115231355031,
+      "ethnicity_cf_diff": 0.004889897361397743,
+      "income_level_cf_diff": 0.004992328604062398,
+      "location_cf_diff": 0.004920852160453797
+    },
+    "test_adaptive_fairness_regularization": {
+      "error": "mat1 and mat2 shapes cannot be multiplied (1000x49 and 82x32)"
+    },
+    "test_causal_intervention": {
+      "error": "mat1 and mat2 shapes cannot be multiplied (800x49 and 82x32)"
+    },
+    "test_intersection_aware_calibration": {
+      "error": "mat1 and mat2 shapes cannot be multiplied (1000x49 and 82x32)"
+    },
+    "test_temporal_fairness_drift": {
+      "error": "mat1 and mat2 shapes cannot be multiplied (100x49 and 82x32)"
+    },
+    "test_subgroup_robustness": {
+      "error": "mat1 and mat2 shapes cannot be multiplied (142x49 and 82x32)"
+    }
+  },
+  "enhancements": {
+    "quantum_noise": true,
+    "differential_privacy": true,
+    "multimodal": true
+  },
+  "timestamp": "2025-02-28T17:48:22.988475"
+}
