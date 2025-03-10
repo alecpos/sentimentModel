@@ -1,0 +1,381 @@
+---
+Description: Standards for ethical ML and data privacy compliance
+Globs: app/**/*.py
+---
+
+# Ethics and Privacy Guidelines
+
+## Data Privacy
+- Never store personally identifiable information (PII) in model features
+- Apply appropriate anonymization to all user data
+- Implement data minimization principles
+- Document all data retention policies
+
+## Fairness and Bias
+- Test models for differential performance across demographics
+- Implement bias mitigation techniques for all models
+- Monitor fairness metrics over time
+- Document any remaining biases with mitigation plans
+
+## Transparency
+- Provide clear explanations for all model decisions
+- Document model limitations explicitly
+- Include confidence scores with all predictions
+- Make feature importance available for all predictions
+
+## Compliance
+- Ensure GDPR compliance for all European data
+- Implement CCPA requirements for California residents
+- Document legal basis for all data processing
+- Maintain comprehensive audit logs
+
+## Example
+```python
+# Good example - fairness assessment component
+class FairnessAssessor:
+    """Assess and mitigate bias in ML models for ad scoring.
+    
+    This component evaluates model fairness across different
+    demographic groups and recommends mitigation strategies.
+    
+    Attributes:
+        protected_attributes: List of protected attributes to check
+        fairness_metrics: Dictionary of fairness metrics to calculate
+        thresholds: Acceptable thresholds for fairness metrics
+    """
+    
+    def __init__(self, protected_attributes=None):
+        """Initialize the fairness assessor.
+        
+        Args:
+            protected_attributes: Optional list of protected attributes
+        """
+        self.protected_attributes = protected_attributes or [
+            "age_group", "gender", "location_type", "language"
+        ]
+        
+        self.fairness_metrics = {
+            "demographic_parity": self._demographic_parity,
+            "equal_opportunity": self._equal_opportunity,
+            "disparate_impact": self._disparate_impact
+        }
+        
+        self.thresholds = {
+            "demographic_parity_difference": 0.1,
+            "equal_opportunity_difference": 0.1,
+            "disparate_impact_ratio": 0.8  # Should be between 0.8 and 1.25
+        }
+    
+    def assess_fairness(self, predictions, actual_values, metadata):
+        """Assess model fairness across protected groups.
+        
+        Args:
+            predictions: Model predictions
+            actual_values: Ground truth values
+            metadata: DataFrame with demographic information
+            
+        Returns:
+            Dictionary with fairness assessment results
+        """
+        if len(predictions) != len(metadata):
+            raise ValueError("Predictions and metadata must have same length")
+            
+        assessment = {
+            "overall_fairness": True,
+            "protected_attributes": {},
+            "recommendations": []
+        }
+        
+        # Analyze each protected attribute
+        for attribute in self.protected_attributes:
+            if attribute not in metadata.columns:
+                assessment["protected_attributes"][attribute] = {
+                    "status": "skipped",
+                    "reason": "Attribute not found in metadata"
+                }
+                continue
+                
+            # Group data by attribute values
+            groups = {}
+            unique_values = metadata[attribute].unique()
+            
+            for value in unique_values:
+                group_indices = metadata[attribute] == value
+                groups[value] = {
+                    "predictions": predictions[group_indices],
+                    "actuals": actual_values[group_indices],
+                    "size": sum(group_indices)
+                }
+            
+            # Calculate fairness metrics
+            metric_results = {}
+            for metric_name, metric_func in self.fairness_metrics.items():
+                metric_results[metric_name] = metric_func(groups)
+            
+            # Evaluate fairness based on thresholds
+            attribute_fairness = True
+            violations = []
+            
+            if abs(metric_results["demographic_parity"]["difference"]) > self.thresholds["demographic_parity_difference"]:
+                attribute_fairness = False
+                violations.append({
+                    "metric": "demographic_parity",
+                    "value": metric_results["demographic_parity"]["difference"],
+                    "threshold": self.thresholds["demographic_parity_difference"]
+                })
+                
+            if abs(metric_results["equal_opportunity"]["difference"]) > self.thresholds["equal_opportunity_difference"]:
+                attribute_fairness = False
+                violations.append({
+                    "metric": "equal_opportunity",
+                    "value": metric_results["equal_opportunity"]["difference"],
+                    "threshold": self.thresholds["equal_opportunity_difference"]
+                })
+                
+            disparate_impact = metric_results["disparate_impact"]["ratio"]
+            if disparate_impact < self.thresholds["disparate_impact_ratio"] or disparate_impact > (1/self.thresholds["disparate_impact_ratio"]):
+                attribute_fairness = False
+                violations.append({
+                    "metric": "disparate_impact",
+                    "value": disparate_impact,
+                    "threshold": f"{self.thresholds['disparate_impact_ratio']} - {1/self.thresholds['disparate_impact_ratio']}"
+                })
+            
+            # Store results for this attribute
+            assessment["protected_attributes"][attribute] = {
+                "status": "fair" if attribute_fairness else "unfair",
+                "metrics": metric_results,
+                "violations": violations if not attribute_fairness else [],
+                "groups": {k: {"size": v["size"]} for k, v in groups.items()}
+            }
+            
+            # Update overall fairness
+            if not attribute_fairness:
+                assessment["overall_fairness"] = False
+                
+                # Add mitigation recommendations
+                if len(violations) > 0:
+                    primary_violation = violations[0]["metric"]
+                    recommendation = self._get_mitigation_recommendation(
+                        attribute, primary_violation, metric_results
+                    )
+                    assessment["recommendations"].append(recommendation)
+        
+        return assessment
+    
+    def _demographic_parity(self, groups):
+        """Calculate demographic parity difference.
+        
+        Demographic parity requires that the prediction rates
+        are the same across all protected groups.
+        
+        Args:
+            groups: Dictionary of groups with prediction data
+            
+        Returns:
+            Dictionary with demographic parity results
+        """
+        # Calculate prediction rates for each group
+        group_rates = {}
+        for group_name, group_data in groups.items():
+            # For binary classification
+            if len(set(group_data["predictions"])) <= 2:
+                # Calculate positive prediction rate (predictions of 1)
+                positive_rate = np.mean(group_data["predictions"])
+                group_rates[group_name] = positive_rate
+            # For regression tasks
+            else:
+                # Use mean prediction as the "rate"
+                group_rates[group_name] = np.mean(group_data["predictions"])
+        
+        # Find min and max rates
+        max_rate = max(group_rates.values())
+        min_rate = min(group_rates.values())
+        max_group = max(group_rates.items(), key=lambda x: x[1])[0]
+        min_group = min(group_rates.items(), key=lambda x: x[1])[0]
+        
+        # Calculate the difference
+        difference = max_rate - min_rate
+        
+        return {
+            "difference": difference,
+            "max_rate": max_rate,
+            "min_rate": min_rate,
+            "max_group": max_group,
+            "min_group": min_group,
+            "group_rates": group_rates
+        }
+    
+    def _equal_opportunity(self, groups):
+        """Calculate equal opportunity difference.
+        
+        Equal opportunity requires that the true positive rates
+        (recall) are the same across all protected groups.
+        
+        Args:
+            groups: Dictionary of groups with prediction and actual data
+            
+        Returns:
+            Dictionary with equal opportunity results
+        """
+        # Calculate true positive rates (recall) for each group
+        group_tpr = {}
+        for group_name, group_data in groups.items():
+            predictions = group_data["predictions"]
+            actuals = group_data["actuals"]
+            
+            # Skip groups with no positive examples (avoid divide by zero)
+            if sum(actuals > 0) == 0:
+                continue
+                
+            # Calculate true positive rate: TP / (TP + FN)
+            # Where TP = sum(actual=1 & pred=1) and (TP + FN) = sum(actual=1)
+            true_positives = sum((actuals > 0) & (predictions > 0))
+            actual_positives = sum(actuals > 0)
+            tpr = true_positives / actual_positives if actual_positives > 0 else 0
+            group_tpr[group_name] = tpr
+        
+        # If we couldn't calculate TPR for any groups, return null result
+        if not group_tpr:
+            return {
+                "difference": 0,
+                "explanation": "No groups had positive examples"
+            }
+        
+        # Find min and max TPR
+        max_tpr = max(group_tpr.values())
+        min_tpr = min(group_tpr.values())
+        max_group = max(group_tpr.items(), key=lambda x: x[1])[0]
+        min_group = min(group_tpr.items(), key=lambda x: x[1])[0]
+        
+        # Calculate the difference
+        difference = max_tpr - min_tpr
+        
+        return {
+            "difference": difference,
+            "max_tpr": max_tpr,
+            "min_tpr": min_tpr,
+            "max_group": max_group,
+            "min_group": min_group,
+            "group_tpr": group_tpr
+        }
+    
+    def _disparate_impact(self, groups):
+        """Calculate disparate impact ratio.
+        
+        Disparate impact measures the ratio between the most favored
+        group's positive prediction rate and the least favored group's rate.
+        Fair models should have this ratio close to 1.0.
+        
+        Args:
+            groups: Dictionary of groups with prediction data
+            
+        Returns:
+            Dictionary with disparate impact results
+        """
+        # Calculate positive prediction rates for each group
+        group_rates = {}
+        for group_name, group_data in groups.items():
+            # For binary classification
+            if len(set(group_data["predictions"])) <= 2:
+                # Calculate positive prediction rate (predictions of 1)
+                positive_rate = np.mean(group_data["predictions"])
+                group_rates[group_name] = positive_rate
+            # For regression tasks
+            else:
+                # Use proportion of predictions above the median as the "rate"
+                global_median = np.median([g["predictions"] for g in groups.values()])
+                positive_rate = np.mean(group_data["predictions"] > global_median)
+                group_rates[group_name] = positive_rate
+        
+        # Find groups with min and max rates
+        if not group_rates or max(group_rates.values()) == 0:
+            return {
+                "ratio": 1.0,
+                "explanation": "No positive predictions or empty groups"
+            }
+            
+        max_rate = max(group_rates.values())
+        min_rate = min(filter(lambda x: x > 0, group_rates.values()), default=max_rate/100)
+        max_group = max(group_rates.items(), key=lambda x: x[1])[0]
+        min_group = min(group_rates.items(), key=lambda x: x[1])[0]
+        
+        # Calculate the ratio (avoid divide by zero)
+        ratio = min_rate / max_rate if max_rate > 0 else 1.0
+        
+        return {
+            "ratio": ratio,
+            "max_rate": max_rate,
+            "min_rate": min_rate,
+            "max_group": max_group,
+            "min_group": min_group,
+            "group_rates": group_rates
+        }
+    
+    def _get_mitigation_recommendation(self, attribute, violation, metrics):
+        """Generate mitigation recommendation based on violation.
+        
+        Args:
+            attribute: The protected attribute with a fairness violation
+            violation: The type of fairness metric that was violated
+            metrics: The fairness metrics results
+            
+        Returns:
+            Dictionary with mitigation recommendation
+        """
+        if violation == "demographic_parity":
+            # Demographic parity violations may need reweighing
+            return {
+                "attribute": attribute,
+                "violation": violation,
+                "strategy": "reweighing",
+                "description": (
+                    f"Apply instance reweighing to balance prediction rates across "
+                    f"{attribute} groups. The '{metrics[violation]['max_group']}' group "
+                    f"receives predictions at a higher rate ({metrics[violation]['max_rate']:.2f}) "
+                    f"than the '{metrics[violation]['min_group']}' group ({metrics[violation]['min_rate']:.2f})."
+                ),
+                "implementation": "Use fairlearn.reductions.ExponentiatedGradient with a demographic parity constraint."
+            }
+        
+        elif violation == "equal_opportunity":
+            # Equal opportunity violations may need threshold adjustments
+            return {
+                "attribute": attribute,
+                "violation": violation,
+                "strategy": "threshold_adjustment",
+                "description": (
+                    f"Apply group-specific thresholds to equalize true positive rates across "
+                    f"{attribute} groups. The '{metrics[violation]['max_group']}' group has a higher "
+                    f"true positive rate ({metrics[violation]['max_tpr']:.2f}) than the "
+                    f"'{metrics[violation]['min_group']}' group ({metrics[violation]['min_tpr']:.2f})."
+                ),
+                "implementation": "Use fairlearn.postprocessing.ThresholdOptimizer with equalized_odds constraint."
+            }
+        
+        elif violation == "disparate_impact":
+            # Disparate impact violations may need adversarial debiasing
+            return {
+                "attribute": attribute,
+                "violation": violation,
+                "strategy": "adversarial_debiasing",
+                "description": (
+                    f"Apply adversarial debiasing to reduce the disparate impact across "
+                    f"{attribute} groups. The ratio between the least favored group "
+                    f"('{metrics[violation]['min_group']}') and most favored group "
+                    f"('{metrics[violation]['max_group']}') is {metrics[violation]['ratio']:.2f}, "
+                    f"which is outside the acceptable range."
+                ),
+                "implementation": "Train an adversarial model to predict protected attributes from model outputs."
+            }
+            
+        else:
+            # Default recommendation for other types of violations
+            return {
+                "attribute": attribute,
+                "violation": violation,
+                "strategy": "model_retraining",
+                "description": f"Retrain the model with fairness constraints for {attribute}.",
+                "implementation": "Use fairlearn.reductions with appropriate constraints."
+            }
+``` 

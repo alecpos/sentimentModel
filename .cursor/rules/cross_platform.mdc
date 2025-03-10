@@ -1,0 +1,138 @@
+---
+Description: Standards for ensuring compatibility across ad platforms
+Globs: app/platforms/**/*.py, app/integrations/**/*.py
+---
+
+# Cross-Platform Compatibility Standards
+
+## Data Normalization
+- Implement standardized schemas for cross-platform data
+- Create consistent naming conventions across all platforms
+- Document platform-specific quirks and limitations
+- Use explicit field mapping for all transformations
+
+## Platform Integration
+- Implement platform-specific error handling
+- Create abstraction layers for platform API differences
+- Rate-limit API calls according to platform requirements
+- Document authentication requirements for each platform
+
+## Feature Parity
+- Clearly mark platform-specific features
+- Implement graceful degradation for unsupported features
+- Use capability detection rather than platform detection
+- Test thoroughly across all supported platforms
+
+## Example
+```python
+# Good example - platform-agnostic ad data adapter
+class AdPlatformAdapter:
+    """Adapter for normalizing data across different ad platforms.
+    
+    This adapter handles the transformation of platform-specific ad data
+    into a standardized format for consistent processing.
+    
+    Supported platforms:
+    - Google Ads
+    - Facebook Ads
+    - Amazon Advertising
+    - TikTok Ads
+    """
+    
+    # Platform-specific field mappings
+    FIELD_MAPPINGS = {
+        "google": {
+            "ad_id": "id",
+            "headline": "headline_text",
+            "description": "description_text",
+            "impressions": "impressions",
+            "clicks": "clicks",
+            "cost": "cost_micros",
+            "conversions": "conversions",
+        },
+        "facebook": {
+            "ad_id": "ad_id",
+            "headline": "title",
+            "description": "body",
+            "impressions": "impressions",
+            "clicks": "clicks",
+            "cost": "spend",
+            "conversions": "actions",
+        },
+        # Additional platform mappings...
+    }
+    
+    # Platform-specific data transformations
+    TRANSFORMATIONS = {
+        "google": {
+            "cost": lambda x: float(x) / 1000000,  # Convert micros to dollars
+            "conversions": lambda x: float(x),
+        },
+        "facebook": {
+            "conversions": lambda x: sum([a.get('value', 0) for a in x]) if isinstance(x, list) else 0,
+        },
+        # Additional transformations...
+    }
+    
+    def __init__(self, default_platform=None):
+        """Initialize the adapter with optional default platform."""
+        self.default_platform = default_platform
+        self.supported_platforms = list(self.FIELD_MAPPINGS.keys())
+        
+    def normalize(self, data, platform=None):
+        """Normalize platform-specific data to standardized format.
+        
+        Args:
+            data: Raw platform data
+            platform: Platform identifier (google, facebook, etc.)
+            
+        Returns:
+            Normalized data dictionary
+            
+        Raises:
+            ValueError: If platform is not supported or cannot be detected
+        """
+        # Determine platform
+        platform = platform or self.default_platform or self._detect_platform(data)
+        
+        if platform not in self.supported_platforms:
+            raise ValueError(f"Unsupported platform: {platform}")
+            
+        # Get field mappings and transformations
+        mappings = self.FIELD_MAPPINGS[platform]
+        transformations = self.TRANSFORMATIONS.get(platform, {})
+        
+        # Create normalized data
+        normalized = {}
+        for standard_field, platform_field in mappings.items():
+            if platform_field in data:
+                value = data[platform_field]
+                
+                # Apply transformation if exists
+                if standard_field in transformations:
+                    try:
+                        value = transformations[standard_field](value)
+                    except Exception as e:
+                        logger.warning(f"Transformation error for {standard_field}: {e}")
+                        
+                normalized[standard_field] = value
+            else:
+                # Use None for missing fields
+                normalized[standard_field] = None
+                
+        # Add metadata
+        normalized["platform"] = platform
+        normalized["normalized_timestamp"] = datetime.now().isoformat()
+        
+        return normalized
+        
+    def _detect_platform(self, data):
+        """Attempt to detect platform from data structure."""
+        # Simple heuristic detection based on field presence
+        if "headline_text" in data and "cost_micros" in data:
+            return "google"
+        elif "title" in data and "body" in data and "spend" in data:
+            return "facebook"
+        # Additional detection logic...
+        
+        raise ValueError("Could not detect platform from data structure") 

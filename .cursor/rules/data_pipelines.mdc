@@ -1,0 +1,45 @@
+---
+Description: Standards for data ingestion and processing pipelines
+Globs: app/pipelines/**/*.py, app/etl/**/*.py
+---
+
+# Data Pipeline Standards
+
+## Architecture
+- Follow Extract-Transform-Load pattern
+- Implement idempotent processing
+- Include data validation at each stage
+- Provide clear logging of processing steps
+
+## Error Handling
+- Gracefully handle API timeouts and failures
+- Implement circuit breakers for external dependencies
+- Maintain transaction logs for recovery
+- Alert on data quality issues
+
+## Performance
+- Implement batching for large datasets
+- Use appropriate parallelization
+- Cache frequently accessed reference data
+- Monitor memory usage for large operations
+
+## Examples
+```python
+# Good example - validation and error handling
+def process_ad_data(data_source):
+    try:
+        # Validate input data
+        validate_schema(data_source, AD_DATA_SCHEMA)
+        
+        # Process with appropriate batching
+        for batch in create_batches(data_source, batch_size=1000):
+            transformed_batch = transform_ad_data(batch)
+            store_processed_data(transformed_batch)
+            
+        return ProcessingResult(success=True, records_processed=len(data_source))
+    except SchemaValidationError as e:
+        log_error("Schema validation failed", error=e)
+        return ProcessingResult(success=False, error="Invalid data format")
+    except ProcessingError as e:
+        log_error("Processing failed", error=e)
+        return ProcessingResult(success=False, error=str(e)) 

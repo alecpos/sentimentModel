@@ -1,0 +1,143 @@
+---
+Description: Standards for data visualization and results presentation
+Globs: app/visualization/**/*.py, app/reports/**/*.py, app/dashboards/**/*.py
+---
+
+# Visualization Standards
+
+## Chart Design
+- Use consistent color schemes across all visualizations
+- Implement responsive designs for all chart types
+- Apply proper axis labels and titles
+- Include data sources and timestamp information
+
+## Performance Dashboards
+- Create hierarchical dashboards (overview to detail)
+- Implement drill-down capabilities for exploration
+- Use appropriate chart types for different metrics
+- Include filtering and comparison features
+
+## Model Insights
+- Visualize feature importance for all models
+- Create confusion matrices for classification tasks
+- Show prediction distributions for regression tasks
+- Implement SHAP value visualizations for local and global explanations
+
+## Ad Performance Visualization
+- Use standardized metrics across platforms
+- Implement trend visualizations with appropriate time scales
+- Highlight anomalies and significant changes
+- Include benchmark comparisons
+
+## Example
+```python
+# Good example - comprehensive visualization function
+def create_ad_performance_dashboard(ad_data, timeframe="last_30_days", comparison=None):
+    """Create a comprehensive ad performance dashboard.
+    
+    Args:
+        ad_data: DataFrame containing ad performance data
+        timeframe: Time period to visualize
+        comparison: Optional comparison period or benchmark
+        
+    Returns:
+        Dashboard object with multiple visualizations
+    """
+    # Validate inputs
+    if ad_data is None or ad_data.empty:
+        raise ValueError("Ad data cannot be empty")
+        
+    # Filter data for timeframe
+    filtered_data = filter_by_timeframe(ad_data, timeframe)
+    
+    # Create dashboard object
+    dashboard = Dashboard(title=f"Ad Performance Dashboard - {timeframe}")
+    
+    # Add key metrics summary
+    metrics_panel = MetricsPanel()
+    metrics_panel.add_metric("Total Impressions", filtered_data["impressions"].sum())
+    metrics_panel.add_metric("Total Clicks", filtered_data["clicks"].sum())
+    metrics_panel.add_metric("Average CTR", filtered_data["clicks"].sum() / filtered_data["impressions"].sum())
+    metrics_panel.add_metric("Total Cost", f"${filtered_data['cost'].sum():.2f}")
+    metrics_panel.add_metric("Average CPC", f"${filtered_data['cost'].sum() / filtered_data['clicks'].sum():.2f}")
+    metrics_panel.add_metric("Total Conversions", filtered_data["conversions"].sum())
+    dashboard.add_component(metrics_panel)
+    
+    # Add time series chart
+    time_series = TimeSeriesChart(
+        title="Performance Over Time",
+        x_label="Date",
+        y_label="Count",
+        height=300
+    )
+    time_series.add_series("Impressions", filtered_data.groupby("date")["impressions"].sum(), color="#4285F4")
+    time_series.add_series("Clicks", filtered_data.groupby("date")["clicks"].sum(), color="#34A853")
+    time_series.add_series("Conversions", filtered_data.groupby("date")["conversions"].sum(), color="#EA4335")
+    dashboard.add_component(time_series)
+    
+    # Add performance breakdown by ad type
+    ad_type_breakdown = BarChart(
+        title="Performance by Ad Type",
+        x_label="Ad Type",
+        y_label="CTR (%)",
+        height=250
+    )
+    ad_type_data = filtered_data.groupby("ad_type").agg({
+        "impressions": "sum",
+        "clicks": "sum"
+    })
+    ad_type_data["ctr"] = ad_type_data["clicks"] / ad_type_data["impressions"] * 100
+    ad_type_breakdown.add_data(ad_type_data["ctr"])
+    dashboard.add_component(ad_type_breakdown)
+    
+    # Add score prediction correlation
+    if "predicted_score" in filtered_data.columns and "actual_performance" in filtered_data.columns:
+        correlation = ScatterPlot(
+            title="Predicted Score vs. Actual Performance",
+            x_label="Predicted Score",
+            y_label="Actual Performance",
+            height=250
+        )
+        correlation.add_data(
+            x=filtered_data["predicted_score"],
+            y=filtered_data["actual_performance"]
+        )
+        correlation.add_trend_line()
+        dashboard.add_component(correlation)
+    
+    # Add comparison if provided
+    if comparison:
+        comparison_data = filter_by_timeframe(ad_data, comparison)
+        comparison_chart = ComparisonChart(
+            title=f"Performance Comparison: {timeframe} vs {comparison}",
+            categories=["Impressions", "Clicks", "Conversions", "Cost"],
+            height=250
+        )
+        current_metrics = [
+            filtered_data["impressions"].sum(),
+            filtered_data["clicks"].sum(),
+            filtered_data["conversions"].sum(),
+            filtered_data["cost"].sum()
+        ]
+        comparison_metrics = [
+            comparison_data["impressions"].sum(),
+            comparison_data["clicks"].sum(),
+            comparison_data["conversions"].sum(),
+            comparison_data["cost"].sum()
+        ]
+        comparison_chart.add_data(current_metrics, comparison_metrics)
+        dashboard.add_component(comparison_chart)
+    
+    # Add data table with top performing ads
+    top_ads_table = DataTable(
+        title="Top Performing Ads",
+        height=300
+    )
+    top_ads = filtered_data.sort_values("conversions", ascending=False).head(10)
+    top_ads_table.add_data(top_ads[["ad_id", "headline", "impressions", "clicks", "conversions", "cost"]])
+    dashboard.add_component(top_ads_table)
+    
+    # Add footer with data source and timestamp
+    dashboard.add_footer(f"Data source: Ad Performance Database | Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    
+    return dashboard 

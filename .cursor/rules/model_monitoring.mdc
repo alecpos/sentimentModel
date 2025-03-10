@@ -1,0 +1,487 @@
+---
+Description: Standards for ongoing model monitoring and maintenance
+Globs: app/monitoring/**/*.py, app/ml/monitoring/**/*.py
+---
+
+# Model Monitoring Standards
+
+## Performance Tracking
+- Implement automated performance metrics calculation
+- Track metrics over time with appropriate granularity
+- Set up alerting for significant performance degradation
+- Document baseline performance for all models
+
+## Data Drift Detection
+- Monitor feature distributions for significant changes
+- Implement statistical tests for distribution shifts
+- Track prediction distribution changes over time
+- Maintain feature correlation stability monitoring
+
+## Model Health Checks
+- Schedule regular model health assessments
+- Implement A/B testing framework for model updates
+- Track inference latency and resource utilization
+- Monitor edge case performance specifically
+
+## Retraining Protocols
+- Define clear triggers for model retraining
+- Implement automated dataset creation for retraining
+- Maintain reproducible training pipelines
+- Document all model version transitions
+
+## Example
+```python
+# Good example - comprehensive model monitor
+class AdScoreModelMonitor:
+    """Monitor ad score model performance and health.
+    
+    This monitor tracks performance metrics, detects data drift,
+    and triggers alerts when necessary.
+    
+    Attributes:
+        model_id: Identifier for the monitored model
+        metrics_store: Connection to metrics storage
+        alert_manager: System for sending alerts
+        baseline_metrics: Baseline performance metrics
+    """
+    
+    def __init__(self, model_id, baseline_metrics=None):
+        """Initialize the model monitor.
+        
+        Args:
+            model_id: Identifier for the model to monitor
+            baseline_metrics: Optional baseline metrics dictionary
+        """
+        self.model_id = model_id
+        self.metrics_store = MetricsStore()
+        self.alert_manager = AlertManager()
+        
+        # Load baseline metrics from store if not provided
+        self.baseline_metrics = baseline_metrics or self.metrics_store.get_baseline(model_id)
+        
+        # Define drift detection thresholds
+        self.drift_thresholds = {
+            "kl_divergence": 0.2,
+            "psi": 0.25,
+            "feature_correlation_change": 0.15,
+            "performance_degradation": 0.1
+        }
+        
+    def check_model_health(self, recent_data, predictions, actuals=None):
+        """Perform a comprehensive model health check.
+        
+        Args:
+            recent_data: Recent feature data used for predictions
+            predictions: Model predictions on recent data
+            actuals: Optional actual values for performance calculation
+            
+        Returns:
+            Health report dictionary with status and findings
+        """
+        health_report = {
+            "model_id": self.model_id,
+            "timestamp": datetime.now().isoformat(),
+            "status": "healthy",
+            "findings": [],
+            "metrics": {}
+        }
+        
+        # Check 1: Data drift detection
+        drift_results = self.detect_data_drift(recent_data)
+        if drift_results["drift_detected"]:
+            health_report["status"] = "warning"
+            health_report["findings"].append({
+                "type": "data_drift",
+                "severity": "medium",
+                "description": f"Data drift detected in {len(drift_results['drifted_features'])} features: " +
+                               f"{', '.join(drift_results['drifted_features'][:3])}..."
+            })
+        health_report["metrics"]["drift"] = drift_results
+        
+        # Check 2: Prediction distribution analysis
+        pred_dist = self.analyze_prediction_distribution(predictions)
+        if pred_dist["distribution_shift"]:
+            health_report["status"] = "warning"
+            health_report["findings"].append({
+                "type": "prediction_distribution_shift",
+                "severity": "medium",
+                "description": "Significant shift in prediction distribution detected."
+            })
+        health_report["metrics"]["prediction_distribution"] = pred_dist
+        
+        # Check 3: Performance metrics (if actuals provided)
+        if actuals is not None:
+            perf_metrics = self.calculate_performance_metrics(predictions, actuals)
+            degradation = self.check_performance_degradation(perf_metrics)
+            
+            if degradation["significant_degradation"]:
+                health_report["status"] = "critical"
+                health_report["findings"].append({
+                    "type": "performance_degradation",
+                    "severity": "high",
+                    "description": f"Model performance degraded by {degradation['degradation_percent']:.1f}% " +
+                                   f"on {degradation['degraded_metrics_count']} metrics."
+                })
+            health_report["metrics"]["performance"] = perf_metrics
+        
+        # Check 4: Resource utilization
+        resource_metrics = self.get_resource_utilization()
+        if resource_metrics["high_utilization"]:
+            health_report["findings"].append({
+                "type": "resource_utilization",
+                "severity": "low",
+                "description": f"High resource utilization detected: {resource_metrics['high_resource']}."
+            })
+        health_report["metrics"]["resources"] = resource_metrics
+        
+        # Store health check results
+        self.metrics_store.store_health_check(self.model_id, health_report)
+        
+        # Send alerts if needed
+        if health_report["status"] in ["warning", "critical"]:
+            self.alert_manager.send_alert(
+                level=health_report["status"],
+                model_id=self.model_id,
+                findings=health_report["findings"]
+            )
+        
+        return health_report
+        
+    def detect_data_drift(self, recent_data):
+        """Detect drift in feature distributions.
+        
+        Args:
+            recent_data: DataFrame with recent feature data
+            
+        Returns:
+            Dictionary with drift detection results
+        """
+        # Get reference distribution from baseline
+        baseline_distributions = self.metrics_store.get_feature_distributions(self.model_id)
+        
+        drift_results = {
+            "drift_detected": False,
+            "drifted_features": [],
+            "feature_metrics": {}
+        }
+        
+        # Check each feature for drift
+        for feature in recent_data.columns:
+            if feature in baseline_distributions:
+                # Calculate distribution distance metrics
+                kl_div = calculate_kl_divergence(
+                    baseline_distributions[feature],
+                    recent_data[feature]
+                )
+                psi = calculate_psi(
+                    baseline_distributions[feature],
+                    recent_data[feature]
+                )
+                
+                drift_results["feature_metrics"][feature] = {
+                    "kl_divergence": kl_div,
+                    "psi": psi,
+                    "drift_detected": (kl_div > self.drift_thresholds["kl_divergence"] or 
+                                      psi > self.drift_thresholds["psi"])
+                }
+                
+                if drift_results["feature_metrics"][feature]["drift_detected"]:
+                    drift_results["drifted_features"].append(feature)
+        
+        drift_results["drift_detected"] = len(drift_results["drifted_features"]) > 0
+        return drift_results
+    
+    def analyze_prediction_distribution(self, predictions):
+        """Analyze the distribution of model predictions for shifts.
+        
+        Args:
+            predictions: Array of model predictions
+            
+        Returns:
+            Dictionary with prediction distribution analysis
+        """
+        # Get baseline prediction distribution
+        baseline_dist = self.metrics_store.get_prediction_distribution(self.model_id)
+        
+        # Calculate basic statistics for current predictions
+        current_stats = {
+            "mean": float(np.mean(predictions)),
+            "median": float(np.median(predictions)),
+            "std": float(np.std(predictions)),
+            "min": float(np.min(predictions)),
+            "max": float(np.max(predictions)),
+            "q1": float(np.percentile(predictions, 25)),
+            "q3": float(np.percentile(predictions, 75))
+        }
+        
+        # Calculate distribution similarity metrics
+        js_divergence = calculate_js_divergence(
+            baseline_dist["histogram"]["counts"],
+            np.histogram(predictions, bins=baseline_dist["histogram"]["bins"])[0]
+        )
+        
+        # Determine if there's a significant distribution shift
+        distribution_shift = js_divergence > self.drift_thresholds["kl_divergence"]
+        
+        # Calculate percentage change in key statistics
+        stat_changes = {}
+        for stat in ["mean", "median", "std"]:
+            if baseline_dist["stats"][stat] != 0:
+                pct_change = (current_stats[stat] - baseline_dist["stats"][stat]) / baseline_dist["stats"][stat] * 100
+                stat_changes[stat] = float(pct_change)
+                
+                # Also flag large statistical changes as distribution shifts
+                if abs(pct_change) > 15:  # 15% change in any key statistic
+                    distribution_shift = True
+        
+        # Create current histogram for comparison
+        hist_counts, hist_bins = np.histogram(predictions, bins=10)
+        current_hist = {
+            "counts": hist_counts.tolist(),
+            "bins": hist_bins.tolist()
+        }
+        
+        return {
+            "distribution_shift": distribution_shift,
+            "js_divergence": js_divergence,
+            "stat_changes": stat_changes,
+            "current_stats": current_stats,
+            "baseline_stats": baseline_dist["stats"],
+            "current_histogram": current_hist
+        }
+    
+    def calculate_performance_metrics(self, predictions, actuals):
+        """Calculate performance metrics based on predictions and actuals.
+        
+        Args:
+            predictions: Model predictions
+            actuals: Actual values
+            
+        Returns:
+            Dictionary of performance metrics
+        """
+        # For regression tasks (ad score is typically regression)
+        metrics = {
+            "mse": float(np.mean((predictions - actuals) ** 2)),
+            "rmse": float(np.sqrt(np.mean((predictions - actuals) ** 2))),
+            "mae": float(np.mean(np.abs(predictions - actuals))),
+            "r2": float(1 - np.sum((actuals - predictions) ** 2) / np.sum((actuals - np.mean(actuals)) ** 2))
+        }
+        
+        # Calculate performance on different segments
+        # Ad scoring often cares about performance in high/medium/low ranges
+        high_mask = actuals > np.percentile(actuals, 67)
+        medium_mask = (actuals <= np.percentile(actuals, 67)) & (actuals > np.percentile(actuals, 33))
+        low_mask = actuals <= np.percentile(actuals, 33)
+        
+        segments = {
+            "high_value": {
+                "rmse": float(np.sqrt(np.mean((predictions[high_mask] - actuals[high_mask]) ** 2))) 
+                         if np.any(high_mask) else None,
+                "count": int(np.sum(high_mask))
+            },
+            "medium_value": {
+                "rmse": float(np.sqrt(np.mean((predictions[medium_mask] - actuals[medium_mask]) ** 2)))
+                         if np.any(medium_mask) else None,
+                "count": int(np.sum(medium_mask))
+            },
+            "low_value": {
+                "rmse": float(np.sqrt(np.mean((predictions[low_mask] - actuals[low_mask]) ** 2)))
+                         if np.any(low_mask) else None,
+                "count": int(np.sum(low_mask))
+            }
+        }
+        
+        # Add error distribution metrics
+        errors = predictions - actuals
+        error_dist = {
+            "mean": float(np.mean(errors)),
+            "std": float(np.std(errors)),
+            "median": float(np.median(errors)),
+            "q1": float(np.percentile(errors, 25)),
+            "q3": float(np.percentile(errors, 75)),
+            "min": float(np.min(errors)),
+            "max": float(np.max(errors))
+        }
+        
+        return {
+            "overall": metrics,
+            "segments": segments,
+            "error_distribution": error_dist,
+            "sample_size": len(predictions)
+        }
+    
+    def check_performance_degradation(self, current_metrics):
+        """Check if there's significant performance degradation compared to baseline.
+        
+        Args:
+            current_metrics: Current performance metrics
+            
+        Returns:
+            Dictionary with degradation assessment
+        """
+        baseline_metrics = self.baseline_metrics.get("performance", {}).get("overall", {})
+        if not baseline_metrics:
+            return {
+                "significant_degradation": False,
+                "reason": "No baseline metrics available for comparison"
+            }
+        
+        # Metrics where higher is better (e.g., R²)
+        higher_better = ["r2"]
+        
+        # Metrics where lower is better (e.g., RMSE, MSE, MAE)
+        lower_better = ["rmse", "mse", "mae"]
+        
+        # Count how many metrics degraded and by how much
+        degraded_metrics = []
+        improvement_metrics = []
+        degradation_percentages = []
+        
+        for metric in higher_better:
+            if metric in current_metrics["overall"] and metric in baseline_metrics:
+                current = current_metrics["overall"][metric]
+                baseline = baseline_metrics[metric]
+                
+                if baseline > 0:  # Avoid division by zero
+                    pct_change = (current - baseline) / baseline * 100
+                    if current < baseline:  # Degradation for higher-better metrics
+                        degraded_metrics.append(metric)
+                        degradation_percentages.append(abs(pct_change))
+                    else:
+                        improvement_metrics.append(metric)
+        
+        for metric in lower_better:
+            if metric in current_metrics["overall"] and metric in baseline_metrics:
+                current = current_metrics["overall"][metric]
+                baseline = baseline_metrics[metric]
+                
+                if baseline > 0:  # Avoid division by zero
+                    pct_change = (current - baseline) / baseline * 100
+                    if current > baseline:  # Degradation for lower-better metrics
+                        degraded_metrics.append(metric)
+                        degradation_percentages.append(pct_change)
+                    else:
+                        improvement_metrics.append(metric)
+        
+        # Calculate average degradation percentage
+        avg_degradation = np.mean(degradation_percentages) if degradation_percentages else 0
+        
+        # Determine if there's significant degradation
+        # This is true if degradation exceeds our threshold AND there are more degraded metrics than improved
+        significant_degradation = (
+            avg_degradation > self.drift_thresholds["performance_degradation"] * 100 and
+            len(degraded_metrics) > len(improvement_metrics)
+        )
+        
+        return {
+            "significant_degradation": significant_degradation,
+            "degraded_metrics": degraded_metrics,
+            "improved_metrics": improvement_metrics,
+            "degradation_percent": avg_degradation,
+            "degraded_metrics_count": len(degraded_metrics),
+            "threshold_percent": self.drift_thresholds["performance_degradation"] * 100
+        }
+    
+    def get_resource_utilization(self):
+        """Get resource utilization metrics for model inference.
+        
+        Returns:
+            Dictionary with resource utilization metrics
+        """
+        # This would typically connect to a monitoring system
+        # like CloudWatch, Prometheus, or custom metrics store
+        resource_metrics = self.metrics_store.get_resource_metrics(self.model_id)
+        
+        # Define thresholds for high utilization
+        utilization_thresholds = {
+            "cpu_percent": 85,
+            "memory_percent": 80,
+            "gpu_memory_percent": 90,
+            "latency_p95_ms": 250  # For ad scoring, responses should be fast
+        }
+        
+        # Check for high utilization
+        high_utilization = False
+        high_resource = []
+        
+        for resource, threshold in utilization_thresholds.items():
+            if resource in resource_metrics and resource_metrics[resource] > threshold:
+                high_utilization = True
+                high_resource.append(f"{resource} ({resource_metrics[resource]:.1f})")
+        
+        return {
+            "metrics": resource_metrics,
+            "high_utilization": high_utilization,
+            "high_resource": ", ".join(high_resource) if high_resource else None,
+            "thresholds": utilization_thresholds
+        }
+        
+    def schedule_retraining(self, drift_results, performance_results):
+        """Determine if model retraining should be scheduled.
+        
+        Args:
+            drift_results: Results from data drift detection
+            performance_results: Results from performance evaluation
+            
+        Returns:
+            Dictionary with retraining decision
+        """
+        should_retrain = False
+        reasons = []
+        urgency = "low"
+        
+        # Check data drift triggers
+        if drift_results["drift_detected"]:
+            should_retrain = True
+            reasons.append(f"Data drift detected in {len(drift_results['drifted_features'])} features")
+            
+            # If more than 30% of features have drifted, this is high urgency
+            if len(drift_results["drifted_features"]) / len(drift_results["feature_metrics"]) > 0.3:
+                urgency = "high"
+        
+        # Check performance degradation triggers
+        if performance_results.get("significant_degradation", False):
+            should_retrain = True
+            reasons.append(f"Performance degraded by {performance_results['degradation_percent']:.1f}%")
+            
+            # If degradation is more than 20%, this is high urgency
+            if performance_results["degradation_percent"] > 20:
+                urgency = "high"
+        
+        # Check time-based triggers (e.g., last retraining was more than 30 days ago)
+        last_training_date = self.metrics_store.get_last_training_date(self.model_id)
+        if last_training_date:
+            days_since_training = (datetime.now() - last_training_date).days
+            if days_since_training > 30:
+                should_retrain = True
+                reasons.append(f"Model age exceeds 30 days (current age: {days_since_training} days)")
+                
+                # If more than 90 days, this is high urgency
+                if days_since_training > 90:
+                    urgency = "high"
+        
+        retraining_decision = {
+            "should_retrain": should_retrain,
+            "reasons": reasons,
+            "urgency": urgency
+        }
+        
+        # If retraining is recommended, schedule it
+        if should_retrain:
+            self.metrics_store.schedule_retraining(
+                self.model_id, 
+                urgency=urgency,
+                reasons=reasons
+            )
+            
+            # For high urgency, also send an alert
+            if urgency == "high":
+                self.alert_manager.send_alert(
+                    level="warning",
+                    model_id=self.model_id,
+                    message=f"Urgent model retraining required: {', '.join(reasons)}"
+                )
+        
+        return retraining_decision
+``` 

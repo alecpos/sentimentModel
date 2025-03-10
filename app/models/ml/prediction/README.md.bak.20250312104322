@@ -1,0 +1,185 @@
+# ML Prediction Models
+
+This directory contains the machine learning prediction models for the WITHIN ML Prediction System. These models are designed to provide accurate predictions for various advertising metrics with emphasis on reliability, fairness, and explainability.
+
+## Models Overview
+
+### Ad Score Predictor (`ad_score_predictor.py`)
+
+The `AdScorePredictor` is a sophisticated multi-modal model that predicts ad performance scores. It combines neural networks and gradient boosting for robust predictions, with built-in calibration and fairness monitoring.
+
+#### Architecture
+
+The model uses a hybrid architecture:
+- **Feature Processing**: Multi-modal feature extraction for text, images, and numerical data
+- **Tree-based Model**: XGBoost for tabular data
+- **Neural Network**: Deep neural network with attention mechanisms
+- **Ensemble**: Calibrated combination of tree and neural network predictions
+- **Monitoring**: Built-in performance tracking and fairness evaluation
+
+#### Components
+
+- **CrossModalAttention**: Attention mechanism for combining text and image features
+- **MultiModalFeatureExtractor**: Processes different types of input features
+- **QuantumNoiseLayer**: Adds regularization through quantum-inspired noise
+- **SplineCalibrator**: Calibrates raw predictions using monotonic splines
+- **HierarchicalCalibrator**: Region-specific calibration
+- **AdPredictorNN**: Neural network component for deep feature extraction
+- **PerformanceMonitor**: Tracks performance metrics during training and inference
+- **CalibratedEnsemble**: Combines predictions from tree and neural models
+- **DPTrainingValidator**: Validates and enforces differential privacy constraints
+- **GeospatialCalibrator**: Applies location-specific calibration adjustments
+
+#### Key Methods
+
+| Method | Description |
+|--------|-------------|
+| `__init__(input_dim=None)` | Initializes the predictor with optional input dimension |
+| `fit(X, y)` | Trains both tree-based and neural network models |
+| `predict(X)` | Generates calibrated predictions for input data |
+| `_build_feature_pipeline(X)` | Creates a preprocessing pipeline for input features |
+| `_train_tree_model(X, y)` | Trains the XGBoost component |
+| `_train_torch_model(X, y)` | Trains the neural network component |
+
+#### Usage Example
+
+```python
+from app.models.ml.prediction import AdScorePredictor
+
+# Initialize predictor
+predictor = AdScorePredictor()
+
+# Prepare sample data
+data = {
+    'text_features': ['Compelling ad copy with call to action'],
+    'numeric_features': [0.1, 0.5, 0.3, 0.7],
+    'categorical_features': ['fashion', 'mobile'],
+    'image_features': [image_tensor]  # Optional
+}
+
+# Train the model
+predictor.fit(X_train, y_train)
+
+# Make predictions
+scores = predictor.predict(data)
+
+# Get feature importance
+importance = predictor.feature_importance()
+```
+
+### Anomaly Detector (`anomaly_detector.py`)
+
+The `AnomalyDetector` identifies unusual patterns in advertising data that may indicate issues or opportunities.
+
+#### Key Features
+
+- **Unsupervised Detection**: Identifies anomalies without requiring labeled data
+- **Multi-dimensional Analysis**: Examines multiple aspects of advertising performance
+- **Configurable Sensitivity**: Adjustable thresholds for anomaly detection
+- **Explainable Results**: Provides reasons for flagged anomalies
+
+#### Usage Example
+
+```python
+from app.models.ml.prediction import AnomalyDetector
+
+# Initialize detector
+detector = AnomalyDetector()
+
+# Train on historical data
+detector.fit(historical_data)
+
+# Detect anomalies
+anomalies = detector.detect(new_data)
+
+# Get explanation for anomalies
+explanations = detector.explain_anomalies(anomalies)
+```
+
+### Account Health Predictor (`account_health_predictor.py`)
+
+The `AccountHealthPredictor` assesses the overall health of advertising accounts by analyzing performance across multiple dimensions.
+
+#### Key Features
+
+- **Composite Health Score**: Combines multiple metrics into a single health assessment
+- **Trend Analysis**: Evaluates performance trajectories over time
+- **Risk Identification**: Flags accounts at risk of performance decline
+- **Prescriptive Insights**: Suggests actions to improve account health
+
+#### Usage Example
+
+```python
+from app.models.ml.prediction import AccountHealthPredictor
+
+# Initialize health predictor
+health_predictor = AccountHealthPredictor()
+
+# Train on historical account data
+health_predictor.fit(account_history)
+
+# Evaluate current accounts
+health_scores = health_predictor.predict(current_accounts)
+
+# Get recommendations
+recommendations = health_predictor.get_recommendations(account_id)
+```
+
+## Base Classes
+
+### BaseMLModel (`base.py`)
+
+The `BaseMLModel` class defines the interface that all ML models implement:
+
+```python
+class BaseMLModel:
+    """Base class for all ML models in the system."""
+    
+    def fit(self, X, y):
+        """Train the model on input data."""
+        raise NotImplementedError
+        
+    def predict(self, X):
+        """Generate predictions for input data."""
+        raise NotImplementedError
+        
+    def evaluate(self, X, y):
+        """Evaluate model performance on input data."""
+        raise NotImplementedError
+```
+
+## Training Utilities (`training.py`)
+
+The `training.py` module provides common training functions used across different models:
+
+- **Learning rate scheduling**
+- **Early stopping**
+- **Cross-validation**
+- **Hyperparameter optimization**
+- **Model persistence**
+
+## Development Guidelines
+
+When enhancing or creating prediction models:
+
+1. **Inherit from BaseMLModel**: Ensure consistent interface
+2. **Document with Google-style docstrings**: Maintain documentation standards
+3. **Implement comprehensive type hints**: Follow strict typing principles
+4. **Add unit tests**: Write tests for all functionality
+5. **Include example usage**: Demonstrate how to use the model
+6. **Add fairness metrics**: Evaluate models for demographic parity and equal opportunity
+7. **Profile performance**: Keep inference time under 300ms
+8. **Monitor memory usage**: Stay within 2GB memory budget
+9. **Validate data inputs**: Check data types, ranges, and handle edge cases
+10. **Provide explainability**: Include SHAP or LIME feature importance
+
+## Performance Optimization
+
+The prediction models use several optimization techniques:
+
+- **PyTorch compilation with `max-autotune`**
+- **Mixed precision (BF16)**
+- **Activation checkpointing**
+- **Gradient accumulation for large batches**
+- **INT8 dynamic quantization**
+- **High-precision float32 matrix multiplication** 

@@ -1,0 +1,171 @@
+{
+  "name": "Ad Performance Dashboard",
+  "description": "Comprehensive view of advertising performance across platforms",
+  "layout": "grid",
+  "widgets": [
+    {
+      "id": "widget_1",
+      "type": "metric_card",
+      "title": "Total Ad Spend",
+      "position": {"x": 0, "y": 0, "width": 4, "height": 2},
+      "data_source": "ad_performance",
+      "settings": {
+        "metric": "total_spend",
+        "comparison_period": "previous_period",
+        "comparison_type": "percentage",
+        "format": "currency",
+        "trend_indicator": true
+      }
+    },
+    {
+      "id": "widget_2",
+      "type": "metric_card",
+      "title": "Overall ROAS",
+      "position": {"x": 4, "y": 0, "width": 4, "height": 2},
+      "data_source": "ad_performance",
+      "settings": {
+        "metric": "roas",
+        "comparison_period": "previous_period",
+        "comparison_type": "absolute",
+        "format": "decimal",
+        "trend_indicator": true
+      }
+    },
+    {
+      "id": "widget_3",
+      "type": "metric_card",
+      "title": "Total Conversions",
+      "position": {"x": 8, "y": 0, "width": 4, "height": 2},
+      "data_source": "ad_performance",
+      "settings": {
+        "metric": "conversions",
+        "comparison_period": "previous_period",
+        "comparison_type": "percentage",
+        "format": "number",
+        "trend_indicator": true
+      }
+    },
+    {
+      "id": "widget_4",
+      "type": "bar_chart",
+      "title": "Ad Spend by Platform",
+      "position": {"x": 0, "y": 2, "width": 6, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metrics": ["total_spend"],
+        "dimensions": ["platform"],
+        "sort_by": "total_spend",
+        "sort_order": "desc",
+        "chart_type": "bar",
+        "color_scheme": "platform",
+        "legend_position": "bottom"
+      }
+    },
+    {
+      "id": "widget_5",
+      "type": "line_chart",
+      "title": "ROAS Trend by Week",
+      "position": {"x": 6, "y": 2, "width": 6, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metrics": ["roas"],
+        "dimensions": ["date"],
+        "time_grain": "week",
+        "show_points": true,
+        "line_style": "solid",
+        "y_axis_min": 0,
+        "show_goal_line": true,
+        "goal_line_value": 3.0,
+        "goal_line_label": "Target ROAS"
+      }
+    },
+    {
+      "id": "widget_6",
+      "type": "table",
+      "title": "Top Performing Campaigns",
+      "position": {"x": 0, "y": 6, "width": 12, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metrics": ["total_spend", "impressions", "clicks", "conversions", "ctr", "conversion_rate", "cpa", "roas"],
+        "dimensions": ["campaign_name"],
+        "sort_by": "roas",
+        "sort_order": "desc",
+        "limit_rows": 10,
+        "conditional_formatting": [
+          {
+            "column": "roas",
+            "rules": [
+              {"condition": "> 5", "color": "#28a745"},
+              {"condition": "< 2", "color": "#dc3545"}
+            ]
+          },
+          {
+            "column": "conversion_rate",
+            "rules": [
+              {"condition": "> 0.1", "color": "#28a745"},
+              {"condition": "< 0.02", "color": "#dc3545"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "widget_7",
+      "type": "bar_chart",
+      "title": "Performance by Ad Format",
+      "position": {"x": 0, "y": 10, "width": 4, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metrics": ["ctr", "conversion_rate", "roas"],
+        "dimensions": ["ad_format"],
+        "chart_type": "horizontal_bar",
+        "stacked": false,
+        "normalize": false,
+        "sort_by": "roas",
+        "sort_order": "desc"
+      }
+    },
+    {
+      "id": "widget_8",
+      "type": "map",
+      "title": "Geographic Performance",
+      "position": {"x": 4, "y": 10, "width": 4, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metric": "conversions",
+        "geographic_level": "country",
+        "color_range": ["#c6e2ff", "#0057b8"],
+        "show_legend": true
+      }
+    },
+    {
+      "id": "widget_9",
+      "type": "pie_chart",
+      "title": "Device Breakdown",
+      "position": {"x": 8, "y": 10, "width": 4, "height": 4},
+      "data_source": "ad_performance",
+      "settings": {
+        "metric": "total_spend",
+        "dimension": "device",
+        "sort_by": "value",
+        "sort_order": "desc",
+        "show_legend": true,
+        "show_percentages": true,
+        "donut": true
+      }
+    }
+  ],
+  "settings": {
+    "default_date_range": "last_30_days",
+    "refresh_rate": 14400,
+    "color_theme": "light",
+    "available_filters": [
+      "platform",
+      "campaign_id",
+      "ad_format",
+      "device",
+      "country"
+    ],
+    "default_filters": {}
+  }
+} 

@@ -1,0 +1,53 @@
+---
+Description: Standards for testing ML components
+Globs: tests/**/*.py
+---
+
+# Testing Standards for ML Components
+
+## Test Types
+- Unit tests for individual functions and methods
+- Integration tests for component interactions
+- Performance tests for critical paths
+- Model evaluation tests with standard metrics
+
+## Test Design
+- Use fixtures for reusable test data
+- Implement mocks for external dependencies
+- Include edge cases and error scenarios
+- Test with representative data distributions
+
+## ML-Specific Testing
+- Test model reproducibility with fixed seeds
+- Verify model metrics against baseline
+- Test feature importance stability
+- Include bias and fairness tests
+
+## Example
+```python
+# Good example - comprehensive ML model test
+def test_ad_score_model_performance():
+    """Test that model meets minimum performance requirements."""
+    # Arrange
+    model = AdScoreModel()
+    X_train, X_test, y_train, y_test = get_test_dataset(random_state=42)
+    
+    # Act
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    rmse = mean_squared_error(y_test, predictions, squared=False)
+    r2 = r2_score(y_test, predictions)
+    
+    # Assert
+    assert rmse < 10.0, f"RMSE too high: {rmse}"
+    assert r2 > 0.7, f"R² too low: {r2}"
+    
+    # Test feature importance stability
+    importance = model.get_feature_importance()
+    top_features = importance.head(5)['feature'].tolist()
+    expected_features = ['ctr_history', 'sentiment_score', 'topic_relevance']
+    
+    # At least 2 of our expected important features should be in top 5
+    common_features = set(top_features) & set(expected_features)
+    assert len(common_features) >= 2, f"Expected features missing from top importance: {top_features}"
+``` 
