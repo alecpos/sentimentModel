@@ -1,0 +1,2528 @@
+{
+  "timestamp": "2025-03-11T22:25:55.114902",
+  "base_directory": "/Users/alecposner/WITHIN/docs",
+  "threshold": 0.75,
+  "path_filter": null,
+  "files": [
+    {
+      "file_path": "README.md",
+      "score": 0.43749999999999994,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.2125,
+        "structure_score": 0.8999999999999999,
+        "quality_score": 0.25,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.43749999999999994
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Documentation Structure' (54 chars)",
+        "Suspiciously short section: 'Creating New Documentation' (73 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "api/overview.md",
+      "score": 0.844642857142857,
+      "classification": "Likely Implemented",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.3642857142857143,
+        "structure_score": 1.0,
+        "quality_score": 0.8999999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.844642857142857
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'API Base URL' (132 chars)",
+        "Suspiciously short section: 'API Architectural Overview' (60 chars)",
+        "Suspiciously short section: 'Response Format' (45 chars)",
+        "Suspiciously short section: 'Pagination' (117 chars)",
+        "Suspiciously short section: 'Performance Metrics' (53 chars)",
+        "Suspiciously short section: 'Supported Content Types' (184 chars)",
+        "Suspiciously short section: 'SDK Support' (196 chars)",
+        "Suspiciously short section: 'Common Use Cases' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": false
+    },
+    {
+      "file_path": "architecture/overview.md",
+      "score": 0.6349999999999999,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.44999999999999996,
+        "structure_score": 1.0,
+        "quality_score": 0.35,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6349999999999999
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "development/coding_standards.md",
+      "score": 0.631,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.46,
+        "structure_score": 0.88,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.631
+      },
+      "suspicious_patterns": [
+        "Excessive use of ellipses (found 5 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "development/setup.md",
+      "score": 0.6077272727272727,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.41363636363636364,
+        "structure_score": 1.0,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6077272727272727
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Environment Setup' (157 chars)",
+        "Suspiciously short section: 'Infrastructure Setup' (183 chars)",
+        "Suspiciously short section: 'Verification' (71 chars)",
+        "Suspiciously short section: 'Docker Environment' (121 chars)",
+        "Excessive use of ellipses (found 22 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "development/testing/drift_detection_testing.md",
+      "score": 0.6033333333333333,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.3916666666666667,
+        "structure_score": 0.9999999999999999,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6033333333333333
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Synthetic Data Generation' (0 chars)",
+        "Suspiciously short section: 'Testing Statistical Methods' (0 chars)",
+        "Suspiciously short section: 'Integration Testing' (0 chars)",
+        "Suspiciously short section: 'Performance Testing' (0 chars)",
+        "Suspiciously short section: 'Regression Testing' (0 chars)",
+        "Missing expected sections: Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "examples/README.md",
+      "score": 0.4477777777777777,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.23888888888888887,
+        "structure_score": 1.0,
+        "quality_score": 0.2,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.4477777777777777
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Usage' (164 chars)",
+        "Suspiciously short section: 'Dashboard Examples' (174 chars)",
+        "Suspiciously short section: 'Integration Examples' (197 chars)",
+        "Suspiciously short section: 'Monitoring Examples' (137 chars)",
+        "Suspiciously short section: 'Troubleshooting Examples' (184 chars)",
+        "Missing expected sections: Introduction, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "getting_started/installation.md",
+      "score": 0.6627777777777777,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.4388888888888889,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6627777777777777
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Manual Installation' (162 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "getting_started/quick_start.md",
+      "score": 0.6805555555555555,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.2777777777777778,
+        "structure_score": 0.9999999999999999,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6805555555555555
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Authentication' (0 chars)",
+        "Suspiciously short section: 'Batch Processing' (56 chars)",
+        "Suspiciously short section: 'Error Handling' (44 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/documentation_tracker.md",
+      "score": 0.3185,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.45666666666666667,
+        "structure_score": 1.0,
+        "quality_score": 0.0,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.3185
+      },
+      "suspicious_patterns": [
+        "Placeholder text in 'Other Referenced Documentation': 'placeholder'",
+        "Missing expected sections: Introduction, Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/ad_score_prediction.md",
+      "score": 0.68625,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.375,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.68625
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Architectural Design' (166 chars)",
+        "Suspiciously short section: 'Performance Optimization' (0 chars)",
+        "Suspiciously short section: 'Integration Points' (101 chars)",
+        "Suspiciously short section: 'Example Usage' (0 chars)",
+        "Suspiciously short section: 'Troubleshooting' (107 chars)",
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/benchmarks/ad_score_benchmarks.md",
+      "score": 0.5751785714285714,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4892857142857143,
+        "structure_score": 0.9571428571428571,
+        "quality_score": 0.2,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5751785714285714
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/drift_detection.md",
+      "score": 0.64328125,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.421875,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.64328125
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Drift Detection Architecture' (71 chars)",
+        "Missing expected sections: Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/evaluation/account_health_evaluation.md",
+      "score": 0.562142857142857,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.4357142857142857,
+        "structure_score": 1.0,
+        "quality_score": 0.35,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.562142857142857
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Example Evaluation Code' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/fairness/ad_score_fairness.md",
+      "score": 0.44,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.44999999999999996,
+        "structure_score": 1.0,
+        "quality_score": 0.1,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.44
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/feature_engineering.md",
+      "score": 0.7158333333333333,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4933333333333333,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7158333333333333
+      },
+      "suspicious_patterns": [
+        "Excessive use of ellipses (found 4 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/index.md",
+      "score": 0.541923076923077,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.40384615384615385,
+        "structure_score": 0.9538461538461538,
+        "quality_score": 0.35,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.541923076923077
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Implementation Examples' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/integration/sentiment_integration.md",
+      "score": 0.7142307692307692,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.4461538461538462,
+        "structure_score": 1.0,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7142307692307692
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'SDK Integration' (166 chars)",
+        "Suspiciously short section: 'Integration with Advertising Platforms' (124 chars)",
+        "Suspiciously short section: 'Example Use Cases' (185 chars)",
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/model_card_account_health_predictor.md",
+      "score": 0.5477272727272727,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.44545454545454544,
+        "structure_score": 0.9454545454545454,
+        "quality_score": 0.35,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5477272727272727
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_score_predictor.md",
+      "score": 0.5459090909090909,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.43636363636363634,
+        "structure_score": 0.9454545454545454,
+        "quality_score": 0.35,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5459090909090909
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "score": 0.6227272727272728,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.44545454545454544,
+        "structure_score": 0.9454545454545454,
+        "quality_score": 0.5,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6227272727272728
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/model_training.md",
+      "score": 0.640625,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4125,
+        "structure_score": 0.95,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.640625
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Model Persistence' (66 chars)",
+        "Suspiciously short section: 'Documentation & Artifact Management' (195 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/monitoring/production_monitoring_service.md",
+      "score": 0.7316666666666666,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.41666666666666663,
+        "structure_score": 1.0,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7316666666666666
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Installation and Setup' (148 chars)",
+        "Suspiciously short section: 'API Reference' (61 chars)",
+        "Suspiciously short section: 'Usage Examples' (0 chars)",
+        "Suspiciously short section: 'Integration Points' (104 chars)",
+        "Missing expected sections: Introduction"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/nlp_pipeline.md",
+      "score": 0.6269999999999999,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.45,
+        "structure_score": 0.9799999999999999,
+        "quality_score": 0.35,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6269999999999999
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/reasoning/nlp_pipeline_implementation_chain_of_reasoning.md",
+      "score": 0.5364285714285714,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.4642857142857143,
+        "structure_score": 0.7285714285714285,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5364285714285714
+      },
+      "suspicious_patterns": [
+        "Excessive use of ellipses (found 4 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/stories/story_completion_ml7_nlp_pipeline.md",
+      "score": 0.52390625,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.415625,
+        "structure_score": 0.8312499999999999,
+        "quality_score": 0.25,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.52390625
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Epic Overview' (113 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/anomaly_detection.md",
+      "score": 0.5891666666666666,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.46111111111111114,
+        "structure_score": 1.0,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5891666666666666
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/concept_drift_detection.md",
+      "score": 0.6094444444444445,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.4222222222222222,
+        "structure_score": 1.0,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6094444444444445
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Algorithmic Implementation' (164 chars)",
+        "Suspiciously short section: 'Integration with Monitoring Services' (65 chars)",
+        "Suspiciously short section: 'Advanced Techniques' (155 chars)",
+        "Missing expected sections: Introduction, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_detection.md",
+      "score": 0.6031818181818182,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.39090909090909093,
+        "structure_score": 1.0,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6031818181818182
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Algorithmic Implementation' (63 chars)",
+        "Suspiciously short section: 'Feature Importance for Drift Detection' (99 chars)",
+        "Suspiciously short section: 'Multivariate Drift Detection' (93 chars)",
+        "Suspiciously short section: 'Integration with Monitoring Services' (61 chars)",
+        "Suspiciously short section: 'Visualization Strategies' (55 chars)",
+        "Missing expected sections: Introduction, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_monitoring.md",
+      "score": 0.5719444444444445,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.47777777777777775,
+        "structure_score": 1.0,
+        "quality_score": 0.1499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5719444444444445
+      },
+      "suspicious_patterns": [
+        "Placeholder text in 'Introduction': 'will be added'",
+        "Missing expected sections: Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_detection_methods.md",
+      "score": 0.64225,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.415,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.64225
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Drift Severity Assessment' (185 chars)",
+        "Suspiciously short section: 'Implementation Code Examples' (0 chars)",
+        "Missing expected sections: Usage"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_implementation_guide.md",
+      "score": 0.6316666666666666,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.2833333333333333,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6316666666666666
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Basic Drift Detection' (0 chars)",
+        "Suspiciously short section: 'Seasonal Drift Handling' (199 chars)",
+        "Suspiciously short section: 'Advanced Drift Tracking and Forecasting' (142 chars)",
+        "Suspiciously short section: 'Feature-Level Drift Analysis' (161 chars)",
+        "Suspiciously short section: 'Model Health Scoring' (137 chars)",
+        "Suspiciously short section: 'Auto-Remediation Integration' (162 chars)",
+        "Suspiciously short section: 'Tracking Drift Metrics' (0 chars)",
+        "Missing expected sections: Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/emotion_detection.md",
+      "score": 0.6923076923076923,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.47307692307692306,
+        "structure_score": 0.9538461538461538,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6923076923076923
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Integration Guidelines' (138 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/error_handling_patterns.md",
+      "score": 0.6163636363636363,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.25,
+        "structure_score": 0.9909090909090909,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6163636363636363
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Exception Hierarchy' (100 chars)",
+        "Suspiciously short section: 'Error Boundaries' (90 chars)",
+        "Suspiciously short section: 'Fallback Mechanisms' (80 chars)",
+        "Suspiciously short section: 'Logging and Monitoring' (72 chars)",
+        "Suspiciously short section: 'Graceful Degradation' (100 chars)",
+        "Suspiciously short section: 'Error Recovery' (69 chars)",
+        "Suspiciously short section: 'Implementation Examples' (84 chars)",
+        "Excessive use of ellipses (found 4 instances)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/ethical_ai_implementation.md",
+      "score": 0.67625,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.415,
+        "structure_score": 0.95,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.67625
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Implementation Examples' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/feature_documentation.md",
+      "score": 0.7934615384615384,
+      "classification": "Likely Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.45384615384615384,
+        "structure_score": 1.0,
+        "quality_score": 0.7999999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7934615384615384
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": false
+    },
+    {
+      "file_path": "implementation/ml/technical/implementation_roadmap.md",
+      "score": 0.4958875,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.41874999999999996,
+        "structure_score": 0.95,
+        "quality_score": 0.03200000000000003,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.4958875
+      },
+      "suspicious_patterns": [
+        "Placeholder text in 'Implementation Strategy': 'will be implemented'",
+        "Suspiciously short section: 'Implementation Timeline' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/model_architecture_specs.md",
+      "score": 0.7162499999999999,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.435,
+        "structure_score": 0.95,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7162499999999999
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Shared Components' (53 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/model_versioning.md",
+      "score": 0.7905769230769231,
+      "classification": "Likely Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4423076923076923,
+        "structure_score": 1.0,
+        "quality_score": 0.7999999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7905769230769231
+      },
+      "suspicious_patterns": [
+        "Excessive use of ellipses (found 5 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": false
+    },
+    {
+      "file_path": "implementation/ml/technical/prediction_drift_detection.md",
+      "score": 0.3811111111111111,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.40555555555555556,
+        "structure_score": 1.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.3811111111111111
+      },
+      "suspicious_patterns": [
+        "Placeholder text in 'Algorithmic Implementation': 'placeholder'",
+        "Suspiciously short section: 'Integration with Monitoring Services' (64 chars)",
+        "Suspiciously short section: 'Root Cause Analysis' (75 chars)",
+        "Suspiciously short section: 'Visualization and Reporting' (58 chars)",
+        "Missing expected sections: Introduction, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/recommendation_engine.md",
+      "score": 0.6361538461538461,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.43846153846153846,
+        "structure_score": 0.9615384615384615,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6361538461538461
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Implementation Details' (197 chars)",
+        "Suspiciously short section: 'Prioritization Framework' (165 chars)",
+        "Suspiciously short section: 'Explainability' (77 chars)",
+        "Missing expected sections: Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/sentiment_analysis.md",
+      "score": 0.6932142857142857,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4714285714285714,
+        "structure_score": 0.9571428571428571,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6932142857142857
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Integration Guidelines' (161 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/test_strategy.md",
+      "score": 0.6537999999999999,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.40800000000000003,
+        "structure_score": 0.824,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6537999999999999
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Model-Specific Testing' (114 chars)",
+        "Suspiciously short section: 'Automated Test Suite' (90 chars)",
+        "Suspiciously short section: 'Continuous Integration' (54 chars)",
+        "Suspiciously short section: 'Production Validation' (131 chars)",
+        "Suspiciously short section: 'Enhanced Robustness Testing' (193 chars)",
+        "Suspiciously short section: 'Enhanced CI Pipeline' (50 chars)",
+        "Suspiciously short section: 'Documentation-Code Alignment' (64 chars)",
+        "Suspiciously short section: 'Future Testing Preparation' (71 chars)",
+        "Excessive use of ellipses (found 14 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/testing_modernization_2025.md",
+      "score": 0.6516666666666666,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.44999999999999996,
+        "structure_score": 0.8666666666666666,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6516666666666666
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/ml/technical/training_pipeline.md",
+      "score": 0.7529545454545454,
+      "classification": "Likely Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4636363636363637,
+        "structure_score": 0.9363636363636363,
+        "quality_score": 0.7499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7529545454545454
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: '2025 Best Practices Analysis' (76 chars)",
+        "Excessive use of ellipses (found 5 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": false
+    },
+    {
+      "file_path": "implementation/ml/technical/validation_report.md",
+      "score": 0.6392857142857142,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4642857142857143,
+        "structure_score": 0.9142857142857143,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6392857142857142
+      },
+      "suspicious_patterns": [
+        "Excessive use of ellipses (found 6 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "implementation/user/README.md",
+      "score": 0.4033333333333333,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.26666666666666666,
+        "structure_score": 1.0,
+        "quality_score": 0.1,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.4033333333333333
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Overview' (191 chars)",
+        "Suspiciously short section: 'Reference' (172 chars)",
+        "Missing expected sections: Introduction, Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "index.md",
+      "score": 0.5796428571428571,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4357142857142857,
+        "structure_score": 0.9142857142857143,
+        "quality_score": 0.30000000000000004,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5796428571428571
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "maintenance/alerting_reference.md",
+      "score": 0.45699999999999996,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.46,
+        "structure_score": 1.0,
+        "quality_score": 0.12999999999999995,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.45699999999999996
+      },
+      "suspicious_patterns": [
+        "Placeholder text in 'Notification Channels': 'XXX'",
+        "Suspiciously short section: 'Alert Examples' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/documentation_guide.md",
+      "score": 0.6976923076923076,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.3634615384615385,
+        "structure_score": 1.0,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.6976923076923076
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Documentation Templates' (98 chars)",
+        "Suspiciously short section: 'Overview' (72 chars)",
+        "Suspiciously short section: 'Directory Structure' (0 chars)",
+        "Suspiciously short section: 'Usage' (0 chars)",
+        "Suspiciously short section: 'API Reference' (144 chars)",
+        "Suspiciously short section: 'Configuration' (189 chars)",
+        "Suspiciously short section: 'Dependencies' (85 chars)",
+        "Suspiciously short section: 'Related Components' (157 chars)",
+        "Suspiciously short section: 'Intended Use' (164 chars)",
+        "Suspiciously short section: 'Limitations and Biases' (158 chars)",
+        "Suspiciously short section: 'Ethical Considerations' (147 chars)",
+        "Suspiciously short section: 'Usage Instructions' (185 chars)",
+        "Suspiciously short section: 'Maintenance' (178 chars)",
+        "Missing expected sections: Introduction, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "maintenance/model_retraining.md",
+      "score": 0.7038636363636362,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.4363636363636364,
+        "structure_score": 0.9181818181818181,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7038636363636362
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Rollback Procedures' (180 chars)",
+        "Suspiciously short section: 'Monitoring Post-Deployment' (57 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "maintenance/monitoring_guide.md",
+      "score": 0.74125,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.45499999999999996,
+        "structure_score": 1.0,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.74125
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "maintenance/troubleshooting.md",
+      "score": 0.7116666666666667,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.48333333333333334,
+        "structure_score": 0.9666666666666667,
+        "quality_score": 0.6499999999999999,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.7116666666666667
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Logging and Debugging' (179 chars)",
+        "Excessive use of ellipses (found 4 instances)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "resources/dashboard_templates/README.md",
+      "score": 0.43500000000000005,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.2,
+        "structure_score": 0.9,
+        "quality_score": 0.25,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.43500000000000005
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Usage' (188 chars)",
+        "Suspiciously short section: 'Template Structure' (67 chars)",
+        "Suspiciously short section: 'Customizing Templates' (187 chars)",
+        "Suspiciously short section: 'Creating Your Own Templates' (187 chars)",
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "standards/examples/model_card_example.md",
+      "score": 0.638,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.43999999999999995,
+        "structure_score": 0.97,
+        "quality_score": 0.4,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.638
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "standards/fairness_guidelines.md",
+      "score": 0.5925,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "general_documentation",
+        "length_score": 0.4625,
+        "structure_score": 1.0,
+        "quality_score": 0.4,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5925
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Usage, Examples"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "user_guides/dashboard_best_practices.md",
+      "score": 0.565,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.44999999999999996,
+        "structure_score": 0.9999999999999999,
+        "quality_score": 0.35,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.565
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Examples and Templates' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "user_guides/dashboard_faq.md",
+      "score": 0.41374999999999995,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.44375,
+        "structure_score": 0.9999999999999999,
+        "quality_score": 0.05,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.41374999999999995
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "user_guides/dashboards.md",
+      "score": 0.5475000000000001,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "user_guide",
+        "length_score": 0.48750000000000004,
+        "structure_score": 1.0,
+        "quality_score": 0.30000000000000004,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5475000000000001
+      },
+      "suspicious_patterns": [
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    }
+  ],
+  "document_types": {
+    "general_documentation": {
+      "count": 22,
+      "verified": 0,
+      "likely": 0,
+      "questionable": 17,
+      "false": 5
+    },
+    "api_reference": {
+      "count": 6,
+      "verified": 0,
+      "likely": 1,
+      "questionable": 4,
+      "false": 1
+    },
+    "architecture_decision": {
+      "count": 24,
+      "verified": 0,
+      "likely": 3,
+      "questionable": 20,
+      "false": 1
+    },
+    "user_guide": {
+      "count": 7,
+      "verified": 0,
+      "likely": 0,
+      "questionable": 4,
+      "false": 3
+    }
+  },
+  "revalidation_recommendations": [
+    {
+      "file_path": "implementation/ml/technical/implementation_roadmap.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.4958875,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/alerting_reference.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.45699999999999996,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "examples/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.4477777777777777,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/fairness/ad_score_fairness.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.44,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.43749999999999994,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "resources/dashboard_templates/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.43500000000000005,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_faq.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.41374999999999995,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/user/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.4033333333333333,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/prediction_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.3811111111111111,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/documentation_tracker.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.3185,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/monitoring_guide.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.74125,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/monitoring/production_monitoring_service.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7316666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/model_architecture_specs.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7162499999999999,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/feature_engineering.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7158333333333333,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/integration/sentiment_integration.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7142307692307692,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/troubleshooting.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7116666666666667,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/model_retraining.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.7038636363636362,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/documentation_guide.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6976923076923076,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/sentiment_analysis.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6932142857142857,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/emotion_detection.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6923076923076923,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/ad_score_prediction.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.68625,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/quick_start.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6805555555555555,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/ethical_ai_implementation.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.67625,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/installation.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6627777777777777,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/test_strategy.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6537999999999999,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/testing_modernization_2025.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6516666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/drift_detection.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.64328125,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_detection_methods.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.64225,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_training.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.640625,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/validation_report.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6392857142857142,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/examples/model_card_example.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.638,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/recommendation_engine.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6361538461538461,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "architecture/overview.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6349999999999999,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_implementation_guide.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6316666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/coding_standards.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.631,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/nlp_pipeline.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6269999999999999,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6227272727272728,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/error_handling_patterns.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6163636363636363,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/concept_drift_detection.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6094444444444445,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/setup.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6077272727272727,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/testing/drift_detection_testing.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6033333333333333,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_detection.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.6031818181818182,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/fairness_guidelines.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5925,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/anomaly_detection.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5891666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "index.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5796428571428571,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/benchmarks/ad_score_benchmarks.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5751785714285714,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_monitoring.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5719444444444445,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_best_practices.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.565,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/evaluation/account_health_evaluation.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.562142857142857,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_account_health_predictor.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5477272727272727,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboards.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5475000000000001,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_score_predictor.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5459090909090909,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/index.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.541923076923077,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/reasoning/nlp_pipeline_implementation_chain_of_reasoning.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5364285714285714,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/stories/story_completion_ml7_nlp_pipeline.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.52390625,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    }
+  ]
+}

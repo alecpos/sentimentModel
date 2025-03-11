@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2025-03-11T21:40:48.442368",
+    "stats": {
+      "NOT_IMPLEMENTED": 29,
+      "PARTIALLY_IMPLEMENTED": 9,
+      "UNKNOWN": 92
+    },
+    "total": 130
+  },
+  {
+    "date": "2025-03-11T22:00:19.970021",
+    "stats": {
+      "IMPLEMENTED": 65,
+      "NOT_IMPLEMENTED": 29,
+      "PARTIALLY_IMPLEMENTED": 19,
+      "UNKNOWN": 17
+    },
+    "total": 130
+  },
+  {
+    "date": "2025-03-11T22:06:49.775889",
+    "stats": {
+      "IMPLEMENTED": 64,
+      "NOT_IMPLEMENTED": 30,
+      "PARTIALLY_IMPLEMENTED": 19,
+      "UNKNOWN": 17
+    },
+    "total": 130
+  },
+  {
+    "date": "2025-03-11T22:17:52.806441",
+    "stats": {
+      "IMPLEMENTED": 59,
+      "NOT_IMPLEMENTED": 30,
+      "PARTIALLY_IMPLEMENTED": 24,
+      "UNKNOWN": 17
+    },
+    "total": 130
+  }
+]

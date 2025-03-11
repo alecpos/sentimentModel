@@ -1,0 +1,177 @@
+{
+  "timestamp": "2025-03-11T22:17:52.557592",
+  "parameters": {
+    "threshold": 0.8,
+    "path_filter": "api",
+    "fix_applied": true,
+    "document_type": "api_reference"
+  },
+  "summary": {
+    "total_files": 6,
+    "verified_implemented": 0,
+    "likely_implemented": 1,
+    "questionably_implemented": 5,
+    "falsely_marked": 0,
+    "updated_files": 5,
+    "document_types": {
+      "api_reference": 6
+    }
+  },
+  "files": [
+    {
+      "file_path": "api/dashboard_api.md",
+      "score": 0.713125,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.2875,
+        "structure_score": 1.0,
+        "quality_score": 0.7,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.713125
+      },
+      "classification": "Questionably Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Authentication' (162 chars)",
+        "Suspiciously short section: 'Embedding Dashboards' (173 chars)",
+        "Suspiciously short section: 'SDK Examples' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "status_updated": true,
+      "new_status": "PARTIALLY_IMPLEMENTED"
+    },
+    {
+      "file_path": "api/overview.md",
+      "score": 0.844642857142857,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.3642857142857143,
+        "structure_score": 1.0,
+        "quality_score": 0.8999999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.844642857142857
+      },
+      "classification": "Likely Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'API Base URL' (132 chars)",
+        "Suspiciously short section: 'API Architectural Overview' (60 chars)",
+        "Suspiciously short section: 'Response Format' (45 chars)",
+        "Suspiciously short section: 'Pagination' (117 chars)",
+        "Suspiciously short section: 'Performance Metrics' (53 chars)",
+        "Suspiciously short section: 'Supported Content Types' (184 chars)",
+        "Suspiciously short section: 'SDK Support' (196 chars)",
+        "Suspiciously short section: 'Common Use Cases' (0 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "status_updated": false
+    },
+    {
+      "file_path": "api/python_sdk.md",
+      "score": 0.5564285714285714,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.24285714285714285,
+        "structure_score": 1.0,
+        "quality_score": 0.44999999999999996,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.5564285714285714
+      },
+      "classification": "Questionably Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Authentication' (63 chars)",
+        "Suspiciously short section: 'Basic Usage' (91 chars)",
+        "Suspiciously short section: 'Ad Score Predictor API' (85 chars)",
+        "Suspiciously short section: 'Account Health Predictor API' (100 chars)",
+        "Suspiciously short section: 'Ad Sentiment Analyzer API' (86 chars)",
+        "Suspiciously short section: 'Batch Processing' (67 chars)",
+        "Suspiciously short section: 'Error Handling' (46 chars)",
+        "Suspiciously short section: 'Rate Limiting' (77 chars)",
+        "Suspiciously short section: 'Advanced Configuration' (0 chars)",
+        "Suspiciously short section: 'Logging and Debugging' (46 chars)",
+        "Suspiciously short section: 'Examples' (0 chars)",
+        "Excessive use of ellipses (found 8 instances)",
+        "Missing expected sections: Introduction, Reference"
+      ],
+      "status_updated": true,
+      "new_status": "PARTIALLY_IMPLEMENTED"
+    },
+    {
+      "file_path": "examples/api/README.md",
+      "score": 0.532,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.18,
+        "structure_score": 0.82,
+        "quality_score": 0.5,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.532
+      },
+      "classification": "Questionably Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Basic Usage Example' (0 chars)",
+        "Suspiciously short section: 'Language Support' (68 chars)",
+        "Suspiciously short section: 'Requirements' (100 chars)",
+        "Suspiciously short section: 'Using the Examples' (160 chars)",
+        "Missing expected sections: Introduction, Reference"
+      ],
+      "status_updated": true,
+      "new_status": "PARTIALLY_IMPLEMENTED"
+    },
+    {
+      "file_path": "implementation/ml/technical/inference_api.md",
+      "score": 0.639375,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.39583333333333337,
+        "structure_score": 1.0,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.639375
+      },
+      "classification": "Questionably Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Request/Response Formats' (165 chars)",
+        "Suspiciously short section: 'Integration Examples' (0 chars)",
+        "Suspiciously short section: 'Monitoring and Debugging' (45 chars)",
+        "Missing expected sections: Introduction, Usage, Reference"
+      ],
+      "status_updated": true,
+      "new_status": "PARTIALLY_IMPLEMENTED"
+    },
+    {
+      "file_path": "user_guides/api_usage.md",
+      "score": 0.6271428571428571,
+      "component_scores": {
+        "document_type": "api_reference",
+        "length_score": 0.38571428571428573,
+        "structure_score": 0.9571428571428571,
+        "quality_score": 0.5499999999999999,
+        "length_weight": 0.15,
+        "structure_weight": 0.25,
+        "content_weight": 0.6,
+        "weighted_score": 0.6271428571428571
+      },
+      "classification": "Questionably Implemented",
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Making API Requests' (193 chars)",
+        "Suspiciously short section: 'Response Formats' (45 chars)",
+        "Suspiciously short section: 'Sentiment Analysis' (196 chars)",
+        "Suspiciously short section: 'Analytics & Reporting' (196 chars)",
+        "Suspiciously short section: 'Batch Processing' (126 chars)",
+        "Suspiciously short section: 'Client Libraries' (76 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "status_updated": true,
+      "new_status": "PARTIALLY_IMPLEMENTED"
+    }
+  ]
+}

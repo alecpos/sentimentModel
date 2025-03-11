@@ -1,0 +1,778 @@
+{
+  "timestamp": "2025-03-11T22:26:22.223894",
+  "base_directory": "/Users/alecposner/WITHIN",
+  "recommendations": [
+    {
+      "file_path": "api/overview.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "architecture/overview.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/coding_standards.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/setup.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/testing/drift_detection_testing.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "examples/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/installation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/quick_start.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/documentation_tracker.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/ad_score_prediction.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/benchmarks/ad_score_benchmarks.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/evaluation/account_health_evaluation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/fairness/ad_score_fairness.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/feature_engineering.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/index.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/integration/sentiment_integration.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_account_health_predictor.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_score_predictor.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_training.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/monitoring/production_monitoring_service.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/nlp_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/reasoning/nlp_pipeline_implementation_chain_of_reasoning.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/stories/story_completion_ml7_nlp_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/anomaly_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/concept_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_monitoring.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_detection_methods.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_implementation_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/emotion_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/error_handling_patterns.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/ethical_ai_implementation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/feature_documentation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/implementation_roadmap.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/model_architecture_specs.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/model_versioning.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/prediction_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/recommendation_engine.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/sentiment_analysis.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/test_strategy.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/testing_modernization_2025.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/training_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/validation_report.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/user/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "index.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/alerting_reference.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/documentation_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/model_retraining.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/monitoring_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/troubleshooting.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "resources/dashboard_templates/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/examples/model_card_example.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/fairness_guidelines.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_best_practices.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_faq.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboards.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "README.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5891666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    }
+  ],
+  "summary": {
+    "high_priority": 58,
+    "medium_priority": 1,
+    "low_priority": 0
+  }
+}

@@ -1,0 +1,2448 @@
+{
+  "timestamp": "2025-03-11T22:26:35.588870",
+  "base_directory": "/Users/alecposner/WITHIN",
+  "threshold": 0.75,
+  "path_filter": null,
+  "files": [
+    {
+      "file_path": "README.md",
+      "score": 0.5891666666666666,
+      "classification": "Questionably Implemented",
+      "component_scores": {
+        "document_type": "architecture_decision",
+        "length_score": 0.26666666666666666,
+        "structure_score": 1.0,
+        "quality_score": 0.35,
+        "length_weight": 0.25,
+        "structure_weight": 0.4,
+        "content_weight": 0.35,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.5891666666666666
+      },
+      "suspicious_patterns": [
+        "Suspiciously short section: 'Directory Structure' (0 chars)",
+        "Suspiciously short section: 'License' (39 chars)",
+        "Suspiciously short section: 'Contributors' (28 chars)",
+        "Missing expected sections: Introduction, Usage, Examples, Reference"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Questionable score",
+      "revalidation_priority": "medium"
+    },
+    {
+      "file_path": "api/overview.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "architecture/overview.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "development/coding_standards.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "development/setup.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "development/testing/drift_detection_testing.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "examples/README.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "getting_started/installation.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "getting_started/quick_start.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/documentation_tracker.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/ad_score_prediction.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/benchmarks/ad_score_benchmarks.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/drift_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/evaluation/account_health_evaluation.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/fairness/ad_score_fairness.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/feature_engineering.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/index.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/integration/sentiment_integration.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/model_card_account_health_predictor.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_score_predictor.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/model_training.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/monitoring/production_monitoring_service.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/nlp_pipeline.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/reasoning/nlp_pipeline_implementation_chain_of_reasoning.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/stories/story_completion_ml7_nlp_pipeline.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/anomaly_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/concept_drift_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_monitoring.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_detection_methods.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_implementation_guide.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/emotion_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/error_handling_patterns.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/ethical_ai_implementation.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/feature_documentation.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/implementation_roadmap.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/model_architecture_specs.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/model_versioning.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/prediction_drift_detection.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/recommendation_engine.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/sentiment_analysis.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/test_strategy.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/testing_modernization_2025.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/training_pipeline.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/ml/technical/validation_report.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "implementation/user/README.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "index.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/alerting_reference.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/documentation_guide.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/model_retraining.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/monitoring_guide.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "maintenance/troubleshooting.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "resources/dashboard_templates/README.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "standards/examples/model_card_example.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "standards/fairness_guidelines.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "user_guides/dashboard_best_practices.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "user_guides/dashboard_faq.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    },
+    {
+      "file_path": "user_guides/dashboards.md",
+      "score": 0.0,
+      "classification": "Falsely Marked",
+      "component_scores": {
+        "document_type": "unknown",
+        "length_score": 0.0,
+        "structure_score": 0.0,
+        "quality_score": 0.0,
+        "length_weight": 0.2,
+        "structure_weight": 0.3,
+        "content_weight": 0.5,
+        "change_frequency": {
+          "commits_per_month": 0,
+          "last_modified": null,
+          "contributors": [],
+          "is_volatile": false
+        },
+        "volatility_penalty": 0.0,
+        "weighted_score": 0.0
+      },
+      "suspicious_patterns": [
+        "File could not be analyzed (not a text file or not found)"
+      ],
+      "should_revalidate": true,
+      "revalidation_reason": "Low verification score",
+      "revalidation_priority": "high"
+    }
+  ],
+  "document_types": {
+    "architecture_decision": {
+      "count": 1,
+      "verified": 0,
+      "likely": 0,
+      "questionable": 1,
+      "false": 0
+    },
+    "unknown": {
+      "count": 58,
+      "verified": 0,
+      "likely": 0,
+      "questionable": 0,
+      "false": 58
+    }
+  },
+  "revalidation_recommendations": [
+    {
+      "file_path": "api/overview.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "architecture/overview.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/coding_standards.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/setup.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "development/testing/drift_detection_testing.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "examples/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/installation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "getting_started/quick_start.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/documentation_tracker.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/ad_score_prediction.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/benchmarks/ad_score_benchmarks.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/evaluation/account_health_evaluation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/fairness/ad_score_fairness.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/feature_engineering.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/index.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/integration/sentiment_integration.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_account_health_predictor.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_score_predictor.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/model_training.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/monitoring/production_monitoring_service.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/nlp_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/reasoning/nlp_pipeline_implementation_chain_of_reasoning.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/stories/story_completion_ml7_nlp_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/anomaly_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/concept_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/data_drift_monitoring.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_detection_methods.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/drift_implementation_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/emotion_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/error_handling_patterns.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/ethical_ai_implementation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/feature_documentation.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/implementation_roadmap.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/model_architecture_specs.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/model_versioning.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/prediction_drift_detection.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/recommendation_engine.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/sentiment_analysis.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/test_strategy.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/testing_modernization_2025.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/training_pipeline.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/ml/technical/validation_report.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "implementation/user/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "index.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/alerting_reference.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/documentation_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/model_retraining.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/monitoring_guide.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "maintenance/troubleshooting.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "resources/dashboard_templates/README.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/examples/model_card_example.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "standards/fairness_guidelines.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_best_practices.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboard_faq.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "user_guides/dashboards.md",
+      "priority": "high",
+      "reason": "Low verification score",
+      "score": 0.0,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    },
+    {
+      "file_path": "README.md",
+      "priority": "medium",
+      "reason": "Questionable score",
+      "score": 0.5891666666666666,
+      "score_trend": "stable",
+      "change_frequency": {
+        "commits_per_month": 0,
+        "last_modified": null,
+        "contributors": [],
+        "is_volatile": false
+      }
+    }
+  ]
+}

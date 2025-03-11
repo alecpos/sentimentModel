@@ -1,0 +1,9 @@
+{
+  "base_dir": "/Users/alecposner/WITHIN/docs",
+  "threshold": 0.75,
+  "path": null,
+  "fix": false,
+  "check_volatility": true,
+  "revalidation_report": "revalidation_priorities.json",
+  "report_file": "verification_details.json"
+} 

@@ -1,0 +1,743 @@
+{
+  "issues": [
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/images/ml_lifecycle.png",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/ml_lifecycle.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/updates.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/updates.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/faq.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/faq.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/best_practices.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/best_practices.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/glossary.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/glossary.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/research/account_health_monitoring.pdf",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/account_health_monitoring.pdf"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/anomaly_detection.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/anomaly_detection.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/images/training_pipeline_architecture.png",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/images/training_pipeline_architecture.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/research/ad_effectiveness_prediction.pdf",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/ad_effectiveness_prediction.pdf"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/research/explainable_ad_prediction.pdf",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/explainable_ad_prediction.pdf"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/images/ml_architecture.png",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/ml_architecture.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/account_metrics, benchmarks",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/account_metrics, benchmarks"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/prediction, actual",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/technical/prediction, actual"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/monitoring_guide.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/monitoring_guide.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad\n_sentiment_analyzer.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad\n_sentiment_analyzer.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/images/sentiment_platform_errors.png",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/sentiment_platform_errors.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/recommendation_engine.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/recommendation_engine.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/images/sentiment_analyzer_calibration.png",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/sentiment_analyzer_calibration.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/model_retraining.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/model_retraining.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/troubleshooting.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/troubleshooting.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/result",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/integration/result"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/alerting_reference.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/alerting_reference.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/python_sdk.md",
+      "line": 0,
+      "message": "Referenced documentation file does not exist",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/python_sdk.md"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 34,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/images/ml_architecture.png",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/ml_architecture.png"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 114,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/images/ml_lifecycle.png",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/ml_lifecycle.png"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 198,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/research/ad_effectiveness_prediction.pdf",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/ad_effectiveness_prediction.pdf"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 199,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/research/account_health_monitoring.pdf",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/account_health_monitoring.pdf"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 200,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/research/explainable_ad_prediction.pdf",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/research/explainable_ad_prediction.pdf"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 204,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/glossary.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/glossary.md"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 205,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/faq.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/faq.md"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 206,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/best_practices.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/best_practices.md"
+    },
+    {
+      "file": "docs/implementation/ml/index.md",
+      "line": 207,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/updates.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/updates.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/training_pipeline.md",
+      "line": 24,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/images/training_pipeline_architecture.png",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/images/training_pipeline_architecture.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/account_health_prediction.md",
+      "line": 135,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/anomaly_detection.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/anomaly_detection.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/account_health_prediction.md",
+      "line": 445,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/account_metrics, benchmarks",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/account_metrics, benchmarks"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/account_health_prediction.md",
+      "line": 499,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/recommendation_engine.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/recommendation_engine.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/evaluation/account_health_evaluation.md",
+      "line": 276,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/feature_engineering.md",
+      "line": 2945,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/feature_engineering.md",
+      "line": 2946,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/feature_engineering.md",
+      "line": 2947,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/feature_engineering.md",
+      "line": 2948,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/feature_engineering.md",
+      "line": 2950,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 38,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 352,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 353,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 354,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 355,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 356,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/ad_score_prediction.md",
+      "line": 358,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/sentiment_analysis.md",
+      "line": 657,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/sentiment_analysis.md",
+      "line": 658,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/sentiment_analysis.md",
+      "line": 659,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/sentiment_analysis.md",
+      "line": 660,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/production_validation.md",
+      "line": 61,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/technical/prediction, actual",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/technical/prediction, actual"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/nlp_pipeline.md",
+      "line": 408,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/nlp_pipeline.md",
+      "line": 409,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/nlp_pipeline.md",
+      "line": 410,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/nlp_pipeline.md",
+      "line": 411,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/monitoring/production_monitoring_service.md",
+      "line": 659,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/monitoring_guide.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/monitoring_guide.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/monitoring/production_monitoring_service.md",
+      "line": 660,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/alerting_reference.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/alerting_reference.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/monitoring/production_monitoring_service.md",
+      "line": 661,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/model_retraining.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/model_retraining.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/monitoring/production_monitoring_service.md",
+      "line": 662,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/troubleshooting.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/troubleshooting.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/evaluation/sentiment_analyzer_evaluation.md",
+      "line": 259,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/images/sentiment_analyzer_calibration.png",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/sentiment_analyzer_calibration.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/evaluation/sentiment_analyzer_evaluation.md",
+      "line": 332,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/images/sentiment_platform_errors.png",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/images/sentiment_platform_errors.png"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/evaluation/sentiment_analyzer_evaluation.md",
+      "line": 493,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 84,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 752,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 753,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 754,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 755,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/model_training.md",
+      "line": 757,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/emotion_detection.md",
+      "line": 721,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/emotion_detection.md",
+      "line": 722,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/emotion_detection.md",
+      "line": 723,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad\n_sentiment_analyzer.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad\n_sentiment_analyzer.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/technical/emotion_detection.md",
+      "line": 725,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 186,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 187,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 188,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1350,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/integration/result",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/integration/result"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1778,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1779,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/python_sdk.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/api/python_sdk.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1780,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1781,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1782,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md"
+    },
+    {
+      "file": "/Users/alecposner/WITHIN/docs/implementation/ml/integration/sentiment_integration.md",
+      "line": 1783,
+      "message": "Reference points to non-existent file: /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md",
+      "severity": "error",
+      "suggested_fix": "Create the missing file at /Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md"
+    }
+  ],
+  "missing_documentation": [
+    "/Users/alecposner/WITHIN/docs/implementation/images/ml_lifecycle.png",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/updates.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/faq.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/best_practices.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/glossary.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/nlp_pipeline.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/research/account_health_monitoring.pdf",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_training.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/anomaly_detection.md",
+    "/Users/alecposner/WITHIN/docs/images/training_pipeline_architecture.png",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/research/ad_effectiveness_prediction.pdf",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/research/explainable_ad_prediction.pdf",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/integration/sentiment_integration.md",
+    "/Users/alecposner/WITHIN/docs/implementation/images/ml_architecture.png",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/documentation_tracker.md",
+    "/Users/alecposner/WITHIN/docs/implementation/standards/fairness_guidelines.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/account_metrics, benchmarks",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/technical/prediction, actual",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/feature_engineering.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_score_predictor.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/ad_score_prediction.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/monitoring_guide.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad\n_sentiment_analyzer.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_card_ad_sentiment_analyzer.md",
+    "/Users/alecposner/WITHIN/docs/implementation/images/sentiment_platform_errors.png",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/recommendation_engine.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/emotion_detection.md",
+    "/Users/alecposner/WITHIN/docs/implementation/images/sentiment_analyzer_calibration.png",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/model_evaluation.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/overview.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/model_retraining.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/troubleshooting.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/integration/result",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/endpoints.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/implementation/ml/technical/sentiment_analysis.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/maintenance/alerting_reference.md",
+    "/Users/alecposner/WITHIN/docs/implementation/ml/docs/api/python_sdk.md"
+  ],
+  "incomplete_documentation": [],
+  "summary": {
+    "total_issues": 99,
+    "errors": 99,
+    "warnings": 0,
+    "references_analyzed": 138
+  }
+}
