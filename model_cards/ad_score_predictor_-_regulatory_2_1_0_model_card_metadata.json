@@ -1,0 +1,80 @@
+{
+  "model_info": {
+    "name": "Ad Score Predictor",
+    "version": "2.1.0",
+    "model_type": "Random Forest Classifier",
+    "date": "2023-10-15",
+    "authors": "WITHIN AI Team",
+    "purpose": "Predict ad performance scores with fairness considerations"
+  },
+  "performance_metrics": {
+    "accuracy": 0.7166666666666667,
+    "precision": 0.625,
+    "recall": 0.6837606837606838,
+    "f1": 0.6530612244897959
+  },
+  "fairness": {
+    "protected_attributes": [
+      "gender",
+      "age_group"
+    ],
+    "group_metrics": {
+      "gender": {
+        "demographic_parity": {
+          "value": 0.02,
+          "threshold": 0.05
+        },
+        "equal_opportunity": {
+          "value": 0.03,
+          "threshold": 0.05
+        }
+      },
+      "age_group": {
+        "demographic_parity": {
+          "value": 0.03,
+          "threshold": 0.05
+        },
+        "equal_opportunity": {
+          "value": 0.04,
+          "threshold": 0.05
+        }
+      }
+    },
+    "intersectional_metrics": {}
+  },
+  "mitigation": {
+    "technique": "Reweighing",
+    "mitigated_metrics": {
+      "gender": {
+        "demographic_parity": {
+          "value": 0.02,
+          "threshold": 0.05
+        },
+        "equal_opportunity": {
+          "value": 0.03,
+          "threshold": 0.05
+        }
+      },
+      "age_group": {
+        "demographic_parity": {
+          "value": 0.03,
+          "threshold": 0.05
+        },
+        "equal_opportunity": {
+          "value": 0.04,
+          "threshold": 0.05
+        }
+      }
+    }
+  },
+  "regulatory_compliance": {
+    "frameworks": [
+      "EU AI Act",
+      "NIST AI RMF"
+    ],
+    "documentation_standards": [
+      "NIST AI RMF ID.GV 1.2",
+      "NIST AI RMF ID.RA 2.9"
+    ]
+  }
+}

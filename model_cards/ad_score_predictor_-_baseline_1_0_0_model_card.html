@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Card</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+        }
+        h1, h2, h3, h4 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        h1 { font-size: 2.2rem; border-bottom: 2px solid #eaecef; padding-bottom: 0.3rem; }
+        h2 { font-size: 1.8rem; border-bottom: 1px solid #eaecef; padding-bottom: 0.3rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.3rem; }
+        img { max-width: 100%; height: auto; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        pre code {
+            display: block;
+            padding: 1rem;
+            overflow-x: auto;
+            line-height: 1.45;
+        }
+        blockquote {
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            color: #6a737d;
+            border-left: 0.25rem solid #dfe2e5;
+        }
+        .warning {
+            background-color: #fffbea;
+            border-left: 0.25rem solid #f0ad4e;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .info {
+            background-color: #e7f5ff;
+            border-left: 0.25rem solid #1c7ed6;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Card: Ad Score Predictor - Baseline</h1>
+<h2>Model Details</h2>
+<ul>
+<li><strong>Model Name</strong>: Ad Score Predictor - Baseline</li>
+<li><strong>Version</strong>: 1.0.0</li>
+<li><strong>Type</strong>: Classification</li>
+<li><strong>Date Created</strong>: 2025-03-12</li>
+<li><strong>Last Updated</strong>: 2025-03-12</li>
+<li><strong>Organization</strong>: WITHIN</li>
+</ul>
+<h3>Model Description</h3>
+<p>Baseline model for predicting ad performance scores.</p>
+<h3>Intended Use</h3>
+<p>This model is designed for the following use cases:</p>
+<ul>
+<li>
+<p>Predicting ad effectiveness</p>
+</li>
+<li>
+<p>Estimating conversion rates</p>
+</li>
+</ul>
+<h3>Model Architecture</h3>
+<p>Detailed model architecture information is not available.</p>
+<h3>Training Parameters</h3>
+<p>Detailed training parameter information is not available.</p>
+<h2>Performance Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| accuracy | 0.7566666666666667 |</p>
+<p>| precision | 0.8146067415730337 |</p>
+<p>| recall | 0.7837837837837838 |</p>
+<p>| f1_score | 0.7988980716253443 |</p>
+<p>| roc_auc | 0.8566862514688602 |</p>
+<h2>Fairness Evaluation</h2>
+<p>This model has been evaluated for fairness across protected attributes.</p>
+<h3>Fairness Metrics</h3>
+<p>Fairness metrics information is not available.</p>
+<h3>Group Performance</h3>
+<h4>gender</h4>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Count</th>
+<th>Accuracy</th>
+<th>Positive Rate</th>
+<th>True Positive Rate</th>
+<th>False Positive Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| male | 188 | 0.6915 | 0.5851 | 0.7031 | 0.3333 |</p>
+<p>| female | 112 | 0.8661 | 0.6071 | 0.9649 | 0.2364 |</p>
+<h4>location</h4>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Count</th>
+<th>Accuracy</th>
+<th>Positive Rate</th>
+<th>True Positive Rate</th>
+<th>False Positive Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| rural | 52 | 0.7692 | 0.6346 | 0.8000 | 0.2941 |</p>
+<p>| urban | 156 | 0.7372 | 0.6218 | 0.7979 | 0.3548 |</p>
+<p>| suburban | 92 | 0.7826 | 0.5217 | 0.7500 | 0.1667 |</p>
+<h4>age_group</h4>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Count</th>
+<th>Accuracy</th>
+<th>Positive Rate</th>
+<th>True Positive Rate</th>
+<th>False Positive Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| 18-25 | 62 | 0.7258 | 0.4839 | 0.6757 | 0.2000 |</p>
+<p>| 26-35 | 113 | 0.7611 | 0.6106 | 0.7917 | 0.2927 |</p>
+<p>| 36-50 | 94 | 0.7553 | 0.6489 | 0.8393 | 0.3684 |</p>
+<p>| 51+ | 31 | 0.8065 | 0.5806 | 0.8000 | 0.1818 |</p>
+<h2>Fairness Mitigations</h2>
+<p>No specific fairness mitigation strategies have been implemented for this model.</p>
+<h2>Ethical Considerations</h2>
+<ul>
+<li>
+<p>This model shows evidence of disparate impact across gender groups</p>
+</li>
+<li>
+<p>Using this model without mitigation could lead to unfair ad targeting</p>
+</li>
+<li>
+<p>Regular fairness audits are recommended if deploying this model</p>
+</li>
+</ul>
+<h2>Limitations and Biases</h2>
+<ul>
+<li>
+<p>This baseline model does not include any fairness mitigations</p>
+</li>
+<li>
+<p>Performance varies across demographic groups, indicating potential bias</p>
+</li>
+<li>
+<p>The model was trained on synthetic data with known gender bias</p>
+</li>
+</ul>
+<h2>Regulatory Compliance</h2>
+<p>This model card is designed to provide information relevant to the following regulatory frameworks:</p>
+<ul>
+<li>
+<p>EU AI Act</p>
+</li>
+<li>
+<p>NIST AI Risk Management Framework</p>
+</li>
+<li>
+<p>NYC Local Law 144</p>
+</li>
+</ul>
+<h2>Contact Information</h2>
+<ul>
+<li><strong>Organization</strong>: WITHIN</li>
+</ul>
+<hr />
+<p><em>This model card was generated on 2025-03-12.</em></p>
+</body>
+</html>

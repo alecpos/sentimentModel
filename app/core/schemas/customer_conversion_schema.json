@@ -1,0 +1,45 @@
+{
+  "name": "customer_conversion_schema",
+  "version": "1.0.0",
+  "description": "Schema for the Customer Conversion Dataset",
+  "required_columns": ["converted", "age", "gender", "location", "time_spent", "pages_visited", "device", "browser", "previous_visits", "referral_source"],
+  "column_types": {
+    "converted": "int",
+    "age": "int",
+    "gender": "str",
+    "location": "str",
+    "time_spent": "float",
+    "pages_visited": "int",
+    "device": "str",
+    "browser": "str",
+    "previous_visits": "int",
+    "referral_source": "str"
+  },
+  "value_constraints": {
+    "converted": {
+      "allowed_values": [0, 1],
+      "description": "1 if customer converted, 0 otherwise"
+    },
+    "gender": {
+      "allowed_values": ["Male", "Female", "Other", "Prefer not to say"],
+      "description": "Gender of the customer"
+    }
+  },
+  "statistics": {
+    "time_spent": {
+      "min": 0.0,
+      "max": 3600.0
+    },
+    "pages_visited": {
+      "min": 1
+    },
+    "previous_visits": {
+      "min": 0
+    }
+  },
+  "fairness_constraints": {
+    "protected_attributes": ["age", "gender", "location"],
+    "fairness_metrics": ["demographic_parity", "equal_opportunity"],
+    "threshold": 0.1
+  }
+} 

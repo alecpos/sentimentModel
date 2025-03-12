@@ -1,0 +1,128 @@
+---
+Description: Standards for NLP components and text analysis
+Globs: app/nlp/**/*.py, app/ml/text/**/*.py
+---
+
+# NLP Processing Standards
+
+## Text Preprocessing
+- Implement consistent tokenization across all text processing
+- Use standardized cleaning procedures (lowercasing, punctuation, special characters)
+- Apply domain-specific stopword removal for advertising content
+- Document all text normalization techniques
+
+## Feature Extraction
+- Implement both traditional (TF-IDF, BoW) and modern embedding techniques
+- Use pre-trained models appropriately (BERT, RoBERTa) with explicit versioning
+- Cache embeddings for performance optimization
+- Apply dimensionality reduction where appropriate
+
+## Sentiment Analysis
+- Calibrate sentiment models specifically for advertising language
+- Implement fine-grained sentiment beyond positive/negative (engagement, urgency, trust)
+- Include confidence scores with all sentiment predictions
+- Validate against human-labeled advertising content
+
+## Entity Recognition
+- Customize NER for advertising-specific entities (brands, offers, CTAs)
+- Document entity extraction rules clearly
+- Implement disambiguation for ambiguous entities
+- Include context-aware entity relationship mapping
+
+## Example
+```python
+# Good example - comprehensive text processor
+class AdTextProcessor:
+    """Process advertising text for feature extraction.
+    
+    This processor handles all text preprocessing, tokenization, and feature
+    extraction for ad content analysis.
+    
+    Attributes:
+        tokenizer: The tokenization method used
+        embedding_model: The embedding model for vector representations
+        entity_extractor: Named entity recognition component
+        sentiment_analyzer: Component for sentiment analysis
+    """
+    
+    def __init__(self, tokenizer="wordpiece", embedding_model="ad-optimized-bert"):
+        """Initialize the text processor.
+        
+        Args:
+            tokenizer: Tokenization method to use
+            embedding_model: Model to use for text embeddings
+        """
+        self.tokenizer = self._load_tokenizer(tokenizer)
+        self.embedding_model = self._load_embedding_model(embedding_model)
+        self.entity_extractor = EntityExtractor(domain="advertising")
+        self.sentiment_analyzer = SentimentAnalyzer(domain="advertising")
+        self.cache = {}
+        
+    def process(self, text, extract_entities=True, include_sentiment=True):
+        """Process text to extract features.
+        
+        Args:
+            text: Raw ad text to process
+            extract_entities: Whether to extract entities
+            include_sentiment: Whether to include sentiment analysis
+            
+        Returns:
+            Dictionary of extracted features
+        """
+        if not text or not isinstance(text, str):
+            return self._empty_result()
+            
+        # Check cache to avoid reprocessing
+        cache_key = self._generate_cache_key(text, extract_entities, include_sentiment)
+        if cache_key in self.cache:
+            return self.cache[cache_key]
+            
+        # Clean and normalize text
+        cleaned_text = self._clean_text(text)
+        tokens = self.tokenizer.tokenize(cleaned_text)
+        
+        # Generate embedding
+        embedding = self.embedding_model.encode(cleaned_text)
+        
+        result = {
+            "embedding": embedding,
+            "token_count": len(tokens),
+            "word_count": len(cleaned_text.split()),
+            "character_count": len(cleaned_text)
+        }
+        
+        # Add optional components
+        if extract_entities:
+            result["entities"] = self.entity_extractor.extract(cleaned_text)
+            
+        if include_sentiment:
+            sentiment = self.sentiment_analyzer.analyze(cleaned_text)
+            result["sentiment"] = sentiment
+            
+        # Cache result
+        self.cache[cache_key] = result
+        return result
+        
+    def _clean_text(self, text):
+        """Clean and normalize text for processing."""
+        # Remove extra whitespace
+        text = re.sub(r'\s+', ' ', text).strip()
+        # Remove special characters but keep important punctuation
+        text = re.sub(r'[^\w\s.,!?]', '', text)
+        # Convert to lowercase
+        return text.lower()
+        
+    def _generate_cache_key(self, text, extract_entities, include_sentiment):
+        """Generate a cache key for the given parameters."""
+        return f"{hash(text)}_{extract_entities}_{include_sentiment}"
+        
+    def _empty_result(self):
+        """Return empty result for invalid inputs."""
+        return {
+            "embedding": np.zeros(self.embedding_model.dimension),
+            "token_count": 0,
+            "word_count": 0,
+            "character_count": 0,
+            "entities": [],
+            "sentiment": {"score": 0, "label": "neutral", "confidence": 0}
+        }

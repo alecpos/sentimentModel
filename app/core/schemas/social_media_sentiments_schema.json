@@ -1,0 +1,27 @@
+{
+  "name": "social_media_sentiments_schema",
+  "version": "1.0.0",
+  "description": "Schema for the Social Media Sentiments Dataset",
+  "required_columns": ["sentiment", "text", "source"],
+  "column_types": {
+    "sentiment": "str",
+    "text": "str",
+    "source": "str"
+  },
+  "value_constraints": {
+    "sentiment": {
+      "allowed_values": ["positive", "negative", "neutral"],
+      "description": "Sentiment of the text"
+    }
+  },
+  "statistics": {
+    "text": {
+      "min_length": 1
+    }
+  },
+  "fairness_constraints": {
+    "protected_attributes": [],
+    "fairness_metrics": [],
+    "threshold": 0.1
+  }
+} 

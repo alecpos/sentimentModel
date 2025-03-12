@@ -1,0 +1,65 @@
+<html><head><title>Ad Score Predictor Model Card</title></head><body><pre># Model Card: Ad Score Predictor (v2.1.0)
+
+## Model Details
+
+- **Name:** Ad Score Predictor
+- **Version:** 2.1.0
+- **Type:** Random Forest Classifier
+- **Date:** 2023-10-15
+- **Authors:** WITHIN AI Team
+
+## Model Performance
+
+- **Accuracy:** 0.7167
+- **Precision:** 0.6250
+- **Recall:** 0.6838
+- **F1 Score:** 0.6531
+
+## Fairness Evaluation
+
+### Gender Group Metrics
+
+- **Demographic Parity:** 0.0200
+- **Equal Opportunity:** 0.0300
+
+### Age_group Group Metrics
+
+- **Demographic Parity:** 0.0300
+- **Equal Opportunity:** 0.0400
+
+## Fairness Mitigation
+
+- **Mitigation Technique:** Reweighing
+### Gender Group Metrics After Mitigation
+
+- **Demographic Parity:** 0.0200
+- **Equal Opportunity:** 0.0300
+
+### Age_group Group Metrics After Mitigation
+
+- **Demographic Parity:** 0.0300
+- **Equal Opportunity:** 0.0400
+
+## Ethical Considerations
+
+- **Protected Attributes:** gender, age_group
+- **Potential Risks:** Bias in model predictions across protected groups
+- **Mitigation Strategies:** Reweighing
+
+## Regulatory Compliance
+
+- **Compliance Frameworks:**
+  - EU AI Act (2023)
+  - NIST AI RMF (AI Risk Management Framework)
+
+- **Documentation Standards:**
+  - NIST AI RMF ID.GV 1.2: Explainability requirements are established
+  - NIST AI RMF ID.RA 2.9: Fairness considerations are evaluated
+
+## Limitations and Warnings
+
+- This model shows some bias across protected attributes that requires ongoing monitoring
+- Fairness metrics should be continuously evaluated in production
+- Mitigation techniques may impact overall model performance
+
+</pre></body></html>

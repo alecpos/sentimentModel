@@ -1,0 +1,173 @@
+# ML Backend Project Standards and AI Guidance
+
+project_context:
+  tech_stack: 
+    - Python 3.9+
+    - PyTorch
+    - scikit-learn
+    - SQLAlchemy
+    - FastAPI
+  architecture: Model-driven ML prediction system with data validation layers
+  style_guide: PEP 8 with strict type hints
+  repository_structure: 
+    - app/models/ml/prediction
+    - app/core
+    - tests/
+  complexity_hotspots:
+    - scripts/digest.py
+    - app/models/ml/prediction/ad_score_predictor.py
+
+python:
+  type_safety: strict
+  test_coverage: 90
+  docstring_style: google
+  max_line_length: 100
+  max_complexity: 15
+  formatter: black
+  linter: 
+    - flake8
+    - pylint
+  property_based_testing: enabled
+  validation_framework: pytest
+
+pytorch:
+  compile_mode: max-autotune
+  mixed_precision: bf16
+  activation_checkpointing: true
+  gradient_accumulation: true
+  quantization: int8-dynamic
+  profiling: enabled
+  float32_matmul_precision: high
+  cuda_optimization: true
+
+sklearn:
+  pipeline_validation: full
+  feature_importance_threshold: 0.01
+  cross_validation: stratified_kfold
+  calibration: isotonic
+  model_persistence: cloudpickle
+  skorch_integration: enabled
+
+ml_constraints:
+  hallucination_threshold: 0.15
+  data_validation: required
+  outlier_handling: explicit
+  model_explainability:
+    - shap
+    - lime
+  fairness_metrics:
+    - demographic_parity
+    - equal_opportunity
+  performance_budget:
+    inference_time: 300ms
+    memory: 2GB
+  privacy_budget:
+    epsilon: 2.0
+    delta: 1e-5
+
+security:
+  encryption: AES-256-GCM
+  access_control: RBAC
+  audit_logging: enabled
+  vulnerability_scanning: enabled
+  license_compliance: strict
+  anonymization: k_anonymity
+  k_anonymity_k: 5
+
+ci_cd:
+  test_coverage_threshold: 90
+  performance_regression_threshold: 5
+  model_validation_suite: enabled
+  deployment_environment: ml.g5.8xlarge
+  inference_environment: ml.inf2.24xlarge
+
+coding_standards:
+  - Use Python type hints for all function parameters and return values
+  - All classes should have docstrings in Google docstring format
+  - Implement proper exception handling with specific exception types
+  - Maintain separation of concerns between data access, processing, and ML prediction
+  - Follow scikit-learn conventions for estimators/transformers
+  - Use dataclasses for data transfer objects
+  - Keep function complexity low (max cyclomatic complexity: 15)
+  - Write unit tests for all ML components with edge case coverage
+  - Validate ML models for robustness and fairness
+  - Document model assumptions, limitations and expected input ranges
+
+data_handling:
+  validation:
+    - Validate input data before processing (schema, ranges, nulls)
+    - Implement proper error messages for data validation failures
+    - Use appropriate data types (numpy arrays for numerical operations)
+  documentation:
+    - Document expected data formats and schemas
+    - Handle edge cases (empty inputs, NaN values, outliers)
+  implementation:
+    - Implement data preprocessing as reusable pipelines
+    - Track data quality metrics and alert on drift
+    - Store processing metadata for reproducibility
+
+error_handling:
+  practices:
+    - Use try/except blocks for all I/O and external service calls
+    - Implement custom exception types for domain-specific errors
+    - Log errors with appropriate context information
+    - Provide helpful error messages for debugging
+  resilience:
+    - Implement graceful degradation for ML components
+    - Track error rates and patterns over time
+    - Add error boundaries around prediction services
+    - Gracefully handle resource limitations
+
+ai_development_workflow:
+  documentation:
+    - Document model design decisions with rationale
+    - Track experiment metrics and parameters
+  version_control:
+    - Version control model artifacts alongside code
+    - Implement CI/CD pipelines for model deployment
+  monitoring:
+    - Monitor model performance in production
+    - Set up automated retraining triggers
+  validation:
+    - Validate model updates before deployment
+    - Document review process for model changes
+
+# WITHIN AD SCORE & ACCOUNT HEALTH PROJECT STANDARDS
+
+## Overall Architecture
+- Ad scoring and account health are separate but interconnected systems
+- Both systems share common data preprocessing components
+- Implementations should follow the Chain of Reasoning pattern
+- Integration points must include comprehensive error handling
+
+## Data Management
+- Always validate input data with explicit checks
+- Implement data versioning for all datasets
+- Document schema and transformations explicitly
+- Handle missing data with consistent strategies
+
+## Model Implementation
+- Prefer scikit-learn for baseline models and PyTorch for deep learning
+- Implement model versioning and experiment tracking
+- Include bias detection and fairness metrics for all models
+- Document model limitations and edge cases
+
+## Integration Requirements
+- APIs must follow RESTful design patterns
+- Include performance metrics in response headers
+- Implement rate limiting and authentication
+- Log all prediction requests with appropriate privacy measures
+
+## Testing Standards
+- Unit tests required for all data transformations
+- Integration tests for model training pipelines
+- Performance testing for inference endpoints
+- A/B testing framework for model comparisons
+
+## ML Constraints
+- Hallucination threshold: 0.15
+- Data validation: required
+- Outlier handling: explicit
+- Model explainability: SHAP and LIME
+- Fairness metrics: demographic parity and equal opportunity
+- Performance budget: 300ms inference time, 2GB memory

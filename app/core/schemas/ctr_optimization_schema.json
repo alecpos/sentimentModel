@@ -1,0 +1,37 @@
+{
+  "name": "ctr_optimization_schema",
+  "version": "1.0.0",
+  "description": "Schema for the CTR Optimization Dataset",
+  "required_columns": ["click", "impression", "campaign_id", "ad_id", "placement", "device_type", "browser", "time_of_day", "day_of_week"],
+  "column_types": {
+    "click": "int",
+    "impression": "int",
+    "campaign_id": "str",
+    "ad_id": "str",
+    "placement": "str",
+    "device_type": "str",
+    "browser": "str",
+    "time_of_day": "str",
+    "day_of_week": "str"
+  },
+  "value_constraints": {
+    "click": {
+      "allowed_values": [0, 1],
+      "description": "1 if ad was clicked, 0 otherwise"
+    },
+    "impression": {
+      "min": 1,
+      "description": "Number of impressions"
+    }
+  },
+  "statistics": {
+    "impression": {
+      "min": 1
+    }
+  },
+  "fairness_constraints": {
+    "protected_attributes": ["device_type"],
+    "fairness_metrics": ["demographic_parity", "equal_opportunity"],
+    "threshold": 0.1
+  }
+} 

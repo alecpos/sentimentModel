@@ -1,0 +1,45 @@
+name: Documentation Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  validate-documentation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
+    - name: Run documentation validation
+      run: |
+        python scripts/validate_documentation.py --format json --output doc_validation.json
+        
+    - name: Check for documentation errors
+      run: |
+        ERROR_COUNT=$(python -c "import json; f=open('doc_validation.json'); data=json.load(f); print(data['error_count']); f.close()")
+        if [ "$ERROR_COUNT" -gt 0 ]; then
+          echo "::error::Documentation validation found $ERROR_COUNT errors. See doc_validation.json for details."
+          exit 1
+        else
+          echo "Documentation validation passed with no errors."
+        fi
+        
+    - name: Upload validation report
+      uses: actions/upload-artifact@v3
+      with:
+        name: documentation-validation-report
+        path: doc_validation.json 

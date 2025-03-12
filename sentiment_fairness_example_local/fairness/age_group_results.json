@@ -1,0 +1,63 @@
+{
+  "protected_attribute": "age_group",
+  "overall_metrics": {
+    "demographic_parity": 0.14285714285714285,
+    "equal_opportunity": 0.31666666666666665,
+    "disparate_impact": 0.7
+  },
+  "group_metrics": {
+    "36-50": {
+      "count": 28,
+      "positive_rate": 0.39285714285714285,
+      "true_positive_rate": 0.5882352941176471,
+      "false_positive_rate": 0.09090909090909091,
+      "true_negative_rate": 0.9090909090909091,
+      "false_negative_rate": 0.4117647058823529,
+      "accuracy": 0.7142857142857143,
+      "precision": 0.9090909090909091
+    },
+    "26-35": {
+      "count": 27,
+      "positive_rate": 0.4444444444444444,
+      "true_positive_rate": 0.7857142857142857,
+      "false_positive_rate": 0.07692307692307693,
+      "true_negative_rate": 0.9230769230769231,
+      "false_negative_rate": 0.21428571428571427,
+      "accuracy": 0.8518518518518519,
+      "precision": 0.9166666666666666
+    },
+    "51+": {
+      "count": 24,
+      "positive_rate": 0.3333333333333333,
+      "true_positive_rate": 0.5833333333333334,
+      "false_positive_rate": 0.08333333333333333,
+      "true_negative_rate": 0.9166666666666666,
+      "false_negative_rate": 0.4166666666666667,
+      "accuracy": 0.75,
+      "precision": 0.875
+    },
+    "18-25": {
+      "count": 21,
+      "positive_rate": 0.47619047619047616,
+      "true_positive_rate": 0.9,
+      "false_positive_rate": 0.09090909090909091,
+      "true_negative_rate": 0.9090909090909091,
+      "false_negative_rate": 0.1,
+      "accuracy": 0.9047619047619048,
+      "precision": 0.9
+    }
+  },
+  "passing_metrics": [],
+  "failing_metrics": [
+    "equal_opportunity",
+    "disparate_impact",
+    "demographic_parity"
+  ],
+  "threshold": 0.1,
+  "visualization_paths": {
+    "fairness_metrics": "sentiment_fairness_example_local/fairness/age_group/age_group_fairness_metrics.png",
+    "group_metrics": "sentiment_fairness_example_local/fairness/age_group/age_group_group_metrics.png",
+    "distribution": "sentiment_fairness_example_local/fairness/age_group/age_group_distribution.png",
+    "intersectional_age_group": "sentiment_fairness_example_local/fairness/age_group/age_group_age_group_heatmap.png"
+  }
+}

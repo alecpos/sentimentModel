@@ -1,0 +1,133 @@
+# ML Validation Components
+
+This directory contains components for validating machine learning models before and during deployment. These tools ensure models meet performance, reliability, and fairness criteria before being put into production.
+
+## Directory Structure
+
+- **__init__.py**: Module initialization with component exports
+- **ab_test.py**: Base A/B testing framework
+- **ab_test_manager.py**: Comprehensive A/B test management system
+- **canary_test.py**: Canary deployment testing utilities
+- **golden_set_validator.py**: Validation against golden datasets
+- **shadow_deployment.py**: Shadow deployment management
+
+## Key Components
+
+### ABTest
+The base A/B testing framework for comparing model versions.
+
+**Key Features:**
+- Statistical significance testing
+- Multiple comparison methods
+- Traffic allocation control
+- Experiment tracking
+
+### ABTestManager
+Comprehensive system for managing multiple A/B tests.
+
+**Key Features:**
+- Test scheduling and lifecycle management
+- Automated data collection and analysis
+- Integration with monitoring systems
+- Results visualization and reporting
+
+### CanaryTest
+Tools for running canary deployments of new model versions.
+
+**Key Features:**
+- Controlled traffic allocation
+- Automated rollback triggers
+- Performance and error monitoring
+- Gradual rollout management
+
+### GoldenSetValidator
+Validation framework using golden datasets with known expected outputs.
+
+**Key Features:**
+- Benchmark performance evaluation
+- Regression testing
+- Edge case validation
+- Model consistency checking
+
+### ShadowDeployment
+Framework for running models in shadow mode without affecting production.
+
+**Key Features:**
+- Side-by-side comparison with production models
+- Performance impact analysis
+- Logging and comparison of predictions
+- Risk-free evaluation in production environment
+
+## Usage Examples
+
+### A/B Testing
+
+```python
+from app.models.ml.validation import ABTestManager
+
+# Create an A/B test comparing two models
+ab_test = ABTestManager(
+    experiment_name="new_ad_score_model",
+    control_version="1.0.0",
+    treatment_version="1.1.0",
+    traffic_allocation=0.2,  # 20% of traffic to treatment
+    success_metrics=["CTR", "conversion_rate"]
+)
+
+# Start the test
+ab_test.start()
+
+# Later, analyze results
+results = ab_test.analyze()
+if results.is_significant:
+    print(f"Treatment improved {results.primary_metric} by {results.lift_percentage}%")
+```
+
+### Shadow Deployment
+
+```python
+from app.models.ml.validation import ShadowDeployment
+from app.models.ml.prediction import AdScorePredictor
+
+# Create new model version
+new_model = AdScorePredictor(version="1.1.0")
+
+# Set up shadow deployment
+shadow = ShadowDeployment(
+    production_model_id="ad_score_predictor_v1.0.0",
+    shadow_model=new_model,
+    log_predictions=True
+)
+
+# Run shadow deployment for a week
+shadow.start(duration_days=7)
+
+# After completion, analyze results
+comparison = shadow.analyze_performance()
+print(f"RMSE difference: {comparison['rmse_diff']}")
+print(f"Latency impact: {comparison['p95_latency_diff_ms']}ms")
+```
+
+## Integration
+
+The validation components integrate with the following systems:
+
+- **Model Registry**: For accessing model versions
+- **Feature Store**: For consistent feature access
+- **Monitoring System**: For tracking performance during validation
+- **Experiment Tracking**: For recording validation results
+- **Deployment Pipeline**: For automating validation steps
+
+## Dependencies
+
+- **scipy**: For statistical analysis
+- **numpy**: For numerical processing
+- **pandas**: For data handling
+- **mlflow**: For experiment tracking
+- **PyTorch**: For model loading and inference
+- **scikit-learn**: For metric calculation
+
+## Additional Resources
+
+- See `app/models/ml/monitoring/README.md` for information on model monitoring
+- See `app/models/ml/prediction/README.md` for model implementation details 

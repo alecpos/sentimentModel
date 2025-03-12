@@ -1,0 +1,98 @@
+# ML Robustness Components
+
+This directory contains components for ensuring the robustness of machine learning models against adversarial attacks, edge cases, and distribution shifts. These tools help create more reliable models that maintain performance under challenging conditions.
+
+## Directory Structure
+
+- **__init__.py**: Module initialization with component exports
+- **attacks.py**: Implementations of various adversarial attacks
+- **certification.py**: Robustness certification methods
+
+## Key Components
+
+### AdversarialAttacks
+A collection of methods to generate adversarial examples that challenge model predictions.
+
+**Key Features:**
+- FGSM (Fast Gradient Sign Method) attack
+- PGD (Projected Gradient Descent) attack
+- Boundary-based attacks
+- Black-box attack simulations
+
+### RobustnessCertification
+Tools for certifying model robustness within certain bounds.
+
+**Key Features:**
+- Randomized smoothing certification
+- Lipschitz constant estimation
+- Formal verification methods
+- Uncertainty quantification
+
+## Usage Examples
+
+### Testing Model Robustness
+
+```python
+from app.models.ml.robustness import AdversarialAttacks
+from app.models.ml.prediction import AdScorePredictor
+
+# Load model
+model = AdScorePredictor()
+
+# Create adversarial examples
+attack = AdversarialAttacks(attack_type="fgsm", epsilon=0.05)
+X_test, y_test = load_test_data()
+X_adv = attack.generate(model, X_test, y_test)
+
+# Evaluate model on adversarial examples
+original_predictions = model.predict(X_test)
+adversarial_predictions = model.predict(X_adv)
+
+# Calculate robustness metrics
+robustness_score = calculate_robustness(original_predictions, adversarial_predictions)
+print(f"Model robustness score: {robustness_score:.4f}")
+```
+
+### Certifying Robustness
+
+```python
+from app.models.ml.robustness import RobustnessCertification
+from app.models.ml.prediction import AdScorePredictor
+
+# Load model
+model = AdScorePredictor()
+
+# Create certification
+certifier = RobustnessCertification(method="randomized_smoothing", samples=1000)
+
+# Certify model robustness
+X_test = load_test_data()
+certification_results = certifier.certify(model, X_test)
+
+# Check certification results
+print(f"Average certified radius: {certification_results['avg_radius']:.4f}")
+print(f"Certified accuracy at radius 0.1: {certification_results['certified_accuracy_at_0.1']:.2f}%")
+```
+
+## Integration
+
+The robustness components integrate with the following systems:
+
+- **Model Training Pipeline**: For adversarial training
+- **Model Evaluation**: For robustness assessment
+- **Monitoring System**: For tracking robustness in production
+- **CI/CD Pipeline**: For automated robustness testing
+
+## Dependencies
+
+- **PyTorch**: For model manipulation and adversarial example generation
+- **NumPy**: For numerical processing
+- **Foolbox**: For additional attack implementations
+- **Advertorch**: For advanced adversarial methods
+- **scikit-learn**: For metrics calculation
+
+## Additional Resources
+
+- See `app/models/ml/monitoring/README.md` for monitoring models in production
+- See `app/models/ml/validation/README.md` for validation techniques
+- See security guidelines in `docs/standards/security.md` 

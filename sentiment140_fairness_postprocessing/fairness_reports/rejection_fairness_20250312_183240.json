@@ -1,0 +1,92 @@
+{
+  "gender": {
+    "groups": {
+      "Female": {
+        "accuracy": 0.7689021539789277,
+        "positive_rate": 0.5275054838361681,
+        "tpr": 0.7637729762940966,
+        "fpr": 0.22452028036309318,
+        "accuracy_disparity": -0.014310346021072284,
+        "sample_size": 139045
+      },
+      "Male": {
+        "accuracy": 0.8029220940022782,
+        "positive_rate": 0.5239364073101878,
+        "tpr": 0.8223846183907148,
+        "fpr": 0.2170882134319063,
+        "accuracy_disparity": 0.01970959400227823,
+        "sample_size": 100955
+      }
+    },
+    "demographic_parity_disparity": 0.0035690765259803747,
+    "equalized_odds_disparity": 0.06604370902780507
+  },
+  "age_group": {
+    "groups": {
+      "51+": {
+        "accuracy": 0.7512211843345616,
+        "positive_rate": 0.5057845573742394,
+        "tpr": 0.7515517530615669,
+        "fpr": 0.2491240364400841,
+        "accuracy_disparity": -0.031991315665438336,
+        "sample_size": 35007
+      },
+      "26-35": {
+        "accuracy": 0.7918155661846904,
+        "positive_rate": 0.5257848149980757,
+        "tpr": 0.7961314355039899,
+        "fpr": 0.21317500148189128,
+        "accuracy_disparity": 0.008603066184690422,
+        "sample_size": 109134
+      },
+      "36-50": {
+        "accuracy": 0.7739903371326375,
+        "positive_rate": 0.5209139684488695,
+        "tpr": 0.7746892093485828,
+        "fpr": 0.22681957010315218,
+        "accuracy_disparity": -0.009222162867362438,
+        "sample_size": 37463
+      },
+      "18-25": {
+        "accuracy": 0.7922289197890267,
+        "positive_rate": 0.5418008082745394,
+        "tpr": 0.7974745318123589,
+        "fpr": 0.21448652869972668,
+        "accuracy_disparity": 0.009016419789026675,
+        "sample_size": 58396
+      }
+    },
+    "demographic_parity_disparity": 0.03601625090029992,
+    "equalized_odds_disparity": 0.08187181370898491
+  },
+  "location": {
+    "groups": {
+      "Urban": {
+        "accuracy": 0.7775900851618776,
+        "positive_rate": 0.5252903643668,
+        "tpr": 0.7778759214351101,
+        "fpr": 0.22275227945985457,
+        "accuracy_disparity": -0.005622414838122425,
+        "sample_size": 114253
+      },
+      "Rural": {
+        "accuracy": 0.7908935546875,
+        "positive_rate": 0.5272420247395834,
+        "tpr": 0.799226912625818,
+        "fpr": 0.21856404465100118,
+        "accuracy_disparity": 0.007681054687500022,
+        "sample_size": 49152
+      },
+      "Suburban": {
+        "accuracy": 0.7866701481819962,
+        "positive_rate": 0.5262745610026764,
+        "tpr": 0.7929888035984941,
+        "fpr": 0.22057216509288577,
+        "accuracy_disparity": 0.0034576481819962313,
+        "sample_size": 76595
+      }
+    },
+    "demographic_parity_disparity": 0.0019516603727833814,
+    "equalized_odds_disparity": 0.02553922599956132
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "protected_attribute": "location",
+  "overall_metrics": {
+    "demographic_parity": 0.06896551724137934,
+    "equal_opportunity": 0.2053571428571429,
+    "disparate_impact": 0.8461538461538461
+  },
+  "group_metrics": {
+    "Urban": {
+      "count": 29,
+      "positive_rate": 0.3793103448275862,
+      "true_positive_rate": 0.7777777777777778,
+      "false_positive_rate": 0.2,
+      "true_negative_rate": 0.8,
+      "false_negative_rate": 0.2222222222222222,
+      "accuracy": 0.7931034482758621,
+      "precision": 0.6363636363636364
+    },
+    "Rural": {
+      "count": 29,
+      "positive_rate": 0.4482758620689655,
+      "true_positive_rate": 0.8125,
+      "false_positive_rate": 0.0,
+      "true_negative_rate": 1.0,
+      "false_negative_rate": 0.1875,
+      "accuracy": 0.896551724137931,
+      "precision": 1.0
+    },
+    "Suburban": {
+      "count": 42,
+      "positive_rate": 0.40476190476190477,
+      "true_positive_rate": 0.6071428571428571,
+      "false_positive_rate": 0.0,
+      "true_negative_rate": 1.0,
+      "false_negative_rate": 0.39285714285714285,
+      "accuracy": 0.7380952380952381,
+      "precision": 1.0
+    }
+  },
+  "passing_metrics": [
+    "disparate_impact",
+    "demographic_parity"
+  ],
+  "failing_metrics": [
+    "equal_opportunity"
+  ],
+  "threshold": 0.1,
+  "visualization_paths": {
+    "fairness_metrics": "sentiment_fairness_example_local/fairness/location/location_fairness_metrics.png",
+    "group_metrics": "sentiment_fairness_example_local/fairness/location/location_group_metrics.png",
+    "distribution": "sentiment_fairness_example_local/fairness/location/location_distribution.png",
+    "intersectional_age_group": "sentiment_fairness_example_local/fairness/location/location_age_group_heatmap.png"
+  }
+}

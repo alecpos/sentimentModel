@@ -1,0 +1,118 @@
+# ML Monitoring Components
+
+This directory contains components for monitoring machine learning models in production. These components are designed to detect data drift, concept drift, and anomalies in model performance, allowing for early intervention and model retraining.
+
+## Directory Structure
+
+- **__init__.py**: Module initialization with component exports
+- **drift_detector.py**: Base drift detection components
+- **concept_drift_detector.py**: Specific detection for concept drift in models
+- **prediction_drift_detector.py**: Monitor changes in prediction distributions
+- **feature_monitor.py**: Track features for distribution changes
+- **alert_manager.py**: Component for sending alerts when drift is detected
+
+## Key Components
+
+### DriftDetector
+The base drift detection system that monitors statistical changes in data distributions.
+
+**Key Features:**
+- Statistical hypothesis testing for distribution comparison
+- Configurable thresholds for drift detection
+- Support for numerical and categorical features
+- Integration with alerting systems
+
+### ConceptDriftDetector
+Specialized detector that focuses on concept drift (changes in relationships between features and targets).
+
+**Key Features:**
+- Model performance monitoring
+- Sequential hypothesis testing
+- Online drift detection
+- Window-based analysis
+
+### PredictionDriftDetector
+Monitors changes in the distribution of model predictions.
+
+**Key Features:**
+- Distribution comparison using KL divergence, PSI, and JS distance
+- Automated threshold determination
+- Support for regression and classification tasks
+
+### FeatureMonitor
+Tracks individual feature distributions over time.
+
+**Key Features:**
+- Feature statistics tracking
+- Correlation stability monitoring
+- Seasonality-aware detection
+- Visualization support
+
+### AlertManager
+Manages the sending of alerts when drift or anomalies are detected.
+
+**Key Features:**
+- Multiple alert channels (email, Slack, webhook)
+- Alert prioritization
+- Rate limiting to prevent alert fatigue
+- Customizable alert templates
+
+## Usage Examples
+
+### Basic Drift Detection
+
+```python
+from app.models.ml.monitoring import DriftDetector
+
+# Initialize detector with reference data
+detector = DriftDetector(reference_data=baseline_data)
+
+# Check for drift in new data
+drift_results = detector.detect_drift(current_data)
+
+if drift_results["drift_detected"]:
+    print(f"Drift detected in features: {drift_results['drifted_features']}")
+```
+
+### Setting Up Alerts
+
+```python
+from app.models.ml.monitoring import AlertManager, DriftDetector
+
+# Initialize alert manager
+alert_manager = AlertManager(
+    channels=["email", "slack"],
+    recipients=["ml-team@example.com"]
+)
+
+# Initialize detector with alert manager
+detector = DriftDetector(
+    reference_data=baseline_data,
+    alert_manager=alert_manager
+)
+
+# Detect drift (will send alerts automatically if drift is detected)
+detector.detect_drift(current_data)
+```
+
+## Integration
+
+The monitoring components integrate with the following systems:
+
+- **Model Registry**: For accessing model versions and training data
+- **Prediction Service**: For monitoring live predictions
+- **Feature Store**: For tracking feature data over time
+- **Alerting Infrastructure**: For sending notifications
+
+## Dependencies
+
+- **scipy**: For statistical tests
+- **numpy**: For numerical processing
+- **pandas**: For data handling
+- **matplotlib**: For optional visualization
+- **scikit-learn**: For ML utilities
+
+## Additional Resources
+
+- See `app/models/ml/validation/README.md` for information on model validation
+- See `app/models/ml/prediction/README.md` for model implementation details 

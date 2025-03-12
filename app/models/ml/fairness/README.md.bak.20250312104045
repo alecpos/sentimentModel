@@ -1,0 +1,135 @@
+# ML Fairness Components
+
+This directory contains components for assessing and mitigating bias in machine learning models. These tools ensure that models provide fair predictions across different demographic groups and protected attributes.
+
+## Directory Structure
+
+- **__init__.py**: Module initialization with component exports
+- **evaluator.py**: Fairness metrics evaluation tools
+- **counterfactual.py**: Counterfactual analysis utilities
+- **mitigation.py**: Bias mitigation techniques
+- **model_auditor.py**: Comprehensive model auditing framework
+
+## Key Components
+
+### FairnessEvaluator
+Tools for measuring various fairness metrics across demographic groups.
+
+**Key Features:**
+- Demographic parity assessment
+- Equal opportunity measurement
+- Disparate impact calculation
+- Group fairness metrics
+
+### CounterfactualAnalyzer
+Generates counterfactual examples to analyze model behavior under different conditions.
+
+**Key Features:**
+- Counterfactual example generation
+- Minimal perturbation analysis
+- Actionable recourse recommendations
+- Sensitivity analysis for protected attributes
+
+### BiasMitigation
+Techniques for mitigating bias in model predictions.
+
+**Key Features:**
+- Preprocessing techniques (reweighing, sampling)
+- In-processing methods (adversarial debiasing, constraint optimization)
+- Post-processing approaches (calibrated equal odds, reject option classification)
+- Model-specific debiasing strategies
+
+### ModelAuditor
+Comprehensive framework for auditing models for fairness issues.
+
+**Key Features:**
+- Automated fairness assessment
+- Reporting and visualization
+- Regulatory compliance checking
+- Bias tracking over time
+
+## Usage Examples
+
+### Fairness Evaluation
+
+```python
+from app.models.ml.fairness import FairnessEvaluator
+from app.models.ml.prediction import AdScorePredictor
+
+# Load model and data
+model = AdScorePredictor()
+X_test, y_test = load_test_data()
+demographic_data = load_demographic_data()
+
+# Initialize evaluator
+evaluator = FairnessEvaluator(
+    protected_attributes=["age_group", "gender", "location"]
+)
+
+# Evaluate fairness
+predictions = model.predict(X_test)
+fairness_report = evaluator.evaluate(
+    predictions=predictions,
+    ground_truth=y_test,
+    demographic_data=demographic_data
+)
+
+# Check results
+for attribute, metrics in fairness_report.items():
+    print(f"Fairness for {attribute}:")
+    print(f"  Demographic Parity: {metrics['demographic_parity']:.3f}")
+    print(f"  Equal Opportunity: {metrics['equal_opportunity']:.3f}")
+```
+
+### Bias Mitigation
+
+```python
+from app.models.ml.fairness import BiasMitigation
+from app.models.ml.prediction import AdScorePredictor
+
+# Load original model and data
+model = AdScorePredictor()
+X_train, y_train = load_training_data()
+demographic_data = load_demographic_data()
+
+# Initialize mitigator
+mitigator = BiasMitigation(
+    method="reweighing",
+    protected_attribute="age_group"
+)
+
+# Create a debiased training set
+X_train_debiased, y_train_debiased, sample_weights = mitigator.transform(
+    X=X_train,
+    y=y_train,
+    demographic_data=demographic_data
+)
+
+# Train a new model with debiased data
+debiased_model = AdScorePredictor()
+debiased_model.fit(X_train_debiased, y_train_debiased, sample_weight=sample_weights)
+```
+
+## Integration
+
+The fairness components integrate with the following systems:
+
+- **Model Training Pipeline**: For bias mitigation during training
+- **Model Evaluation**: For assessing fairness before deployment
+- **Monitoring System**: For tracking fairness metrics in production
+- **Reporting System**: For generating fairness audit reports
+
+## Dependencies
+
+- **scikit-learn**: For metrics calculation
+- **numpy**: For numerical processing
+- **pandas**: For data handling
+- **matplotlib/seaborn**: For visualization
+- **fairlearn**: For advanced fairness metrics and mitigation
+- **aif360**: For additional bias mitigation techniques
+
+## Additional Resources
+
+- See `app/models/ml/monitoring/README.md` for information on ongoing monitoring
+- See `app/models/ml/validation/README.md` for pre-deployment validation
+- See ethical guidelines in `docs/standards/ethical_ai.md` 

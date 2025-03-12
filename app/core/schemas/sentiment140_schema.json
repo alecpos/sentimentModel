@@ -1,0 +1,26 @@
+{
+  "name": "sentiment140_schema",
+  "version": "1.0.0",
+  "description": "Schema for the Sentiment140 Dataset",
+  "required_columns": ["target", "text"],
+  "column_types": {
+    "target": "int",
+    "text": "str"
+  },
+  "value_constraints": {
+    "target": {
+      "allowed_values": [0, 4],
+      "description": "0 = negative, 4 = positive"
+    }
+  },
+  "statistics": {
+    "text": {
+      "min_length": 1
+    }
+  },
+  "fairness_constraints": {
+    "protected_attributes": [],
+    "fairness_metrics": [],
+    "threshold": 0.1
+  }
+} 

@@ -1,0 +1,130 @@
+{
+  "model_info": {
+    "name": "Ad Score Predictor - Baseline",
+    "version": "1.0.0",
+    "type": "Classification",
+    "description": "Baseline model for predicting ad performance scores.",
+    "use_cases": [
+      "Predicting ad effectiveness",
+      "Estimating conversion rates"
+    ],
+    "date_created": "2025-03-12",
+    "developers": "Not specified",
+    "last_updated": "2025-03-12"
+  },
+  "performance_metrics": {
+    "accuracy": 0.7566666666666667,
+    "precision": 0.8146067415730337,
+    "recall": 0.7837837837837838,
+    "f1_score": 0.7988980716253443,
+    "roc_auc": 0.8566862514688602
+  },
+  "fairness_metrics": {
+    "overall": {
+      "accuracy": 0.7566666666666667
+    },
+    "fairness_metrics": {
+      "gender_demographic_parity": {
+        "difference": 0.02203647416413368,
+        "passes_threshold": true
+      },
+      "gender_equal_opportunity": {
+        "difference": 0.2617872807017544,
+        "passes_threshold": true
+      },
+      "location_demographic_parity": {
+        "difference": 0.012820512820512775,
+        "passes_threshold": true
+      },
+      "location_equal_opportunity": {
+        "difference": 0.0021276595744681437,
+        "passes_threshold": true
+      },
+      "age_group_demographic_parity": {
+        "difference": 0.12674850128461312,
+        "passes_threshold": true
+      },
+      "age_group_equal_opportunity": {
+        "difference": 0.11599099099099097,
+        "passes_threshold": true
+      }
+    },
+    "group_metrics": {
+      "gender": {
+        "male": {
+          "count": 188,
+          "accuracy": 0.6914893617021277,
+          "positive_rate": 0.5851063829787234,
+          "true_positive_rate": 0.703125,
+          "false_positive_rate": 0.3333333333333333
+        },
+        "female": {
+          "count": 112,
+          "accuracy": 0.8660714285714286,
+          "positive_rate": 0.6071428571428571,
+          "true_positive_rate": 0.9649122807017544,
+          "false_positive_rate": 0.23636363636363636
+        }
+      },
+      "location": {
+        "rural": {
+          "count": 52,
+          "accuracy": 0.7692307692307693,
+          "positive_rate": 0.6346153846153846,
+          "true_positive_rate": 0.8,
+          "false_positive_rate": 0.29411764705882354
+        },
+        "urban": {
+          "count": 156,
+          "accuracy": 0.7371794871794872,
+          "positive_rate": 0.6217948717948718,
+          "true_positive_rate": 0.7978723404255319,
+          "false_positive_rate": 0.3548387096774194
+        },
+        "suburban": {
+          "count": 92,
+          "accuracy": 0.782608695652174,
+          "positive_rate": 0.5217391304347826,
+          "true_positive_rate": 0.75,
+          "false_positive_rate": 0.16666666666666666
+        }
+      },
+      "age_group": {
+        "18-25": {
+          "count": 62,
+          "accuracy": 0.7258064516129032,
+          "positive_rate": 0.4838709677419355,
+          "true_positive_rate": 0.6756756756756757,
+          "false_positive_rate": 0.2
+        },
+        "26-35": {
+          "count": 113,
+          "accuracy": 0.7610619469026548,
+          "positive_rate": 0.6106194690265486,
+          "true_positive_rate": 0.7916666666666666,
+          "false_positive_rate": 0.2926829268292683
+        },
+        "36-50": {
+          "count": 94,
+          "accuracy": 0.7553191489361702,
+          "positive_rate": 0.648936170212766,
+          "true_positive_rate": 0.8392857142857143,
+          "false_positive_rate": 0.3684210526315789
+        },
+        "51+": {
+          "count": 31,
+          "accuracy": 0.8064516129032258,
+          "positive_rate": 0.5806451612903226,
+          "true_positive_rate": 0.8,
+          "false_positive_rate": 0.18181818181818182
+        }
+      }
+    },
+    "fairness_threshold": 0.05
+  },
+  "generation_date": "2025-03-12",
+  "exported_formats": [
+    "md",
+    "html"
+  ]
+}

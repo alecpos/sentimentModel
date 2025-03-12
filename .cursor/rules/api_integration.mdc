@@ -1,0 +1,72 @@
+---
+Description: Standards for API implementations and integrations
+Globs: app/api/**/*.py, app/routes/**/*.py
+---
+
+# API Implementation Standards
+
+## Architecture
+- Follow RESTful API design principles
+- Implement proper status codes and error formats
+- Include request validation
+- Document with OpenAPI/Swagger
+
+## Performance
+- Implement caching for frequent predictions
+- Add monitoring for latency and throughput
+- Use appropriate batch processing
+- Include rate limiting for external clients
+
+## Security
+- Implement proper authentication
+- Add input sanitization
+- Include audit logging
+- Apply appropriate access controls
+
+## Example
+```python
+# Good example - API endpoint with validation and error handling
+@router.post("/predict/ad-score", response_model=AdScorePredictionResponse)
+async def predict_ad_score(request: AdScorePredictionRequest, current_user: User = Depends(get_current_user)):
+    """Generate ad effectiveness score predictions.
+    
+    Args:
+        request: The prediction request containing ad data
+        current_user: Authenticated user making the request
+        
+    Returns:
+        Prediction results with scores and confidence levels
+        
+    Raises:
+        HTTPException: For invalid inputs or processing errors
+    """
+    try:
+        # Validate permissions
+        if not has_prediction_access(current_user, request.account_id):
+            raise HTTPException(status_code=403, detail="Insufficient permissions")
+        
+        # Get model and generate prediction
+        model = get_ad_score_model(version=request.model_version)
+        features = extract_features(request.ad_data)
+        prediction = model.predict(features)
+        
+        # Log prediction for auditing
+        await log_prediction(user_id=current_user.id, 
+                           request_data=request, 
+                           prediction=prediction)
+        
+        # Return formatted response
+        return AdScorePredictionResponse(
+            ad_id=request.ad_id,
+            score=float(prediction[0]),
+            confidence=calculate_confidence(model, features),
+            model_version=model.version,
+            timestamp=datetime.now().isoformat()
+        )
+    except ValidationError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    except ModelNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except PredictionError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+``` 

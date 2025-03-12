@@ -1,0 +1,24 @@
+{
+  "gender": {
+    "groups": {
+      "0": {
+        "accuracy": 0.7872340425531915,
+        "positive_rate": 0.5241779497098646,
+        "tpr": 0.7992565055762082,
+        "fpr": 0.22580645161290322,
+        "accuracy_disparity": 0.014234042553191495,
+        "sample_size": 517
+      },
+      "1": {
+        "accuracy": 0.7577639751552795,
+        "positive_rate": 0.5424430641821946,
+        "tpr": 0.7888446215139442,
+        "fpr": 0.27586206896551724,
+        "accuracy_disparity": -0.01523602484472053,
+        "sample_size": 483
+      }
+    },
+    "demographic_parity_disparity": 0.018265114472329924,
+    "equalized_odds_disparity": 0.06046750141487803
+  }
+}

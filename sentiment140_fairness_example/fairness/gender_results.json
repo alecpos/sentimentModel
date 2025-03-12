@@ -1,0 +1,43 @@
+{
+  "protected_attribute": "gender",
+  "overall_metrics": {
+    "demographic_parity": 0.001785596195463035,
+    "equal_opportunity": 0.002179911616596586,
+    "disparate_impact": 0.9965220761624768
+  },
+  "group_metrics": {
+    "Male": {
+      "count": 119891,
+      "positive_rate": 0.5116230576106631,
+      "true_positive_rate": 0.807882100785884,
+      "false_positive_rate": 0.21296730537317432,
+      "true_negative_rate": 0.7870326946268257,
+      "false_negative_rate": 0.192117899214116,
+      "accuracy": 0.7974993952840497,
+      "precision": 0.792709369243059
+    },
+    "Female": {
+      "count": 120109,
+      "positive_rate": 0.5134086538061261,
+      "true_positive_rate": 0.8100620124024805,
+      "false_positive_rate": 0.2174115533673758,
+      "true_negative_rate": 0.7825884466326242,
+      "false_negative_rate": 0.1899379875975195,
+      "accuracy": 0.7963100183999534,
+      "precision": 0.7880321089759182
+    }
+  },
+  "passing_metrics": [
+    "disparate_impact",
+    "demographic_parity",
+    "equal_opportunity"
+  ],
+  "failing_metrics": [],
+  "threshold": 0.1,
+  "visualization_paths": {
+    "fairness_metrics": "sentiment140_fairness_example/fairness/gender/gender_fairness_metrics.png",
+    "group_metrics": "sentiment140_fairness_example/fairness/gender/gender_group_metrics.png",
+    "distribution": "sentiment140_fairness_example/fairness/gender/gender_distribution.png",
+    "intersectional_age_group": "sentiment140_fairness_example/fairness/gender/gender_age_group_heatmap.png"
+  }
+}

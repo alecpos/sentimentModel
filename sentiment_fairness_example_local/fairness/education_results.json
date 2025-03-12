@@ -1,0 +1,53 @@
+{
+  "protected_attribute": "education",
+  "overall_metrics": {
+    "demographic_parity": 0.3076923076923077,
+    "equal_opportunity": 0.1785714285714286,
+    "disparate_impact": 0.38461538461538464
+  },
+  "group_metrics": {
+    "College": {
+      "count": 40,
+      "positive_rate": 0.475,
+      "true_positive_rate": 0.6923076923076923,
+      "false_positive_rate": 0.07142857142857142,
+      "true_negative_rate": 0.9285714285714286,
+      "false_negative_rate": 0.3076923076923077,
+      "accuracy": 0.775,
+      "precision": 0.9473684210526315
+    },
+    "Graduate": {
+      "count": 34,
+      "positive_rate": 0.5,
+      "true_positive_rate": 0.75,
+      "false_positive_rate": 0.14285714285714285,
+      "true_negative_rate": 0.8571428571428571,
+      "false_negative_rate": 0.25,
+      "accuracy": 0.7941176470588235,
+      "precision": 0.8823529411764706
+    },
+    "High School": {
+      "count": 26,
+      "positive_rate": 0.19230769230769232,
+      "true_positive_rate": 0.5714285714285714,
+      "false_positive_rate": 0.05263157894736842,
+      "true_negative_rate": 0.9473684210526315,
+      "false_negative_rate": 0.42857142857142855,
+      "accuracy": 0.8461538461538461,
+      "precision": 0.8
+    }
+  },
+  "passing_metrics": [],
+  "failing_metrics": [
+    "equal_opportunity",
+    "disparate_impact",
+    "demographic_parity"
+  ],
+  "threshold": 0.1,
+  "visualization_paths": {
+    "fairness_metrics": "sentiment_fairness_example_local/fairness/education/education_fairness_metrics.png",
+    "group_metrics": "sentiment_fairness_example_local/fairness/education/education_group_metrics.png",
+    "distribution": "sentiment_fairness_example_local/fairness/education/education_distribution.png",
+    "intersectional_age_group": "sentiment_fairness_example_local/fairness/education/education_age_group_heatmap.png"
+  }
+}
