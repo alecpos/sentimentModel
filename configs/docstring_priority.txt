@@ -1,0 +1,24 @@
+# Docstring Generation Priority List
+# ===============================
+# This file defines the priority order for docstring generation.
+# Files/directories listed earlier will be processed first.
+# Format: one path per line, can be file or directory
+# Comments (lines starting with #) are ignored
+
+# High Priority - Core ML Models
+app/models/ml/prediction/
+app/models/ml/training/
+app/core/
+
+# Medium Priority - API and Services
+app/api/
+app/services/
+
+# Lower Priority - Utils and Helpers
+app/utils/
+app/helpers/
+
+# Specific files needing immediate attention
+app/models/ml/prediction/ad_score_predictor.py
+app/models/ml/prediction/account_health_predictor.py
+app/core/validation.py 

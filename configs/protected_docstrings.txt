@@ -1,0 +1,14 @@
+# Protected Docstrings List
+# Use format: file_path:element_name
+# Examples:
+app/core/validation.py:validate_dataset
+app/core/validation.py:DataValidationSchema
+app/core/validation.py:_validate_column_type
+app/core/validation.py:_validate_value_constraints
+app/core/validation.py:_validate_statistics
+app/core/validation.py:apply_schema_preprocessing
+
+# Classes with good docstrings
+app/models/ml/prediction/ad_score_predictor.py:TestResultsExporter
+
+# Add more as needed 

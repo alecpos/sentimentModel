@@ -1,0 +1,47 @@
+{
+  "ad_score_predictor": {
+    "status": "Not implemented",
+    "priority": "High",
+    "benchmarks": {
+      "RMSE": 8.2,
+      "R\u00b2": 0.76,
+      "Spearman": 0.72
+    },
+    "dependencies": [
+      "Create feature pipeline",
+      "Implement hybrid neural/tree model",
+      "Add calibration layer"
+    ],
+    "estimated_effort": "4 weeks"
+  },
+  "account_health_predictor": {
+    "status": "Not implemented",
+    "priority": "Medium",
+    "benchmarks": {
+      "Health Score RMSE": 7.2,
+      "Classification Accuracy": 0.83,
+      "Anomaly Detection F1": 0.76
+    },
+    "dependencies": [
+      "Create time-series preprocessing",
+      "Implement ensemble model",
+      "Add anomaly detection"
+    ],
+    "estimated_effort": "3 weeks"
+  },
+  "drift_detection": {
+    "status": "Not implemented",
+    "priority": "Medium",
+    "benchmarks": {
+      "Processing latency": 100,
+      "Memory usage": 50,
+      "False positive rate": 0.05
+    },
+    "dependencies": [
+      "Implement statistical tests",
+      "Create reference distribution storage",
+      "Add alerting system"
+    ],
+    "estimated_effort": "2 weeks"
+  }
+}
