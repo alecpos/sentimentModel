@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.5833333333333334,
+  "f1_score": 0.5804195804195804,
+  "precision": 0.5857142857142856,
+  "recall": 0.5833333333333334,
+  "training_time": 35.959176,
+  "sample_size": 300,
+  "train_size": 240,
+  "test_size": 60,
+  "feature_selection": false,
+  "model_path": "comparison_results/no_feature_selection_20250316_225947/sentiment_analyzer.pkl"
+}
