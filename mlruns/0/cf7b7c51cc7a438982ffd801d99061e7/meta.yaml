@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alecposner/WITHIN/mlruns/0/cf7b7c51cc7a438982ffd801d99061e7/artifacts
+end_time: 1742230110927
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cf7b7c51cc7a438982ffd801d99061e7
+run_name: ./transformer_models/sentiment140
+run_uuid: cf7b7c51cc7a438982ffd801d99061e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742229568977
+status: 3
+tags: []
+user_id: alecposner

@@ -1,0 +1,38 @@
+{
+  "overall": {
+    "accuracy": 0.725,
+    "positive_rate": 1.0,
+    "true_positive_rate": 1.0,
+    "false_positive_rate": 1.0
+  },
+  "group_metrics": {
+    "gender": {
+      "female": {
+        "count": 84,
+        "accuracy": 0.38095238095238093,
+        "positive_rate": 1.0,
+        "true_positive_rate": 1.0,
+        "false_positive_rate": 1.0
+      },
+      "male": {
+        "count": 116,
+        "accuracy": 0.9741379310344828,
+        "positive_rate": 1.0,
+        "true_positive_rate": 1.0,
+        "false_positive_rate": 1.0
+      }
+    }
+  },
+  "fairness_metrics": {
+    "gender_demographic_parity": {
+      "difference": 0.0,
+      "ratio": 1.0,
+      "passes_threshold": true
+    },
+    "gender_equal_opportunity": {
+      "difference": 0.0,
+      "ratio": 1.0,
+      "passes_threshold": true
+    }
+  }
+}

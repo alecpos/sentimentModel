@@ -1,0 +1,27 @@
+{
+  "started_at": "2025-03-17 01:18:17",
+  "config": {
+    "dataset_path": "/Users/alecposner/.cache/kagglehub/datasets/kazanova/sentiment140/versions/2/training.1600000.processed.noemoticon.csv",
+    "max_samples": 80000,
+    "output_dir": "enhanced_sentiment_results",
+    "model_type": "distilbert",
+    "train_mode": "transformer",
+    "batch_size": 16,
+    "epochs": 2,
+    "learning_rate": 2e-05,
+    "max_iter": 5000,
+    "fairness_evaluation": false,
+    "bias_mitigation": false,
+    "comparative_analysis": false
+  },
+  "steps": {
+    "data_loading": {
+      "status": "completed",
+      "completed_at": "01:18:29"
+    },
+    "transformer_training": {
+      "status": "in_progress",
+      "started_at": "01:18:29"
+    }
+  }
+}
