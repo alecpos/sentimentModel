@@ -124,4 +124,7 @@ model_explanations/plots/
 *.temp
 *.bak
 *.swp
-*~ 
+*~
+
+# Malformed paths
+*model_card_ad\n_sentiment_analyzer.md 
