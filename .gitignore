@@ -24,34 +24,104 @@ wheels/
 venv/
 ENV/
 env/
+.env
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+.DS_Store
 
-# Testing
+# Project specific
+benchmark_results/
+mlruns/
+output/
+results/
+*.log
+*.joblib
+*.safetensors
+*.bin
+*.json
+!package.json
+!tsconfig.json
+
+# Documentation
+docs/_build/
+site/
+docs/images/
+docs/implementation/images/
+
+# Test coverage
 .coverage
 htmlcov/
 .pytest_cache/
-.tox/
-.nox/
-coverage.xml
-*.cover
-*.py,cover
 .hypothesis/
 
-# Project specific
-results/
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Model files
+transformer_models/
+models/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+
+# Data files
 *.csv
+*.tsv
+*.json
+!package.json
+!tsconfig.json
+
+# Logs
+logs/
+*.log
+
+# Generated content
 *.png
 *.jpg
 *.jpeg
 *.gif
 *.pdf
-*.log
+*.svg
+*.eps
+*.ps
+*.ai
+*.tiff
+*.bmp
+*.ico
+*.webp
 
-# OS specific
-.DS_Store
-Thumbs.db 
+# Results and outputs
+ad_predictor_direct_test_*/
+comparison_results/
+dataset_analysis/
+enhanced_sentiment_results/
+fairness_evaluation/
+fairness_explanations/
+fairness_framework_demo/
+fairness_monitoring/
+fairness_reports/
+fairness_results/
+fairness_visualizations/
+sentiment140_fairness_example/
+sentiment140_fairness_postprocessing/
+sentiment_fairness_example_local/
+sentiment_results/
+sentiment_results_advanced/
+sentiment_results_fixed/
+test_results_ad_predictor_*.pdf
+model_cards/assets/
+model_explanations/plots/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~ 
