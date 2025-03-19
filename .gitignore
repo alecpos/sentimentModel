@@ -63,8 +63,8 @@ htmlcov/
 *.ipynb
 
 # Model files
-transformer_models/
-models/
+
+
 *.pt
 *.pth
 *.onnx
@@ -98,26 +98,6 @@ logs/
 *.webp
 
 # Results and outputs
-ad_predictor_direct_test_*/
-comparison_results/
-dataset_analysis/
-enhanced_sentiment_results/
-fairness_evaluation/
-fairness_explanations/
-fairness_framework_demo/
-fairness_monitoring/
-fairness_reports/
-fairness_results/
-fairness_visualizations/
-sentiment140_fairness_example/
-sentiment140_fairness_postprocessing/
-sentiment_fairness_example_local/
-sentiment_results/
-sentiment_results_advanced/
-sentiment_results_fixed/
-test_results_ad_predictor_*.pdf
-model_cards/assets/
-model_explanations/plots/
 
 # Temporary files
 *.tmp
@@ -127,4 +107,3 @@ model_explanations/plots/
 *~
 
 # Malformed paths
-*model_card_ad\n_sentiment_analyzer.md 
