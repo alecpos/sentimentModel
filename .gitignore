@@ -35,6 +35,7 @@ env/
 
 # Project specific
 benchmark_results/
+transformer_models/
 mlruns/
 output/
 results/
@@ -63,8 +64,6 @@ htmlcov/
 *.ipynb
 
 # Model files
-
-
 *.pt
 *.pth
 *.onnx
